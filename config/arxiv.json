@@ -1,0 +1,27 @@
+{
+  "categories": [
+    "cond-mat.dis-nn",
+    "cond-mat.mes-hall",
+    "cond-mat.mtrl-sci",
+    "cond-mat.other",
+    "cond-mat.quant-gas",
+    "cond-mat.soft",
+    "cond-mat.stat-mech",
+    "cond-mat.str-el",
+    "cond-mat.supr-con"
+  ],
+  "listing_days": 3,
+  "recent_list_show": 1000,
+  "openai_model": "gpt-4.1-mini",
+  "site_data_path": "site/data/latest.json",
+  "site_title": "arXiv Condensed Matter Daily",
+  "llm": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "base_url": "https://api.deepseek.com/v1",
+    "max_concurrent": 3,
+    "timeout": 60
+  },
+  "use_openai_summary": true
+}

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.paper_cache.json
+site/data/.paper_cache.json
+data/update_log.txt
+.env
+.cache/
