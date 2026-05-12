@@ -681,10 +681,11 @@ def make_chinese_summary(title: str, abstract: str, config: dict) -> tuple[dict[
 # ── Paper cache for resume support ─────────────────────────────
 
 class PaperCache:
-    """Caches paper summaries so we don't re-process on re-run."""
+    """Thread-safe cache for paper summaries."""
 
     def __init__(self, path: Path):
         self.path = path
+        self.lock = threading.Lock()
         self.data: dict[str, dict] = {}
         if path.exists():
             try:
@@ -694,18 +695,22 @@ class PaperCache:
                 self.data = {}
 
     def get(self, arxiv_id: str) -> dict | None:
-        return self.data.get(arxiv_id)
+        with self.lock:
+            return self.data.get(arxiv_id)
 
     def set(self, arxiv_id: str, summary: dict, keywords: list[str]) -> None:
-        self.data[arxiv_id] = {
-            "summary": summary,
-            "keywords": keywords,
-        }
+        with self.lock:
+            self.data[arxiv_id] = {
+                "summary": summary,
+                "keywords": keywords,
+            }
 
     def save(self) -> None:
-        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with self.lock:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            data_copy = dict(self.data)
         with self.path.open("w", encoding="utf-8") as f:
-            json.dump(self.data, f, ensure_ascii=False, indent=2)
+            json.dump(data_copy, f, ensure_ascii=False, indent=2)
 
 
 # ── Entry parsing ──────────────────────────────────────────────
@@ -845,7 +850,11 @@ def fetch_papers_by_listing(config: dict) -> tuple[list[Paper], list[dict[str, o
         all_papers: list[Paper] = []
         for start in range(0, total, batch_size):
             batch_ids = ids[start:start + batch_size]
-            feed = fetch_feed_by_ids(batch_ids)
+            try:
+                feed = fetch_feed_by_ids(batch_ids)
+            except Exception as exc:
+                print(f"  [WARN] Failed to fetch batch {start}-{start + batch_size}: {exc}")
+                continue
             entries = feed.findall(f"{ATOM_NS}entry")
 
             # Split entries into sub-batches for parallel LLM processing
@@ -876,7 +885,11 @@ def fetch_papers_by_listing(config: dict) -> tuple[list[Paper], list[dict[str, o
         # Sequential processing
         for start in range(0, total, batch_size):
             batch_ids = ids[start:start + batch_size]
-            feed = fetch_feed_by_ids(batch_ids)
+            try:
+                feed = fetch_feed_by_ids(batch_ids)
+            except Exception as exc:
+                print(f"  [WARN] Failed to fetch batch {start}-{start + batch_size}: {exc}")
+                continue
             entries = feed.findall(f"{ATOM_NS}entry")
             for entry in entries:
                 try:
