@@ -1,6 +1,6 @@
 {
   "site_title": "arXiv Condensed Matter Daily",
-  "generated_at": "2026-06-19T04:19:56.570408+00:00",
+  "generated_at": "2026-06-20T03:41:15.629488+00:00",
   "query": "(cat:cond-mat.dis-nn OR cat:cond-mat.mes-hall OR cat:cond-mat.mtrl-sci OR cat:cond-mat.other OR cat:cond-mat.quant-gas OR cat:cond-mat.soft OR cat:cond-mat.stat-mech OR cat:cond-mat.str-el OR cat:cond-mat.supr-con)",
   "categories": [
     "cond-mat.dis-nn",
