@@ -75,7 +75,7 @@ button:hover {
 
 .summary {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 16px;
 }
@@ -96,6 +96,40 @@ button:hover {
 .metric .value {
   font-size: 24px;
   font-weight: 700;
+}
+
+.source-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.source-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 46px;
+  border-radius: 8px;
+  background: var(--panel);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.source-chip strong {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.source-chip.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.source-chip.active strong {
+  color: var(--accent);
 }
 
 .filters {
@@ -280,6 +314,10 @@ button:hover {
   }
 
   .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .source-filters {
     grid-template-columns: 1fr;
   }
 }

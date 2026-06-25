@@ -8,6 +8,7 @@ import ssl
 import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from html import unescape
 from html.parser import HTMLParser
 from collections import Counter
 from dataclasses import dataclass, field
@@ -21,6 +22,10 @@ import xml.etree.ElementTree as ET
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
+RSS_NS = "{http://purl.org/rss/1.0/}"
+DC_NS = "{http://purl.org/dc/elements/1.1/}"
+PRISM_NS = "{http://prismstandard.org/namespaces/basic/2.0/}"
+CONTENT_NS = "{http://purl.org/rss/1.0/modules/content/}"
 RECENT_LIST_URL = "https://arxiv.org/list/cond-mat/recent"
 
 STOPWORDS = {
@@ -77,6 +82,22 @@ class ArxivRecentListParser(HTMLParser):
             self.h3_buffer.append(data)
 
 
+class HTMLTextParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {"br", "p", "div", "li"}:
+            self.parts.append(" ")
+
+    def handle_data(self, data: str) -> None:
+        self.parts.append(data)
+
+    def text(self) -> str:
+        return " ".join("".join(self.parts).split())
+
+
 # ── Data classes ────────────────────────────────────────────────
 
 @dataclass
@@ -97,6 +118,9 @@ class Paper:
     keywords: list[str] = field(default_factory=list)
     pdf_url: str = ""
     abs_url: str = ""
+    source: str = "arxiv"
+    doi: str = ""
+    journal_ref: str = ""
 
 
 # ── arXiv API helpers ──────────────────────────────────────────
@@ -119,6 +143,21 @@ def http_get(url: str, timeout: int = 30) -> bytes:
             return response.read()
     with urlopen(request, timeout=timeout) as response:
         return response.read()
+
+
+def strip_html(html: str) -> str:
+    parser = HTMLTextParser()
+    parser.feed(unescape(html or ""))
+    return parser.text()
+
+
+def parse_iso_datetime(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def fetch_feed(query: str, start: int, max_results: int) -> ET.Element:
@@ -768,6 +807,81 @@ def parse_entry(entry: ET.Element, config: dict, cache: PaperCache | None = None
         keywords=keywords,
         pdf_url=link_pdf,
         abs_url=link_abs,
+        source="arxiv",
+    )
+
+
+def parse_prb_authors(raw: str) -> list[str]:
+    raw = re.sub(r"\s+and\s+", ", ", raw or "")
+    return [part.strip() for part in raw.split(",") if part.strip()]
+
+
+def prb_text_of(item: ET.Element, tag: str, default: str = "") -> str:
+    child = item.find(tag)
+    if child is None or child.text is None:
+        return default
+    return " ".join(child.text.split())
+
+
+def prb_abstract_from_item(item: ET.Element) -> str:
+    encoded = prb_text_of(item, f"{CONTENT_NS}encoded")
+    text = strip_html(encoded)
+    text = re.sub(r"^Author\(s\):\s*.*?(?=(We|Here|Using|This|The|A|An|In)\s)", "", text)
+    text = re.sub(r"\[Phys\. Rev\. B.*?Published .*?$", "", text).strip()
+    if text and len(text) > 40:
+        return text
+
+    description = strip_html(prb_text_of(item, f"{RSS_NS}description"))
+    description = re.sub(r"^Author\(s\):\s*.*?(?=(We|Here|Using|This|The|A|An|In)\s)", "", description)
+    description = re.sub(r"\[Phys\. Rev\. B.*?Published .*?$", "", description).strip()
+    return description or "RSS 条目未提供摘要。"
+
+
+def parse_prb_item(item: ET.Element, config: dict, cache: PaperCache | None = None) -> Paper:
+    title = prb_text_of(item, f"{DC_NS}title") or prb_text_of(item, f"{RSS_NS}title")
+    authors = parse_prb_authors(prb_text_of(item, f"{DC_NS}creator"))
+    published = prb_text_of(item, f"{PRISM_NS}publicationDate") or prb_text_of(item, f"{DC_NS}date")
+    link = prb_text_of(item, f"{PRISM_NS}url") or prb_text_of(item, f"{RSS_NS}link")
+    doi = prb_text_of(item, f"{PRISM_NS}doi")
+    journal_ref = prb_text_of(item, f"{DC_NS}source")
+    section = prb_text_of(item, f"{PRISM_NS}section") or prb_text_of(item, f"{DC_NS}subject")
+    abstract = prb_abstract_from_item(item)
+    paper_id = f"PRB:{doi}" if doi else f"PRB:{link.rsplit('/', 1)[-1]}"
+
+    if cache:
+        cached = cache.get(paper_id)
+        if cached and cached.get("summary", {}).get("summary_mode", "").startswith("llm-"):
+            summary = cached["summary"]
+            keywords = cached["keywords"]
+        else:
+            summary, keywords = make_chinese_summary(title, abstract, config)
+            cache.set(paper_id, summary, keywords)
+    else:
+        summary, keywords = make_chinese_summary(title, abstract, config)
+
+    subject_keywords = [part.strip().lower() for part in re.split(r"[,;]", section) if part.strip()]
+    keywords = list(dict.fromkeys((subject_keywords + keywords)[:8]))
+
+    return Paper(
+        arxiv_id=paper_id,
+        title=title,
+        authors=authors,
+        published=published,
+        updated=published,
+        primary_category="prb",
+        categories=["prb"],
+        abstract=abstract,
+        study_overview_zh=summary["study_overview_zh"],
+        abstract_summary_zh=summary["abstract_summary_zh"],
+        main_content_zh=summary["main_content_zh"],
+        method_zh=summary["method_zh"],
+        summary_mode=summary["summary_mode"],
+        keywords=keywords,
+        pdf_url=link,
+        abs_url=link,
+        source="prb",
+        doi=doi,
+        journal_ref=journal_ref,
     )
 
 
@@ -802,6 +916,9 @@ def serialize_papers(papers: Iterable[Paper]) -> list[dict]:
             "keywords": paper.keywords,
             "pdf_url": paper.pdf_url,
             "abs_url": paper.abs_url,
+            "source": paper.source,
+            "doi": paper.doi,
+            "journal_ref": paper.journal_ref,
         })
     return items
 
@@ -918,6 +1035,55 @@ def fetch_papers_by_listing(config: dict) -> tuple[list[Paper], list[dict[str, o
     return papers, sections
 
 
+def fetch_prb_papers(config: dict) -> tuple[list[Paper], list[dict[str, object]]]:
+    prb_cfg = config.get("prb", {})
+    if not prb_cfg.get("enabled", False):
+        return [], []
+
+    feed_url = prb_cfg.get("feed_url", "https://feeds.aps.org/rss/recent/prb.xml")
+    recent_days = int(prb_cfg.get("recent_days", config.get("listing_days", 3)))
+    max_results = int(prb_cfg.get("max_results", 80))
+    cutoff = datetime.now(timezone.utc) - timedelta(days=recent_days)
+    root = ET.fromstring(http_get(feed_url).decode("utf-8", errors="replace"))
+    items = root.findall(f"{RSS_NS}item")
+
+    cache_dir = Path(config.get("site_data_path", "arxiv-daily/site/data/latest.json")).parent
+    cache = PaperCache(cache_dir / ".paper_cache.json")
+    papers: list[Paper] = []
+    stats: dict[str, int] = {}
+
+    for item in items:
+        published_text = prb_text_of(item, f"{PRISM_NS}publicationDate") or prb_text_of(item, f"{DC_NS}date")
+        published_dt = parse_iso_datetime(published_text)
+        if published_dt and published_dt < cutoff:
+            continue
+        if len(papers) >= max_results:
+            break
+        try:
+            paper = parse_prb_item(item, config, cache)
+            papers.append(paper)
+            stats[paper.summary_mode] = stats.get(paper.summary_mode, 0) + 1
+        except Exception as exc:
+            title = prb_text_of(item, f"{DC_NS}title", "unknown")
+            print(f"  [WARN] Failed to process PRB item '{title[:60]}...': {exc}")
+
+    cache.save()
+    sections_by_date: dict[str, list[str]] = {}
+    for paper in papers:
+        published_dt = parse_iso_datetime(paper.published)
+        label = published_dt.strftime("%Y-%m-%d") if published_dt else "Unknown date"
+        sections_by_date.setdefault(label, []).append(paper.arxiv_id)
+
+    sections = [
+        {"title": f"Physical Review B - {date}", "ids": ids}
+        for date, ids in sections_by_date.items()
+    ]
+    llm_count = sum(v for k, v in stats.items() if k.startswith("llm-"))
+    rule_count = sum(v for k, v in stats.items() if k.startswith("rule"))
+    print(f"Fetched {len(papers)} PRB papers | LLM: {llm_count} | Rule: {rule_count}")
+    return papers, sections
+
+
 # ── Ensure directory exists ────────────────────────────────────
 
 def ensure_parent(path: Path) -> None:
@@ -939,6 +1105,9 @@ def main() -> int:
 
     query = build_query(categories)
     papers, listing_sections = fetch_papers_by_listing(config)
+    prb_papers, prb_sections = fetch_prb_papers(config)
+    papers = papers + prb_papers
+    listing_sections = listing_sections + prb_sections
     days_back = int(config.get("listing_days", 3))
 
     now = datetime.now(timezone.utc).isoformat()
@@ -947,7 +1116,8 @@ def main() -> int:
         "generated_at": now,
         "query": query,
         "categories": categories,
-        "source": config.get("source", "recent-list"),
+        "source": config.get("source", "arxiv-recent-list+prb-rss"),
+        "sources": ["arxiv", "prb"] if config.get("prb", {}).get("enabled", False) else ["arxiv"],
         "listing_days": int(config.get("listing_days", days_back)),
         "days_back": days_back,
         "listing_sections": listing_sections,

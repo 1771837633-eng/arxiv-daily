@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>arXiv Daily</title>
-  <link rel="stylesheet" href="./styles.css?v=20260511-mathjax" />
+  <title>凝聚态论文日报</title>
+  <link rel="stylesheet" href="./styles.css?v=20260625-source" />
   <script>
     window.MathJax = {
       tex: {
@@ -23,7 +23,7 @@
   <main class="app">
     <header class="topbar">
       <div>
-        <h1 id="page-title">arXiv Daily</h1>
+        <h1 id="page-title">凝聚态论文日报</h1>
         <p id="page-meta">正在加载最新论文...</p>
       </div>
       <div class="controls">
@@ -34,11 +34,13 @@
 
     <section class="summary" id="summary"></section>
 
+    <section class="source-filters" id="source-filters"></section>
+
     <section class="filters" id="filters"></section>
 
     <section class="paper-list" id="paper-list"></section>
   </main>
 
-  <script defer src="./app.js?v=20260511-mathjax"></script>
+  <script defer src="./app.js?v=20260625-source"></script>
 </body>
 </html>

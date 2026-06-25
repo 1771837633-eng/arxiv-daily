@@ -12,9 +12,15 @@
   ],
   "listing_days": 3,
   "recent_list_show": 1000,
+  "prb": {
+    "enabled": true,
+    "feed_url": "https://feeds.aps.org/rss/recent/prb.xml",
+    "recent_days": 3,
+    "max_results": 80
+  },
   "openai_model": "gpt-4.1-mini",
   "site_data_path": "site/data/latest.json",
-  "site_title": "arXiv Condensed Matter Daily",
+  "site_title": "凝聚态论文日报",
   "llm": {
     "provider": "deepseek",
     "model": "deepseek-chat",

@@ -1,5 +1,6 @@
 const state = {
   data: null,
+  source: "all",
   category: "all",
   query: "",
   sectionsExpanded: true,
@@ -9,6 +10,7 @@ const els = {
   title: document.getElementById("page-title"),
   meta: document.getElementById("page-meta"),
   summary: document.getElementById("summary"),
+  sourceFilters: document.getElementById("source-filters"),
   filters: document.getElementById("filters"),
   list: document.getElementById("paper-list"),
   search: document.getElementById("search"),
@@ -16,6 +18,7 @@ const els = {
 };
 
 const CATEGORY_LABELS_ZH = {
+  "prb": "Physical Review B",
   "cond-mat.dis-nn": "无序系统与神经网络",
   "cond-mat.mes-hall": "介观系统与量子霍尔",
   "cond-mat.mtrl-sci": "材料科学",
@@ -85,7 +88,7 @@ function uniqCategories(papers) {
   const result = [];
   for (const paper of papers) {
     for (const category of paper.categories || []) {
-      if (category.startsWith("cond-mat.") && !seen.has(category)) {
+      if ((category === "prb" || category.startsWith("cond-mat.")) && !seen.has(category)) {
         seen.add(category);
         result.push(category);
       }
@@ -94,8 +97,18 @@ function uniqCategories(papers) {
   return result;
 }
 
-function filteredPapers() {
+function sourceOf(paper) {
+  return paper.source || "arxiv";
+}
+
+function sourceFilteredPapers() {
   const papers = state.data?.papers || [];
+  if (state.source === "all") return papers;
+  return papers.filter((paper) => sourceOf(paper) === state.source);
+}
+
+function filteredPapers() {
+  const papers = sourceFilteredPapers();
   return papers.filter((paper) => {
     const categoryOk = state.category === "all" || (paper.categories || []).includes(state.category);
     if (!state.query) return categoryOk;
@@ -118,14 +131,38 @@ function filteredPapers() {
 }
 
 function renderMetrics(papers) {
-  const categories = uniqCategories(papers);
   const llmCount = papers.filter(function(p) {
     return (p.summary_mode || "").startsWith("llm-");
   }).length;
+  const prbCount = papers.filter(function(p) { return p.source === "prb"; }).length;
   els.summary.innerHTML =
     '<div class="metric"><div class="label">凝聚态论文</div><div class="value">' + papers.length + '</div></div>' +
     '<div class="metric"><div class="label">AI 总结</div><div class="value">' + llmCount + '</div></div>' +
+    '<div class="metric"><div class="label">PRB 论文</div><div class="value">' + prbCount + '</div></div>' +
     '<div class="metric"><div class="label">更新时间</div><div class="value">' + formatDate(state.data.generated_at) + '</div></div>';
+}
+
+function renderSourceFilters(papers) {
+  const counts = {
+    all: papers.length,
+    arxiv: papers.filter(function(p) { return sourceOf(p) === "arxiv"; }).length,
+    prb: papers.filter(function(p) { return sourceOf(p) === "prb"; }).length,
+  };
+  const options = [
+    ["all", "全部", counts.all],
+    ["arxiv", "arXiv", counts.arxiv],
+    ["prb", "PRB", counts.prb],
+  ];
+  var html = "";
+  for (var i = 0; i < options.length; i++) {
+    var item = options[i];
+    var active = state.source === item[0] ? " active" : "";
+    html += '<button class="source-chip' + active + '" data-source="' + item[0] + '">' +
+      '<span>' + item[1] + '</span>' +
+      '<strong>' + item[2] + '</strong>' +
+    '</button>';
+  }
+  els.sourceFilters.innerHTML = html;
 }
 
 function renderFilters(papers) {
@@ -180,7 +217,7 @@ function renderPapers(papers) {
     var authors = escapeHtml((paper.authors || []).slice(0, 4).join(", "));
     var moreAuthors = (paper.authors || []).length > 4 ? " 等" : "";
     var title = escapeHtml(paper.title);
-    var arxivId = escapeHtml(paper.arxiv_id);
+    var paperId = escapeHtml(paper.source === "prb" ? (paper.doi || paper.arxiv_id) : paper.arxiv_id);
     var absUrl = encodeURI(paper.abs_url || "#");
     var pdfUrl = encodeURI(paper.pdf_url || "#");
     var mode = paper.summary_mode || "";
@@ -207,10 +244,11 @@ function renderPapers(papers) {
             '<span>·</span>' +
             '<span>' + formatDate(paper.published) + '</span>' +
             '<span>·</span>' +
+            (paper.journal_ref ? '<span>' + escapeHtml(paper.journal_ref) + '</span><span>·</span>' : '') +
             '<span class="' + modeClass + '">' + modeLabel + '</span>' +
           '</div>' +
         '</div>' +
-        '<div class="paper-id">' + arxivId + '</div>' +
+        '<div class="paper-id">' + paperId + '</div>' +
       '</div>' +
       '<div class="paper-summary">' +
         renderSummaryField("📌 研究概览", paper.study_overview_zh, isLLM) +
@@ -220,8 +258,8 @@ function renderPapers(papers) {
       '</div>' +
       '<div class="tags">' + tagsHtml + '</div>' +
       '<div class="paper-actions">' +
-        '<a href="' + absUrl + '" target="_blank" rel="noreferrer">arXiv Abstract</a>' +
-        '<a href="' + pdfUrl + '" target="_blank" rel="noreferrer">PDF</a>' +
+        '<a href="' + absUrl + '" target="_blank" rel="noreferrer">' + (paper.source === "prb" ? "PRB Article" : "arXiv Abstract") + '</a>' +
+        (paper.source === "prb" ? '<a href="https://doi.org/' + encodeURIComponent(paper.doi || "") + '" target="_blank" rel="noreferrer">DOI</a>' : '<a href="' + pdfUrl + '" target="_blank" rel="noreferrer">PDF</a>') +
       '</div>' +
     '</article>';
   }
@@ -237,10 +275,12 @@ function typesetMath() {
 
 function rerender() {
   var papers = filteredPapers();
-  renderMetrics(state.data.papers || []);
-  renderFilters(state.data.papers || []);
+  var visibleSourcePapers = sourceFilteredPapers();
+  renderSourceFilters(state.data.papers || []);
+  renderMetrics(papers);
+  renderFilters(visibleSourcePapers);
   renderPapers(papers);
-  els.meta.textContent = "显示 " + papers.length + " / " + (state.data.papers || []).length + " 篇论文";
+  els.meta.textContent = "显示 " + papers.length + " / " + visibleSourcePapers.length + " 篇论文";
   typesetMath();
 }
 
@@ -248,7 +288,9 @@ async function loadData() {
   var response = await fetch("./data/latest.json", { cache: "no-store" });
   if (!response.ok) throw new Error("加载失败: " + response.status);
   state.data = await response.json();
-  els.title.textContent = state.data.site_title || "arXiv Daily";
+  els.title.textContent = state.data.site_title || "凝聚态论文日报";
+  document.title = state.data.site_title || "凝聚态论文日报";
+  state.source = "all";
   state.category = "all";
   rerender();
 }
@@ -262,6 +304,14 @@ els.refresh.addEventListener("click", async function() {
   els.refresh.disabled = true;
   try { await loadData(); }
   finally { els.refresh.disabled = false; }
+});
+
+els.sourceFilters.addEventListener("click", function(event) {
+  var button = event.target.closest("[data-source]");
+  if (!button) return;
+  state.source = button.dataset.source;
+  state.category = "all";
+  rerender();
 });
 
 els.filters.addEventListener("click", function(event) {
