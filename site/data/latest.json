@@ -1,6 +1,6 @@
 {
   "site_title": "凝聚态论文日报",
-  "generated_at": "2026-09-05T03:17:45.832216+00:00",
+  "generated_at": "2026-09-06T03:20:03.536676+00:00",
   "query": "(cat:cond-mat.dis-nn OR cat:cond-mat.mes-hall OR cat:cond-mat.mtrl-sci OR cat:cond-mat.other OR cat:cond-mat.quant-gas OR cat:cond-mat.soft OR cat:cond-mat.stat-mech OR cat:cond-mat.str-el OR cat:cond-mat.supr-con)",
   "categories": [
     "cond-mat.dis-nn",
@@ -406,6 +406,35 @@
       ]
     },
     {
+      "title": "Physical Review B - 2026-09-04",
+      "ids": [
+        "PRB:10.1103/pbkc-jrxp",
+        "PRB:10.1103/928z-jgcx",
+        "PRB:10.1103/dn6s-8b5y",
+        "PRB:10.1103/9z82-vlky",
+        "PRB:10.1103/qbhv-yr3d",
+        "PRB:10.1103/b4vc-jf1z",
+        "PRB:10.1103/xsf5-n5l2",
+        "PRB:10.1103/y5tx-5vm7",
+        "PRB:10.1103/qq37-26x6",
+        "PRB:10.1103/kpdq-r4l5",
+        "PRB:10.1103/3lb4-pnvx",
+        "PRB:10.1103/c1sc-f3sv",
+        "PRB:10.1103/mw26-r4sv",
+        "PRB:10.1103/sqdz-4x29",
+        "PRB:10.1103/b97g-cjf8",
+        "PRB:10.1103/c8vq-kz85",
+        "PRB:10.1103/91gg-t2kv",
+        "PRB:10.1103/rwzq-lfty",
+        "PRB:10.1103/8b8c-2wm3",
+        "PRB:10.1103/d775-mmsy",
+        "PRB:10.1103/fknf-gr8l",
+        "PRB:10.1103/skxr-hb16",
+        "PRB:10.1103/82bg-5mt2",
+        "PRB:10.1103/r1gj-g99c"
+      ]
+    },
+    {
       "title": "Physical Review B - 2026-09-03",
       "ids": [
         "PRB:10.1103/ykcp-vs74",
@@ -430,45 +459,935 @@
         "PRB:10.1103/26rq-4m96",
         "PRB:10.1103/nppx-k9lx"
       ]
-    },
-    {
-      "title": "Physical Review B - 2026-09-02",
-      "ids": [
-        "PRB:10.1103/1n3w-5q5n",
-        "PRB:10.1103/pzbz-4rw9",
-        "PRB:10.1103/6ql2-m6bq",
-        "PRB:10.1103/x1rf-xmrd",
-        "PRB:10.1103/b18r-2d5k",
-        "PRB:10.1103/w3f8-dvyl",
-        "PRB:10.1103/kq2k-5dfg",
-        "PRB:10.1103/zl58-4yxk",
-        "PRB:10.1103/qz25-c2fq",
-        "PRB:10.1103/5bbt-q2t7",
-        "PRB:10.1103/1fpk-fgkj",
-        "PRB:10.1103/smf3-dnfd",
-        "PRB:10.1103/gjmr-w4s5",
-        "PRB:10.1103/llyv-nn5q",
-        "PRB:10.1103/ftvb-x737",
-        "PRB:10.1103/ml9d-pzwl",
-        "PRB:10.1103/6y9w-lx94",
-        "PRB:10.1103/5r9j-382y",
-        "PRB:10.1103/l7qg-hm2p",
-        "PRB:10.1103/kh8y-fqvm",
-        "PRB:10.1103/lxn4-s9j4",
-        "PRB:10.1103/bvwr-y8gz",
-        "PRB:10.1103/6kv9-46kx",
-        "PRB:10.1103/s2ds-5n5k",
-        "PRB:10.1103/lwkc-hbx7",
-        "PRB:10.1103/5rk9-w686",
-        "PRB:10.1103/byz8-31yp",
-        "PRB:10.1103/s4k5-qs9g",
-        "PRB:10.1103/qbr7-dpdr",
-        "PRB:10.1103/btb3-gww3"
-      ]
     }
   ],
-  "count": 51,
+  "count": 45,
   "papers": [
+    {
+      "arxiv_id": "PRB:10.1103/pbkc-jrxp",
+      "title": "Spinon shift current in a noncentrosymmetric quantum spin chain",
+      "authors": [
+        "Ryosuke Yamashita",
+        "Shintaro Takayoshi",
+        "Takahiro Morimoto"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We theoretically study direct current generation in a quantum spin chain induced by spinon excitations by light irradiation. We consider a S=1/2 one-dimensional (1D) antiferromagnetic XXZ model with magnetoelectric coupling that describes multiferroics with broken inversion symmetry. We perform the …",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提到“We theoretically study...”（我们理论研究...），且使用了“We perform the ...”等表述，指向具体的理论计算或推导。；研究对象：研究对象是一个S=1/2的一维（1D）反铁磁XXZ量子自旋链，并引入了磁电耦合，用于描述具有破缺反演对称性的多铁性材料。物理现象是光照射下由自旋子（spinon）激发诱导的直流电流（即“自旋子位移电流”）。",
+      "abstract_summary_zh": "摘要未完整给出最终结论，但核心目标已明确：理论上证明了在非中心对称量子自旋链中，通过光激发自旋子可以产生直流电流。具体电流大小或与材料参数的定量关系，摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出最终结论，但核心目标已明确：理论上证明了在非中心对称量子自旋链中，通过光激发自旋子可以产生直流电流。具体电流大小或与材料参数的定量关系，摘要未明确说明。；创新点：将“位移电流”（shift current）这一通常在电子系统中讨论的光伏效应机制，拓展到自旋子（分数化自旋激发）体系中，并明确关联了非中心对称多铁性材料的一维自旋链模型。摘要未突出说明其他创新点。",
+      "method_zh": "理论框架为量子自旋链模型（XXZ模型）结合磁电耦合项。具体计算手段摘要未明确说明（可能涉及玻尔兹曼输运理论、线性响应理论或精确对角化等，但摘要截断部分未提及，故不臆测）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "spinon",
+        "current",
+        "quantum",
+        "spin",
+        "chain",
+        "shift",
+        "noncentrosymmetric"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/pbkc-jrxp",
+      "abs_url": "http://link.aps.org/doi/10.1103/pbkc-jrxp",
+      "source": "prb",
+      "doi": "10.1103/pbkc-jrxp",
+      "journal_ref": "Phys. Rev. B 114, 134405 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/928z-jgcx",
+      "title": "NMR evidence of pairing fluctuations above ${T}_{c}$ and absence of spin magnetism in the time-reversal symmetry-breaking state of ${\\mathrm{Ba}}_{1−x}{\\mathrm{K}}_{x}{\\mathrm{Fe}}_{2}{\\mathrm{As}}_{2}$",
+      "authors": [
+        "Florian Bärtl",
+        "Nadia Stegani",
+        "Federico Caglieris",
+        "Ilya Shipulin",
+        "Yongwei Li",
+        "Ruidan Zhong",
+        "Quanxin Hu",
+        "Yu Zheng",
+        "Chi-Ming Yim",
+        "Sven Luther",
+        "Jochen Wosnitza",
+        "Rajib Sarkar",
+        "Hans-Henning Klauss",
+        "Julien Garaud",
+        "Albert Samoilenka",
+        "Anton Talkachov",
+        "Egor Babaev",
+        "Hannes Kühne",
+        "Vadim Grinenko"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "The NMR and μSR findings show that multicomponent superconductivity appears homogeneously throughout the entire sample volume and that the BTRS state is unrelated to conventional spin magnetism.",
+      "study_overview_zh": "研究类型：实验文章。判断依据：摘要明确提及NMR（核磁共振）和μSR（缪子自旋旋转/弛豫）实验测量结果。；研究对象：铁基超导体Ba₁₋ₓKₓFe₂As₂（掺钾钡铁砷化合物），具体关注其超导转变温度T_c以上的配对涨落，以及时间反演对称性破缺（BTRS）态的性质。",
+      "abstract_summary_zh": "多组分超导电性在整个样品体积内均匀出现；时间反演对称性破缺态与常规自旋磁性无关。",
+      "main_content_zh": "核心发现：多组分超导电性在整个样品体积内均匀出现；时间反演对称性破缺态与常规自旋磁性无关。；创新点：摘要未突出说明。但可推断其新意在于通过NMR/μSR结合，首次明确证明该体系中BTRS态并非源于自旋磁有序，且多组分超导是体均匀的（而非局域或相分离）。具体对比细节摘要未明确说明。",
+      "method_zh": "核磁共振（NMR）和缪子自旋旋转/弛豫（μSR）实验技术。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "superfluidity and superconductivity",
+        "mathrm",
+        "nmr",
+        "spin",
+        "magnetism",
+        "state",
+        "evidence",
+        "pairing"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/928z-jgcx",
+      "abs_url": "http://link.aps.org/doi/10.1103/928z-jgcx",
+      "source": "prb",
+      "doi": "10.1103/928z-jgcx",
+      "journal_ref": "Phys. Rev. B 114, 134504 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/dn6s-8b5y",
+      "title": "Superconductivity mediated by nematic fluctuations: The dispersion of collective modes",
+      "authors": [
+        "Kazi Ranjibul Islam",
+        "Andrey Chubukov"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We analyze the spectrum of collective modes in a superconductor, in which pairing is mediated by long-range nematic fluctuations. Previous experimental and theoretical studies have found that a superconducting gap in such a system is highly anisotropic and at any finite T<Tc vanishes on four arcs…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要明确使用“We analyze the spectrum of collective modes”，属于理论分析。；研究对象：由向列涨落（nematic fluctuations）介导的超导体的集体模（collective modes）色散谱。具体体系为具有长程向列涨落、且超导能隙高度各向异性（在T<Tc时在四个弧上消失）的超导体。",
+      "abstract_summary_zh": "摘要未明确说明具体结论，仅指出该工作分析了此类超导体中集体模的谱。摘要未给出任何数值或定性结果。",
+      "main_content_zh": "核心发现：摘要未明确说明具体结论，仅指出该工作分析了此类超导体中集体模的谱。摘要未给出任何数值或定性结果。；创新点：摘要未突出说明。仅能判断其关注点在于向列涨落介导超导中集体模的色散，而非此前实验与理论已关注的能隙各向异性本身。",
+      "method_zh": "理论分析框架，具体为对超导体中集体模谱的计算（摘要未说明具体技术手段，如是否使用随机相位近似、泛函积分等方法）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "superfluidity and superconductivity",
+        "mediated",
+        "nematic",
+        "fluctuations",
+        "collective",
+        "modes",
+        "superconductivity",
+        "dispersion"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/dn6s-8b5y",
+      "abs_url": "http://link.aps.org/doi/10.1103/dn6s-8b5y",
+      "source": "prb",
+      "doi": "10.1103/dn6s-8b5y",
+      "journal_ref": "Phys. Rev. B 114, 134505 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/9z82-vlky",
+      "title": "Variational Monte Carlo with row-update projected entangled-pair states and its applications to quantum spin glasses",
+      "authors": [
+        "Tao Chen",
+        "Jing Liu",
+        "Yantao Wu",
+        "Pan Zhang",
+        "Youjin Deng"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "In this context, the variational Monte Carlo (VMC) framework based on projected entangled-pair states (PEPS) has witnessed rapid development, establishing itself as a vital approach for investiga…",
+      "study_overview_zh": "研究类型：计算文章。判断依据：标题明确提及“变分蒙特卡洛（Variational Monte Carlo, VMC）”和“投影纠缠对态（PEPS）”，摘要开头也强调“VMC框架的快速发展”，属于典型的数值计算方法研究。；研究对象：量子自旋玻璃（quantum spin glasses）系统。摘要未明确说明具体材料或晶格模型（如是否二维、是否阻挫），但结合PEPS方法的应用场景，可推断为二维或准二维阻挫量子磁性体系。",
+      "abstract_summary_zh": "摘要未完整给出，无法提取具体物理结论。摘要仅指出VMC-PEPS方法在相关研究中已成为重要工具，但未说明该方法应用于自旋玻璃后获得了何种新物理结果。",
+      "main_content_zh": "核心发现：摘要未完整给出，无法提取具体物理结论。摘要仅指出VMC-PEPS方法在相关研究中已成为重要工具，但未说明该方法应用于自旋玻璃后获得了何种新物理结果。；创新点：摘要未突出说明。从标题可推断，创新点可能在于将“行更新”策略引入PEPS-VMC框架，以处理量子自旋玻璃这类具有强阻挫和随机性的系统，但具体技术优势（如收敛性、精度提升）摘要未明确说明。",
+      "method_zh": "变分蒙特卡洛（VMC）结合投影纠缠对态（PEPS），并特别强调“行更新（row-update）”技术。这是一种针对PEPS的张量网络变分优化方案，用于高效计算高维量子态的能量和关联函数。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "inhomogeneous",
+        "disordered",
+        "and partially ordered systems",
+        "variational",
+        "monte",
+        "carlo",
+        "projected",
+        "entangled-pair"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/9z82-vlky",
+      "abs_url": "http://link.aps.org/doi/10.1103/9z82-vlky",
+      "source": "prb",
+      "doi": "10.1103/9z82-vlky",
+      "journal_ref": "Phys. Rev. B 114, 144201 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/qbhv-yr3d",
+      "title": "Qudit-native framework for discrete time crystals",
+      "authors": [
+        "Wei-Guo Ma",
+        "Heng Fan",
+        "Shi-Xin Zhang"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We introduce a qudit-native framework for engineering rich and robust discrete time crystals (DTCs) by leveraging their internal multilevel structure. Unlike in qubit systems, qudit-based DTCs exhibit distinct dynamical mechanisms that arise only in multilevel systems, as supported by a dressed norm…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“framework”（理论框架）、“introduce”（提出）以及“dynamical mechanisms”（动力学机制）等词汇，侧重于概念构建与机制分析，而非具体的实验或数值模拟细节。；研究对象：离散时间晶体（DTCs），具体为基于多能级量子系统（qudit，即高维量子比特）构建的离散时间晶体体系。摘要未明确说明具体的物理材料或实验平台。",
+      "abstract_summary_zh": "该工作提出了一种基于qudit（多能级系统）的通用框架，用于构建丰富且鲁棒的离散时间晶体。研究发现，与传统的qubit（二能级系统）相比，qudit体系能够展现出仅存在于多能级系统中的独特动力学机制。",
+      "main_content_zh": "核心发现：该工作提出了一种基于qudit（多能级系统）的通用框架，用于构建丰富且鲁棒的离散时间晶体。研究发现，与传统的qubit（二能级系统）相比，qudit体系能够展现出仅存在于多能级系统中的独特动力学机制。；创新点：核心创新在于将离散时间晶体的工程化设计从二能级（qubit）推广到多能级（qudit）本征框架，并揭示了多能级系统中独有的、不同于qubit体系的动力学机制。摘要未突出说明其他方面的创新点。",
+      "method_zh": "摘要未明确说明具体的理论工具（如张量网络、平均场理论等）或数值方法。摘要仅提及了“dressed norm”（修饰范数）这一概念，暗示可能采用了某种解析或半解析的 dressed-state（修饰态）理论框架，但具体细节未展开。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "dynamics",
+        "dynamical systems",
+        "lattice effects",
+        "qudit-native",
+        "framework",
+        "discrete",
+        "time",
+        "crystals"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/qbhv-yr3d",
+      "abs_url": "http://link.aps.org/doi/10.1103/qbhv-yr3d",
+      "source": "prb",
+      "doi": "10.1103/qbhv-yr3d",
+      "journal_ref": "Phys. Rev. B 114, 144301 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/b4vc-jf1z",
+      "title": "Non-Hermitian jumps in $\\mathcal{PT}$-symmetric disordered systems",
+      "authors": [
+        "Yongqi Han",
+        "Ying Zhou",
+        "Kunkun Wang"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Yongqi Han, Ying Zhou, and Kunkun Wang Non-Hermitian jumps, manifested as abrupt wave-packet relocations arising from mode competition between spatially separated localized eigenmodes with different imaginary eigenenergies, constitute a unique dynamical phenomenon absent in Hermitian systems. These jumps are commonly thought to require s…",
+      "study_overview_zh": "研究类型：理论/计算文章。依据：摘要聚焦于非厄米跳跃的动力学机制与模式竞争，未提及实验手段，关键词如“局域本征模”“虚本征能量”表明为理论分析。；研究对象：PT对称无序系统中的非厄米跳跃现象——即波包在空间分离的局域本征模之间发生突然迁移的动力学行为。",
+      "abstract_summary_zh": "非厄米跳跃源于具有不同虚本征能量的空间分离局域模之间的模式竞争，是厄米系统中不存在的独特动力学现象；摘要进一步指出该现象通常被认为需要某种条件（原文截断，未完整给出）。",
+      "main_content_zh": "核心发现：非厄米跳跃源于具有不同虚本征能量的空间分离局域模之间的模式竞争，是厄米系统中不存在的独特动力学现象；摘要进一步指出该现象通常被认为需要某种条件（原文截断，未完整给出）。；创新点：摘要未突出说明，但可推断其新意在于将非厄米跳跃引入PT对称无序体系，并探讨其与局域模虚能量差异的关联。",
+      "method_zh": "摘要未明确说明具体理论框架或数值方法（如是否使用紧束缚模型、传输矩阵或含时演化模拟），仅给出概念性分析框架。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "dynamics",
+        "dynamical systems",
+        "lattice effects",
+        "jumps",
+        "non-hermitian",
+        "systems",
+        "mathcal",
+        "symmetric"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/b4vc-jf1z",
+      "abs_url": "http://link.aps.org/doi/10.1103/b4vc-jf1z",
+      "source": "prb",
+      "doi": "10.1103/b4vc-jf1z",
+      "journal_ref": "Phys. Rev. B 114, 144302 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/xsf5-n5l2",
+      "title": "Subkelvin magnetocaloric effect in the Gd-based Shastry-Sutherland magnets (${\\mathrm{Gd}}_{x}{\\mathrm{Lu}}_{1−x}$)${}_{2}{\\mathrm{Be}}_{2}{\\mathrm{GeO}}_{7}$ ($x=1$, 0.36) and comparison with ${\\mathrm{Yb}}_{2}{\\mathrm{Be}}_{2}{\\mathrm{GeO}}_{7}$",
+      "authors": [
+        "Andi Liu",
+        "Jin Zhou",
+        "Zhaoyi Li",
+        "Shu Guo",
+        "Ritao Huang",
+        "Zhenxing Wang",
+        "Zhongwen Ouyang",
+        "Langsheng Ling",
+        "Jinkui Zhao",
+        "Hanjie Guo",
+        "Zhaoming Tian"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Andi Liu, Jin Zhou, Zhaoyi Li, Shu Guo, Ritao Huang, Zhenxing Wang, Zhongwen Ouyang, Langsheng Ling, Jinkui Zhao, Hanjie Guo, and Zhaoming Tian Rare-earth-based frustrated magnets have attracted significant attention as excellent candidates for magnetic refrigeration operating at subkelvin temperatures. Herein we investigate the magnetic ground states and low-temperature magnetocaloric effect (MCE) of frustrated Shastry-Sutherland Gd2Be2GeO…",
+      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中出现“investigate”“magnetic ground states”“low-temperature magnetocaloric effect”等表述，且作者列表包含大量实验研究机构，推测为实验测量为主。；研究对象：稀土基Shastry-Sutherland晶格阻挫磁体 (GdₓLu₁₋ₓ)₂Be₂GeO₇（x=1, 0.36），以及用于对比的Yb₂Be₂GeO₇。研究其磁基态与亚开尔文温区的磁热效应（MCE）。",
+      "abstract_summary_zh": "摘要未明确给出具体数值结论，但指出该Gd基Shastry-Sutherland磁体在亚开尔文温区表现出优异的磁制冷潜力，其磁热效应性能与Yb₂Be₂GeO₇进行了对比。具体磁基态性质与熵变数值摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未明确给出具体数值结论，但指出该Gd基Shastry-Sutherland磁体在亚开尔文温区表现出优异的磁制冷潜力，其磁热效应性能与Yb₂Be₂GeO₇进行了对比。具体磁基态性质与熵变数值摘要未明确说明。；创新点：摘要未突出说明。仅提及对Gd基Shastry-Sutherland体系在亚开尔文温区磁热效应的系统研究，并与Yb基同构化合物进行对比，但具体新意（如首次报道、性能突破等）摘要中未明确。",
+      "method_zh": "摘要未明确说明具体实验手段，但结合研究内容可推断涉及低温磁化率、比热、磁热效应（等温磁熵变或绝热温变）测量，可能包含单晶或粉末样品的磁性表征。具体仪器与方法（如PPMS、SQUID等）摘要未明确说明。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "mathrm",
+        "subkelvin",
+        "magnetocaloric",
+        "effect",
+        "shastry-sutherland",
+        "magnets",
+        "geo"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/xsf5-n5l2",
+      "abs_url": "http://link.aps.org/doi/10.1103/xsf5-n5l2",
+      "source": "prb",
+      "doi": "10.1103/xsf5-n5l2",
+      "journal_ref": "Phys. Rev. B 114, 144404 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/y5tx-5vm7",
+      "title": "Magnetic criticality and magnetocaloric response in ${\\mathrm{MnBi}}_{2}{\\mathrm{Te}}_{4}$ and ${\\mathrm{MnBi}}_{4}{\\mathrm{Te}}_{7}$",
+      "authors": [
+        "Nazma Firdosh",
+        "Shreyashi Sinha",
+        "Sujit Manna"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Nazma Firdosh, Shreyashi Sinha, and Sujit Manna MnBi2Te4 and MnBi4Te7 are antiferromagnetic topological insulators belonging to the MnBi2nTe3n+1 series, where structural layering provides a natural route to tune magnetic interaction in van der Waals magnets. Despite extensive interest in their topological properties, how the insertion of Bi2Te3 q…",
+      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中提及作者团队（Firdosh, Sinha, Manna）及对材料磁性与磁热响应的研究，未出现计算或理论框架关键词。；研究对象：反铁磁拓扑绝缘体 MnBi₂Te₄ 和 MnBi₄Te₇，属于 MnBi₂ₙTe₃ₙ₊₁ 系列范德华磁性材料，重点研究其磁临界行为与磁热响应。",
+      "abstract_summary_zh": "摘要未完整给出（截断），但可确认论文关注 Bi₂Te₃ 层插入如何调控该系列材料的磁相互作用，并研究其磁临界性与磁热效应。具体结论摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出（截断），但可确认论文关注 Bi₂Te₃ 层插入如何调控该系列材料的磁相互作用，并研究其磁临界性与磁热效应。具体结论摘要未明确说明。；创新点：通过结构层状化（插入 Bi₂Te₃ 层）系统调控范德华磁性材料的磁相互作用，并关联磁临界行为与磁热响应，这在以往主要关注拓扑性质的研究中提供了新的视角。摘要未突出更具体的创新表述。",
+      "method_zh": "摘要未明确说明具体实验手段（如磁化率测量、比热测量等），仅提及研究磁临界性和磁热响应，推测涉及磁性测量，但具体方法需以原文为准。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "mathrm",
+        "magnetic",
+        "mnbi",
+        "topological",
+        "criticality",
+        "magnetocaloric",
+        "response"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/y5tx-5vm7",
+      "abs_url": "http://link.aps.org/doi/10.1103/y5tx-5vm7",
+      "source": "prb",
+      "doi": "10.1103/y5tx-5vm7",
+      "journal_ref": "Phys. Rev. B 114, 144405 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/qq37-26x6",
+      "title": "Magnetoelastoresistivity in FeSe",
+      "authors": [
+        "M. Wissmann",
+        "L. Fanfarillo",
+        "X.-C. Hong",
+        "S. Caprara",
+        "S. Aswartham",
+        "B. Büchner",
+        "C. Hess",
+        "G. Seibold",
+        "F. Caglieris"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): M. Wissmann, L. Fanfarillo, X.-C. Hong, S. Caprara, S. Aswartham, B. Büchner, C. Hess, G. Seibold, and F. Caglieris FeSe stands out among iron-based superconductors due to its extended nematic phase without the onset of long-range magnetic order. While strain-dependent electrical resistivity has been extensively explored to probe nematicity, its influence on magnetotransport properties remains less understood. In…",
+      "study_overview_zh": "研究类型：实验文章（结合理论分析）。判断依据：摘要中明确列出了实验测量（应变依赖的电阻率、磁输运）以及多位理论物理学家（Fanfarillo, Caprara, Seibold）作为共同作者，暗示实验与理论建模的协同。；研究对象：铁基超导体 FeSe（硒化铁）。具体物理现象是：向列相（nematic phase）与磁输运性质（磁电阻）之间的耦合关系，即“磁弹电阻效应”（magnetoelastoresistivity）。",
+      "abstract_summary_zh": "摘要未完整给出，但可明确的是：该工作揭示了 FeSe 中应变（弹性）对磁输运（磁电阻）的显著影响，即存在磁弹电阻效应，且该效应与其独特的向列相（无长程磁序）相关联。具体定量结论摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出，但可明确的是：该工作揭示了 FeSe 中应变（弹性）对磁输运（磁电阻）的显著影响，即存在磁弹电阻效应，且该效应与其独特的向列相（无长程磁序）相关联。具体定量结论摘要未明确说明。；创新点：摘要未突出说明。但可推断：以往研究多关注应变对电阻率的响应（探测向列性），而该工作将应变调控拓展到磁输运（磁电阻）领域，研究了向列相与磁输运的耦合，这在 FeSe 体系中是较少被探索的方向。",
+      "method_zh": "实验上：应变依赖的电阻率测量（用于探测向列性）以及磁输运（磁电阻）测量。理论上：结合了向列涨落或弹性和磁性的耦合模型进行分析（具体理论框架摘要未明确说明，但作者团队有强关联理论背景）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "superfluidity and superconductivity",
+        "fese",
+        "magnetoelastoresistivity",
+        "author",
+        "wissmann",
+        "fanfarillo",
+        "hong",
+        "caprara"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/qq37-26x6",
+      "abs_url": "http://link.aps.org/doi/10.1103/qq37-26x6",
+      "source": "prb",
+      "doi": "10.1103/qq37-26x6",
+      "journal_ref": "Phys. Rev. B 114, 144502 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/kpdq-r4l5",
+      "title": "Computational prediction of strontium carbide phases under compression",
+      "authors": [
+        "Nikita Rybin",
+        "Evgeny Moerman",
+        "Pranab Gain",
+        "Artem R. Oganov",
+        "Alexander Shapeev"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We systematically searched for all thermodynamically stable Sr-C compounds under pressure (up to 100 GPa) using the ab initio evolutionary crystal structure predictio…",
+      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中出现“*ab initio* evolutionary crystal structure prediction”（从头算进化晶体结构预测）等关键词。；研究对象：碳化锶（Sr-C）化合物体系。具体研究在高压（最高100 GPa）条件下，所有热力学稳定的锶-碳化合物的晶体结构及其相变行为。",
+      "abstract_summary_zh": "摘要未完整给出，但可确认：通过系统搜索，在0-100 GPa压力范围内预测了多种热力学稳定的Sr-C化合物相。具体的物相组成、化学计量比及高压下的结构转变细节，**摘要未明确说明**（因摘要截断）。",
+      "main_content_zh": "核心发现：摘要未完整给出，但可确认：通过系统搜索，在0-100 GPa压力范围内预测了多种热力学稳定的Sr-C化合物相。具体的物相组成、化学计量比及高压下的结构转变细节，**摘要未明确说明**（因摘要截断）。；创新点：首次对Sr-C二元体系在高压（至100 GPa）下的完整热力学稳定相图进行了系统性预测搜索。具体相较于以往研究的新颖之处（如发现新化学计量比、奇异成键方式等），**摘要未突出说明**（因摘要截断）。",
+      "method_zh": "采用基于第一性原理（从头算）的进化晶体结构预测方法（如USPEX或类似算法），结合密度泛函理论（DFT）进行能量计算和热力学稳定性评估。具体交换关联泛函类型（如PBE、PBEsol等）**摘要未明确说明**。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "structure",
+        "structural phase transitions",
+        "mechanical properties",
+        "defects",
+        "computational",
+        "prediction",
+        "strontium",
+        "carbide"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/kpdq-r4l5",
+      "abs_url": "http://link.aps.org/doi/10.1103/kpdq-r4l5",
+      "source": "prb",
+      "doi": "10.1103/kpdq-r4l5",
+      "journal_ref": "Phys. Rev. B 114, 154102 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/3lb4-pnvx",
+      "title": "Semiclassical thermoelectric transport in the disordered Dirac electron system ${\\mathrm{Ag}}_{2}\\mathrm{Te}$",
+      "authors": [
+        "Kentaro Kuga",
+        "Keisuke Hirata",
+        "Daiki Goto",
+        "Ryogo Ishihara",
+        "Masaharu Matsunami",
+        "Tsunehiro Takeuchi"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We investigated the thermoelectric effects of the Dirac electron system Ag2Te under magnetic field. Our analysis based on the Boltzmann semiclassical model associated the disorder with the unconventional magnetic field responses such as linear magnetoresistance, linear Nernst effect, steplike Nernst…",
+      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中明确提及“基于玻尔兹曼半经典模型的分析”（Our analysis based on the Boltzmann semiclassical model）。；研究对象：无序狄拉克电子系统 Ag₂Te（碲化银）在磁场下的热电输运性质。具体物理现象包括线性磁电阻、线性能斯特效应和阶梯状能斯特效应等。",
+      "abstract_summary_zh": "该工作通过半经典玻尔兹曼理论，将 Ag₂Te 中的无序效应与实验中观测到的非常规磁场响应（如线性磁电阻和线性能斯特效应）联系起来，从而解释了该体系在磁场下的热电输运行为。",
+      "main_content_zh": "核心发现：该工作通过半经典玻尔兹曼理论，将 Ag₂Te 中的无序效应与实验中观测到的非常规磁场响应（如线性磁电阻和线性能斯特效应）联系起来，从而解释了该体系在磁场下的热电输运行为。；创新点：摘要未突出说明。但可推断其新意在于将无序机制与半经典输运理论结合，用于统一解释 Ag₂Te 中多个非常规的磁场响应现象（磁电阻与能斯特效应的线性行为）。",
+      "method_zh": "理论框架为玻尔兹曼半经典输运模型（Boltzmann semiclassical transport model），并引入了无序（disorder）效应来处理磁场下的输运问题。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "inhomogeneous",
+        "disordered",
+        "and partially ordered systems",
+        "semiclassical",
+        "thermoelectric",
+        "dirac",
+        "electron",
+        "system"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/3lb4-pnvx",
+      "abs_url": "http://link.aps.org/doi/10.1103/3lb4-pnvx",
+      "source": "prb",
+      "doi": "10.1103/3lb4-pnvx",
+      "journal_ref": "Phys. Rev. B 114, 154203 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/c1sc-f3sv",
+      "title": "Dynamic interplay between magnons and phonons in photoexcited antiferromagnetic ${\\mathrm{Co}}_{3}{\\mathrm{O}}_{4}$",
+      "authors": [
+        "Huifeng Zhang",
+        "Kang Wang",
+        "Kelvin HL Zhang",
+        "Ye Yang"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Here we employ transient absorption (TA) spectroscopy to investigate the nonequilibrium spin dynamics in antif…",
+      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中明确提及“employ transient absorption (TA) spectroscopy”（采用瞬态吸收光谱），属于超快光学实验手段。；研究对象：反铁磁材料 Co₃O₄（四氧化三钴）。具体物理现象为光激发（photoexcited）状态下，该材料中磁振子（magnons）与声子（phonons）之间的动态相互作用（dynamic interplay），即非平衡态的自旋-晶格耦合动力学。",
+      "abstract_summary_zh": "摘要未完整给出。根据标题和摘要开头，核心发现应为：通过瞬态吸收光谱观测到光激发后反铁磁 Co₃O₄ 中磁振子与声子之间存在显著的动态耦合或能量交换过程。具体定量结论（如耦合强度、弛豫时间等）摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出。根据标题和摘要开头，核心发现应为：通过瞬态吸收光谱观测到光激发后反铁磁 Co₃O₄ 中磁振子与声子之间存在显著的动态耦合或能量交换过程。具体定量结论（如耦合强度、弛豫时间等）摘要未明确说明。；创新点：摘要未突出说明。但结合标题，其新颖性可能在于：首次在 Co₃O₄ 这一特定反铁磁体系中，利用时间分辨光谱直接观测磁振子-声子相互作用的动态过程，而非仅依赖静态或平衡态测量。具体创新细节需阅读全文确认。",
+      "method_zh": "瞬态吸收光谱（TA spectroscopy）。这是一种超快泵浦-探测技术，用于追踪光激发后的非平衡载流子、自旋和晶格动力学。摘要未提及是否结合了其他理论计算或磁光表征手段。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "mathrm",
+        "dynamic",
+        "interplay",
+        "between",
+        "magnons",
+        "phonons",
+        "photoexcited"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/c1sc-f3sv",
+      "abs_url": "http://link.aps.org/doi/10.1103/c1sc-f3sv",
+      "source": "prb",
+      "doi": "10.1103/c1sc-f3sv",
+      "journal_ref": "Phys. Rev. B 114, 154404 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/mw26-r4sv",
+      "title": "Competing Ru magnetic orders in the spin-1 $XY$ pyrochlore ${\\mathrm{Nd}}_{2}{\\mathrm{Ru}}_{2}{\\mathrm{O}}_{7}$",
+      "authors": [
+        "Poonam Yadav",
+        "Jae Hyuck Lee",
+        "Heung-Sik Kim",
+        "Dongjoon Song",
+        "A. Dominic Fortes",
+        "Changyoung Kim",
+        "Sungkyun Choi"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Poonam Yadav, Jae Hyuck Lee, Heung-Sik Kim, Dongjoon Song, A. Dominic Fortes, Changyoung Kim, and Sungkyun Choi Magnetic pyrochlore oxides exhibit various unconventional electronic phases and excitations due to geometric frustration. Recently, a collective magnetic excitation was reported in Raman spectroscopy on a pyrochlore ruthenate Nd2Ru2O7. However, its origin remains unclear as the Ru magnetic ground st…",
+      "study_overview_zh": "研究类型：实验文章（结合了中子衍射与理论计算/模拟）。判断依据：摘要提及“Raman spectroscopy”、“collective magnetic excitation”等实验现象，且作者列表包含同步辐射与中子源科学家，摘要中“Ru magnetic ground st…”暗示对基态的确定需结合实验与理论。；研究对象：烧绿石结构钌酸盐 Nd₂Ru₂O₇ 中 Ru 离子的竞争性磁有序态，以及与之相关的集体磁激发（Raman 光谱中观测到）的起源。属于几何阻挫磁性氧化物体系。",
+      "abstract_summary_zh": "摘要未明确给出最终结论，但核心问题是：Raman 光谱中观测到的集体磁激发源于何种 Ru 磁基态（竞争中的不同磁有序之一），该基态尚未被明确确定。",
+      "main_content_zh": "核心发现：摘要未明确给出最终结论，但核心问题是：Raman 光谱中观测到的集体磁激发源于何种 Ru 磁基态（竞争中的不同磁有序之一），该基态尚未被明确确定。；创新点：摘要未突出说明。但可推断：首次尝试将 Raman 光谱中的集体磁激发与 Ru 亚晶格的竞争磁基态联系起来，并利用中子衍射等手段甄别不同磁有序构型。",
+      "method_zh": "摘要明确提及：Raman 光谱（用于观测集体磁激发）；中子衍射（作者含 A. Dominic Fortes，暗示使用中子散射确定磁结构）；可能结合了第一性原理或模型计算（作者含 Heung-Sik Kim，从事 DFT 计算）。具体计算细节（如 DFT+U 或 spin-wave 模拟）摘要未明确说明。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "magnetic",
+        "pyrochlore",
+        "mathrm",
+        "kim",
+        "competing",
+        "orders",
+        "spin-1"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/mw26-r4sv",
+      "abs_url": "http://link.aps.org/doi/10.1103/mw26-r4sv",
+      "source": "prb",
+      "doi": "10.1103/mw26-r4sv",
+      "journal_ref": "Phys. Rev. B 114, 154405 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/sqdz-4x29",
+      "title": "Ultrafast spin dynamics and low Gilbert damping in ferrimagnetic ${\\mathrm{Mn}}_{4}\\mathrm{N}$ films",
+      "authors": [
+        "Zhuang Ji",
+        "Qinwen Lu",
+        "Zhen Wang",
+        "Minghui Gu",
+        "Dongxiao Yang",
+        "Zhigao Sheng",
+        "Jiandong Guo",
+        "Meng Meng"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Here we investigate the ultrafast magnetization and lattice dynamics in ferrimagnetic antiperovskite Mn4N epitaxial thin films on Sr…",
+      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中明确提到“Here we investigate...”，且研究对象为“epitaxial thin films”（外延薄膜），属于实验生长与表征范畴。；研究对象：铁磁性反钙钛矿结构Mn₄N外延薄膜（生长于Sr...衬底上）的超快磁化动力学与晶格动力学，以及其吉尔伯特阻尼特性。",
+      "abstract_summary_zh": "摘要未完整给出具体数值或最终结论，但研究主题指向在Mn₄N薄膜中观测到超快自旋动力学行为，并发现其具有较低的吉尔伯特阻尼系数。",
+      "main_content_zh": "核心发现：摘要未完整给出具体数值或最终结论，但研究主题指向在Mn₄N薄膜中观测到超快自旋动力学行为，并发现其具有较低的吉尔伯特阻尼系数。；创新点：摘要未突出说明。但可推测，针对Mn₄N这一铁磁反钙钛矿材料体系开展超快自旋动力学与低阻尼特性的联合研究，可能为新型自旋电子学材料提供新视角。具体创新点需结合全文判断。",
+      "method_zh": "超快光学泵浦-探测技术（用于测量超快磁化与晶格动力学），结合铁磁共振（FMR）或类似手段测量吉尔伯特阻尼。薄膜通过外延生长方法制备（如分子束外延或脉冲激光沉积，摘要未明确具体方法）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "magnetism",
+        "ultrafast",
+        "dynamics",
+        "ferrimagnetic",
+        "mathrm",
+        "films",
+        "spin",
+        "low"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/sqdz-4x29",
+      "abs_url": "http://link.aps.org/doi/10.1103/sqdz-4x29",
+      "source": "prb",
+      "doi": "10.1103/sqdz-4x29",
+      "journal_ref": "Phys. Rev. B 114, 154406 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/b97g-cjf8",
+      "title": "Superconductivity of magnonic Cooper pairs in the infinite-$U$ triangular lattice",
+      "authors": [
+        "Hantian Zhu",
+        "Yixin Zhang",
+        "Shang-Shun Zhang",
+        "Yang Zhang",
+        "Cristian D. Batista"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We demonstrate that the infinite-U triangular-lattice Hubbard model supports a superconducting state built from tightly bound Cooper pairs composed of two holes and one magnon (2h1m). Building on the seminal prediction of repulsively bound 2h1m states, we show that next-nearest-neighbor hopping t2 c…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“We demonstrate”（理论论证）、“Hubbard model”（理论模型）以及“seminal prediction”（基于理论预言）等表述，属于强关联电子系统的理论推导。；研究对象：无限U三角晶格Hubbard模型中的超导态。具体物理现象为一种由“两个空穴+一个磁振子”（2h1m）组成的紧密束缚库珀对所构成的超导态。",
+      "abstract_summary_zh": "该工作证明，在无限U三角晶格Hubbard模型中，可以存在由两个空穴和一个磁振子组成的紧密束缚库珀对（2h1m）所构成的超导态。",
+      "main_content_zh": "核心发现：该工作证明，在无限U三角晶格Hubbard模型中，可以存在由两个空穴和一个磁振子组成的紧密束缚库珀对（2h1m）所构成的超导态。；创新点：将先前预言的2h1m排斥性束缚态（非超导的复合粒子）进一步发展为可形成超导配对的载流子，从而提出一种全新的超导配对机制。摘要未突出说明其与实验的关联或具体材料对应。",
+      "method_zh": "理论分析。基于对三角晶格Hubbard模型在无限库仑排斥（infinite-U）极限下的严格或解析处理，并建立在先前关于2h1m排斥性束缚态预言的框架之上。摘要中未提及具体的数值方法（如DMRG、QMC等）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "cooper",
+        "pairs",
+        "bound",
+        "h1m",
+        "superconductivity",
+        "magnonic",
+        "infinite-"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/b97g-cjf8",
+      "abs_url": "http://link.aps.org/doi/10.1103/b97g-cjf8",
+      "source": "prb",
+      "doi": "10.1103/b97g-cjf8",
+      "journal_ref": "Phys. Rev. B 114, 165107 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/c8vq-kz85",
+      "title": "Variational method for interacting surfaces with higher-form global symmetries",
+      "authors": [
+        "Kiyoharu Kawana"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We develop a variational method for interacting surface systems with higher-form global symmetries. As a natural extension of the conventional second-quantized Hamiltonian of interacting bosons, we explicitly construct a second-quantized Hamiltonian formulated in terms of a closed surface operator ϕ…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提及“变分方法”（variational method）、“二次量子化哈密顿量”（second-quantized Hamiltonian）等理论物理核心概念，属于形式理论推导。；研究对象：具有高阶形式全局对称性（higher-form global symmetries）的相互作用表面体系（interacting surface systems）。摘要未明确说明具体材料或化合物，而是聚焦于这类对称性约束下的量子场论/多体系统。",
+      "abstract_summary_zh": "摘要未明确说明具体的物理结论或发现，仅指出该工作发展了一种针对此类体系的变分方法。核心结果（如基态性质、相图或对称性实现方式）在摘要中未给出。",
+      "main_content_zh": "核心发现：摘要未明确说明具体的物理结论或发现，仅指出该工作发展了一种针对此类体系的变分方法。核心结果（如基态性质、相图或对称性实现方式）在摘要中未给出。；创新点：将变分法系统性地推广到具有高阶形式全局对称性的相互作用表面体系，并给出了基于闭合表面算符的二次量子化哈密顿量的显式构造。这一形式化框架是对传统玻色子二次量子化方法的自然延伸，摘要未突出说明其与已有工作的具体差异。",
+      "method_zh": "变分法（variational method）。具体而言，作者将传统相互作用玻色子的二次量子化哈密顿量自然推广，显式构造了一个以闭合表面算符 φ 表达的二次量子化哈密顿量，并以此为基础进行变分处理。摘要未提及数值计算或具体模型求解细节。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "surface physics",
+        "nanoscale physics",
+        "low-dimensional systems",
+        "interacting",
+        "variational",
+        "higher-form",
+        "global",
+        "symmetries"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/c8vq-kz85",
+      "abs_url": "http://link.aps.org/doi/10.1103/c8vq-kz85",
+      "source": "prb",
+      "doi": "10.1103/c8vq-kz85",
+      "journal_ref": "Phys. Rev. B 114, 165405 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/91gg-t2kv",
+      "title": "Reentrant behavior and possible $2/3$ magnetization plateau on the double-trillium langbeinite ${\\mathrm{K}}_{2}{\\mathrm{Ni}}_{2}{({\\mathrm{SO}}_{4})}_{3}$",
+      "authors": [
+        "Matías G. Gonzalez",
+        "Yurii Skourski",
+        "Johannes Reuther",
+        "Ivica Živković"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Matías G. Gonzalez, Yurii Skourski, Johannes Reuther, and Ivica Živković K2Ni2(SO4)3 is a member of the langbeinite family, consisting of two intertwined S=1 trillium lattices, of which one is strongly coupled (strong-TL) and the other is weakly coupled (weak-TL). Further intertrillium interactions give rise to a highly frustrated Heisenberg Hamiltonian. Despite ordering…",
+      "study_overview_zh": "研究类型：混合类型（实验 + 理论计算）。判断依据：摘要提及作者使用磁化测量（实验，涉及Yurii Skourski等强磁场实验者）并结合数值计算（Johannes Reuther为理论物理学家，擅长张量网络/自旋波方法），但摘要未明确列出具体实验手段与计算方法名称。；研究对象：K₂Ni₂(SO₄)₃——一种双三叶草（double-trillium）晶格结构的langbeinite家族化合物，包含两个交织的S=1三叶草子晶格（强耦合TL与弱耦合TL），其Heisenberg哈密顿量具有高度阻挫特性。",
+      "abstract_summary_zh": "该材料表现出**重返（reentrant）行为**，并可能存在**2/3磁化平台**。摘要未明确说明重返行为的具体温度/磁场区间或平台出现的磁场范围。",
+      "main_content_zh": "核心发现：该材料表现出**重返（reentrant）行为**，并可能存在**2/3磁化平台**。摘要未明确说明重返行为的具体温度/磁场区间或平台出现的磁场范围。；创新点：首次在langbeinite家族的双三叶草晶格体系中报道重返磁行为与可能的2/3磁化平台，该平台分数值在S=1阻挫体系中较为罕见。摘要未突出说明与已有langbeinite研究的定量对比。",
+      "method_zh": "摘要未明确说明具体实验手段（如脉冲磁场磁化、比热等）与理论方法（如DMRG、自旋波、张量网络等）。仅能确认涉及磁化测量（强磁场实验）与理论建模（阻挫Heisenberg模型）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "mathrm",
+        "langbeinite",
+        "coupled",
+        "reentrant",
+        "behavior",
+        "possible",
+        "magnetization"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/91gg-t2kv",
+      "abs_url": "http://link.aps.org/doi/10.1103/91gg-t2kv",
+      "source": "prb",
+      "doi": "10.1103/91gg-t2kv",
+      "journal_ref": "Phys. Rev. B 114, 175105 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/rwzq-lfty",
+      "title": "Rigorous foundations of the effective mass approximation: Analyticity and symmetry of band extrema",
+      "authors": [
+        "Jakob Kjaerulff Svaneborg"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "The effective mass approximation is widely used across models of carrier transport, optical response, and excitons in semiconductors and insulators, but its validity hinges on the assumption that the band dispersion En(k) at the relevant extremum is analytic. We prove that analyticity holds at any n…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提及“We prove that...”（我们证明了……），核心内容为数学严格性证明，属于凝聚态理论物理范畴。；研究对象：有效质量近似（Effective Mass Approximation）的数学基础。具体针对半导体和绝缘体中能带极值（band extrema）附近的能带色散关系 Eₙ(k) 的解析性质（analyticity）与对称性。",
+      "abstract_summary_zh": "论文严格证明了在能带极值处，能带色散关系 Eₙ(k) 的解析性（analyticity）在特定条件下成立，从而为有效质量近似提供了坚实的数学基础。摘要未明确说明该证明的具体适用条件或例外情况。",
+      "main_content_zh": "核心发现：论文严格证明了在能带极值处，能带色散关系 Eₙ(k) 的解析性（analyticity）在特定条件下成立，从而为有效质量近似提供了坚实的数学基础。摘要未明确说明该证明的具体适用条件或例外情况。；创新点：为广泛使用的有效质量近似提供了严格的数学基础（rigorous foundations）。此前该近似的有效性依赖于能带极值处色散关系解析性的假设，而本工作通过严格的证明将该假设提升为可验证的定理。摘要未突出说明其他方面的创新。",
+      "method_zh": "数学分析与证明。摘要未提及具体的数值计算方法或实验手段，而是采用严格的数学推导来论证能带极值处波函数的解析性质及其与晶体对称性的关系。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "effective",
+        "mass",
+        "approximation",
+        "analyticity",
+        "band",
+        "rigorous",
+        "foundations"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/rwzq-lfty",
+      "abs_url": "http://link.aps.org/doi/10.1103/rwzq-lfty",
+      "source": "prb",
+      "doi": "10.1103/rwzq-lfty",
+      "journal_ref": "Phys. Rev. B 114, 175106 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/8b8c-2wm3",
+      "title": "Pressure-induced electronic delocalization and superconductivity in ${\\mathrm{GaNb}}_{4}{\\mathrm{Se}}_{8}$",
+      "authors": [
+        "Yuejian Wang",
+        "Zhongyan Wu",
+        "Bhupendra K C",
+        "Dongzhou Zhang",
+        "Lin Wang",
+        "Sanjay V. Khare",
+        "Lilian Prodan",
+        "Vladimir Tsurkan"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "Author(s): Yuejian Wang, Zhongyan Wu, Bhupendra K C, Dongzhou Zhang, Lin Wang, Sanjay V. Khare, Lilian Prodan, and Vladimir Tsurkan Understanding how electronic transport evolves from localized to itinerant regimes in correlated cluster solids remains an important challenge in condensed-matter physics. Here, we investigate the pressure-dependent transport properties of the lacunar spinel GaNb4Se8, a cluster Mott insulator at amb…",
+      "study_overview_zh": "研究类型：实验文章（结合了高压输运测量与理论计算）。判断依据：摘要关键词“investigate the pressure-dependent transport properties”（实验测量）以及“Sanjay V. Khare”（理论合作者，暗示可能包含计算支持）。；研究对象：lacunar 尖晶石（缺位尖晶石）化合物 GaNb4Se8，一种在环境压力下表现为团簇 Mott 绝缘体的材料。研究聚焦于压力诱导下该体系中电子从局域（绝缘）到巡游（金属/超导）行为的转变。",
+      "abstract_summary_zh": "在压力作用下，GaNb4Se8 中的电子发生离域化（delocalization），并最终在高压下诱导出超导电性。该工作揭示了该团簇 Mott 绝缘体中电子输运从局域到巡游的演化路径。",
+      "main_content_zh": "核心发现：在压力作用下，GaNb4Se8 中的电子发生离域化（delocalization），并最终在高压下诱导出超导电性。该工作揭示了该团簇 Mott 绝缘体中电子输运从局域到巡游的演化路径。；创新点：摘要未突出说明。其核心意义在于对“相关团簇固体”（correlated cluster solids）中压力调控电子离域化这一普遍挑战的探索，但具体区别于以往工作的新意（如是否首次在该材料中观测到超导）在摘要中未明确强调。",
+      "method_zh": "高压下的电输运性质测量（用于追踪电阻随压力的变化，探测金属化和超导转变）。摘要未明确说明是否使用金刚石对顶砧（DAC）或具体测量温度范围，但“高压输运”是核心手段。摘要提及理论合作者，但未明确说明具体计算方法（如 DFT+U 等）。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "electronic",
+        "mathrm",
+        "wang",
+        "transport",
+        "cluster",
+        "pressure-induced",
+        "delocalization"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/8b8c-2wm3",
+      "abs_url": "http://link.aps.org/doi/10.1103/8b8c-2wm3",
+      "source": "prb",
+      "doi": "10.1103/8b8c-2wm3",
+      "journal_ref": "Phys. Rev. B 114, 175107 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/d775-mmsy",
+      "title": "Machine-learned potential for fission gas diffusion in uranium oxide nuclear fuels",
+      "authors": [
+        "Audrey R. Miles",
+        "Bartomeu Monserrat",
+        "Sarah C. Finkeldei"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We report a machine-learned interatomic potential for uranium dioxide with xenon gas, as well as a machine-learned potential for uranium dioxide. Training datasets were constructed by leveraging a combination of density functional theory calculations with a Hubbard U correction and molecular dynamic…",
+      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提及“machine-learned interatomic potential”（机器学习原子间势）、“density functional theory calculations”（密度泛函理论计算）以及“molecular dynamic…（分子动力学）”，属于典型的计算材料学/计算物理研究。；研究对象：二氧化铀（UO₂）核燃料中裂变气体（氙，Xe）的扩散行为。具体研究体系为含氙气体的二氧化铀材料，物理现象为裂变气体在核燃料中的扩散。",
+      "abstract_summary_zh": "摘要未明确说明具体的物理结论或发现，仅报告了开发了两种机器学习势函数（一种针对含氙的UO₂，一种针对纯UO₂）。核心物理结果（如扩散系数、迁移能垒等）摘要未提及。",
+      "main_content_zh": "核心发现：摘要未明确说明具体的物理结论或发现，仅报告了开发了两种机器学习势函数（一种针对含氙的UO₂，一种针对纯UO₂）。核心物理结果（如扩散系数、迁移能垒等）摘要未提及。；创新点：开发了专门针对含裂变气体（氙）的二氧化铀体系的机器学习势函数，这相较于传统经验势或纯DFT计算，有望在保持精度的同时大幅提升分子动力学模拟的效率与规模。摘要未突出说明其他创新点。",
+      "method_zh": "机器学习原子间势（machine-learned interatomic potential）的构建与训练。训练数据集通过密度泛函理论（DFT）加Hubbard U修正（DFT+U）计算生成，并结合分子动力学（molecular dynamics，摘要中截断）方法使用该势函数进行模拟。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "machine-learned",
+        "potential",
+        "uranium",
+        "gas",
+        "dioxide",
+        "fission",
+        "diffusion"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/d775-mmsy",
+      "abs_url": "http://link.aps.org/doi/10.1103/d775-mmsy",
+      "source": "prb",
+      "doi": "10.1103/d775-mmsy",
+      "journal_ref": "Phys. Rev. B 114, 175108 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/fknf-gr8l",
+      "title": "Fermion condensation in a generalized Hatsugai-Kohmoto model with momentum-mixing Landau interactions",
+      "authors": [
+        "Jan Heinrich",
+        "Andreas Rückriegel",
+        "Peter Kopietz"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "The Hatsugai-Kohmoto (HK) model is an exactly solvable electronic lattice model where the interaction between electrons with opposite spin is diagonal in momentum space. We generalize the HK model by introducing momentum-mixing Landau interactions. Within a self-consistent mean-field analysis we fin…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提及“自洽平均场分析”（self-consistent mean-field analysis），属于理论计算框架。；研究对象：广义Hatsugai-Kohmoto (HK) 模型。该模型是一个动量空间中对角化的可精确求解电子格点模型，本文引入了动量混合的朗道相互作用（Landau interactions）对其进行推广，研究其费米子凝聚（fermion condensation）行为。",
+      "abstract_summary_zh": "摘要未完整给出（原文被截断），但根据现有信息，该工作通过自洽平均场分析，研究了在引入动量混合朗道相互作用后，广义HK模型中费米子凝聚的发生条件或相变行为。具体结论摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出（原文被截断），但根据现有信息，该工作通过自洽平均场分析，研究了在引入动量混合朗道相互作用后，广义HK模型中费米子凝聚的发生条件或相变行为。具体结论摘要未明确说明。；创新点：将原本仅在动量空间对角化的HK模型推广至包含动量混合（即非对角）的朗道相互作用，从而在保持模型可解性的前提下，探索更丰富的关联效应和费米子凝聚机制。摘要未突出说明更多细节。",
+      "method_zh": "自洽平均场分析（self-consistent mean-field analysis）。基于推广的HK模型哈密顿量，在动量空间中处理包含自旋翻转或动量转移的朗道相互作用项。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "model",
+        "hatsugai-kohmoto",
+        "momentum-mixing",
+        "landau",
+        "interactions",
+        "fermion",
+        "condensation"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/fknf-gr8l",
+      "abs_url": "http://link.aps.org/doi/10.1103/fknf-gr8l",
+      "source": "prb",
+      "doi": "10.1103/fknf-gr8l",
+      "journal_ref": "Phys. Rev. B 114, 185105 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/skxr-hb16",
+      "title": "Sign of the Rashba parameter in image-potential states",
+      "authors": [
+        "Fabian Schöttke",
+        "Kaishu Kawaguchi",
+        "Kenta Kuroda",
+        "Peter Krüger",
+        "Thorsten Deilmann",
+        "Ayumi Harasawa",
+        "Shuntaro Tani",
+        "Yohei Kobayashi",
+        "Takeshi Kondo",
+        "Markus Donath"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "The Rashba effect in surface states at high-Z materials is related to both the strong spin-orbit interaction in heavy atoms and the orbital angular momentum arisin…",
+      "study_overview_zh": "研究类型：理论/计算文章（判断依据：摘要中提及“Rashba parameter”的符号（Sign）问题，这通常涉及对电子能带结构或波函数相位的理论分析与第一性原理计算，而非直接的实验测量。）；研究对象：高原子序数（high-Z）材料表面的**图像势态（image-potential states）** 中的**Rashba效应**。具体关注的是Rashba参数（自旋轨道耦合引起的能带劈裂强度与符号）在该类表面态中的表现。",
+      "abstract_summary_zh": "摘要未完整给出，但根据标题和片段可推断：论文揭示了在图像势态中，Rashba参数的**符号**（即自旋劈裂的方向或手性）与表面态（如 Shockley 态）中的符号可能不同，且其来源与高Z原子中的强自旋轨道耦合及**轨道角动量**的贡献密切相关。具体结论需待摘要补全。",
+      "main_content_zh": "核心发现：摘要未完整给出，但根据标题和片段可推断：论文揭示了在图像势态中，Rashba参数的**符号**（即自旋劈裂的方向或手性）与表面态（如 Shockley 态）中的符号可能不同，且其来源与高Z原子中的强自旋轨道耦合及**轨道角动量**的贡献密切相关。具体结论需待摘要补全。；创新点：摘要未突出说明。但根据标题推断，创新点可能在于：此前对Rashba效应的研究多集中于表面态（如Au(111)的Shockley态），而本工作专门针对**图像势态**这一不同物理起源的电子态，系统分析了其Rashba参数的符号规律，并指出其与原子轨道角动量耦合的独特关系，从而修正或补充了以往对Rashba效应符号的普遍认知。",
+      "method_zh": "摘要未明确说明具体方法。但鉴于研究对象为表面电子态和自旋轨道耦合，推测可能采用**密度泛函理论（DFT）** 结合**自旋轨道耦合（SOC）** 的**第一性原理计算**，或基于**k·p微扰理论**和**群论分析**来解析Rashba参数的符号。具体手段（如是否使用GW修正、Wannier函数插值等）摘要未提及。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "electronic structure and strongly correlated systems",
+        "rashba",
+        "states",
+        "sign",
+        "parameter",
+        "image-potential",
+        "effect",
+        "surface"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/skxr-hb16",
+      "abs_url": "http://link.aps.org/doi/10.1103/skxr-hb16",
+      "source": "prb",
+      "doi": "10.1103/skxr-hb16",
+      "journal_ref": "Phys. Rev. B 114, 185106 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/82bg-5mt2",
+      "title": "Incipient ferroelectric behavior and structural phase transitions in two-dimensional layered ${\\mathrm{TlGaS}}_{2}$",
+      "authors": [
+        "A. D. Molchanova",
+        "L. H. Yin",
+        "L. P. Gao",
+        "W. H. Song",
+        "Y. P. Sun",
+        "K. R. Allahverdiyev",
+        "M. N. Popova"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "The coexistence of out-of-plane and in-plane electric polarization is rare in two-dimensional (2D) ferroelectric materials, yet the two configurations offer distinct advantages for ferroelectric-based devices. Here, we report the coexistence of in-plane and out-of-plane incipient ferroelectricity, a…",
+      "study_overview_zh": "研究类型：实验文章（摘要提及“we report”，且涉及材料制备与表征，但未明确给出具体实验手段关键词，判断为实验为主）。；研究对象：二维层状材料 TlGaS₂（铊镓硫），具体关注其面内与面外电极化共存行为，以及结构相变与“初期铁电性”（incipient ferroelectricity）。",
+      "abstract_summary_zh": "在二维层状 TlGaS₂ 中实现了面内与面外初期铁电性的共存，这是一种在二维铁电材料中罕见的极化构型组合。",
+      "main_content_zh": "核心发现：在二维层状 TlGaS₂ 中实现了面内与面外初期铁电性的共存，这是一种在二维铁电材料中罕见的极化构型组合。；创新点：首次在二维层状材料 TlGaS₂ 中报道面内与面外初期铁电性的共存，为二维铁电器件中不同极化方向的应用提供了新材料平台。摘要未突出说明其他创新点。",
+      "method_zh": "摘要未明确说明具体实验手段（如压电力显微镜、二次谐波、介电测量等）或计算方法，仅提及“报告”该现象。具体表征与测量技术需参考全文。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "surface physics",
+        "nanoscale physics",
+        "low-dimensional systems",
+        "incipient",
+        "ferroelectric",
+        "two-dimensional",
+        "coexistence",
+        "out-of-plane"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/82bg-5mt2",
+      "abs_url": "http://link.aps.org/doi/10.1103/82bg-5mt2",
+      "source": "prb",
+      "doi": "10.1103/82bg-5mt2",
+      "journal_ref": "Phys. Rev. B 114, 185408 (2026)"
+    },
+    {
+      "arxiv_id": "PRB:10.1103/r1gj-g99c",
+      "title": "Imprints of information scrambling on eigenstates of a quantum chaotic system",
+      "authors": [
+        "Bikram Pain",
+        "Ratul Thakur",
+        "Sthitadhi Roy"
+      ],
+      "published": "2026-09-04T10:00:00+00:00",
+      "updated": "2026-09-04T10:00:00+00:00",
+      "primary_category": "prb",
+      "categories": [
+        "prb"
+      ],
+      "abstract": "We address this question by identifying statistical correlations among sets of minimally four eigenstates that pr…",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要关键词为“identifying statistical correlations”（识别统计关联）、“eigenstates”（本征态），属于量子混沌与信息 scrambling 的理论研究范畴，未提及实验或数值模拟细节。；研究对象：量子混沌系统（quantum chaotic system）的本征态，具体关注信息 scrambling（信息扰乱/量子信息在多体系统中的扩散）在本征态结构上留下的印记。摘要未明确指定具体材料或哈密顿量模型。",
+      "abstract_summary_zh": "摘要未完整给出，但可推断：该工作发现信息 scrambling 的痕迹体现在**至少四个本征态**之间的统计关联中（而非通常的两体或单体关联），即 scrambling 的印记需要多本征态关联才能被捕捉。",
+      "main_content_zh": "核心发现：摘要未完整给出，但可推断：该工作发现信息 scrambling 的痕迹体现在**至少四个本征态**之间的统计关联中（而非通常的两体或单体关联），即 scrambling 的印记需要多本征态关联才能被捕捉。；创新点：提出并识别了**最少四个本征态**之间的统计关联作为信息 scrambling 的探针，突破了以往通常关注两体或单体关联的框架。摘要未突出说明其他创新点。",
+      "method_zh": "摘要未明确说明具体理论框架（如随机矩阵理论、全息对偶、或具体模型计算）。仅提及“statistical correlations among sets of minimally four eigenstates”，暗示采用本征态统计关联分析，但具体技术细节（如是否使用数值对角化、解析近似等）摘要未明确说明。",
+      "summary_mode": "llm-deepseek",
+      "keywords": [
+        "dynamics",
+        "dynamical systems",
+        "lattice effects",
+        "eigenstates",
+        "imprints",
+        "information",
+        "scrambling",
+        "quantum"
+      ],
+      "pdf_url": "http://link.aps.org/doi/10.1103/r1gj-g99c",
+      "abs_url": "http://link.aps.org/doi/10.1103/r1gj-g99c",
+      "source": "prb",
+      "doi": "10.1103/r1gj-g99c",
+      "journal_ref": "Phys. Rev. B 114, L140302 (2026)"
+    },
     {
       "arxiv_id": "PRB:10.1103/ykcp-vs74",
       "title": "Vacancy-driven electronic reconstruction in monolayer ${\\mathrm{PtSe}}_{2}$: Formation thermodynamics and charge states",
@@ -484,10 +1403,10 @@
         "prb"
       ],
       "abstract": "Author(s): Xinwen Gai, Jingang Wang, and Tianxing Ma Layered transition metal dichalcogenides are an important platform for two-dimensional materials, where the inevitable intrinsic defects provide new degrees of freedom for tuning their physical properties. Based on first-principles calculations, this work systematically investigates the formation en…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提及“基于第一性原理计算”（Based on first-principles calculations）。；研究对象：单层二硫化铂（monolayer ${\\mathrm{PtSe}}_{2}$）中的空位缺陷及其诱导的电子结构重构。具体关注空位的形成热力学和电荷态。",
-      "abstract_summary_zh": "摘要未完整给出，但根据已提供部分，该工作系统研究了单层PtSe₂中固有缺陷（空位）的形成能及其对物理性质的调控作用，揭示了空位驱动的电子重构机制。更具体的结论（如具体缺陷类型、能级位置等）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出，但根据已提供部分，该工作系统研究了单层PtSe₂中固有缺陷（空位）的形成能及其对物理性质的调控作用，揭示了空位驱动的电子重构机制。更具体的结论（如具体缺陷类型、能级位置等）摘要未明确说明。；创新点：摘要未突出说明。但从摘要开头可推断，其创新性在于系统性地从热力学和电荷态角度研究单层PtSe₂中空位缺陷的电子重构效应，为二维过渡金属硫族化合物中缺陷工程调控物性提供了理论依据。更具体的创新点摘要未明确说明。",
-      "method_zh": "第一性原理计算（first-principles calculations）。摘要未明确说明具体泛函（如PBE、HSE06等）或软件包，因此无法进一步细化。",
+      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提到“Based on first-principles calculations”（基于第一性原理计算）。；研究对象：单层二硒化铂（monolayer ${\\mathrm{PtSe}}_{2}$），一种层状过渡金属二硫属化物（TMDC）。具体研究其**空位缺陷**（vacancy）及其对材料物理性质的影响，包括缺陷的形成热力学和电荷态。",
+      "abstract_summary_zh": "摘要未完整给出，但根据已提供信息可判断：该工作系统研究了单层${\\mathrm{PtSe}}_{2}$中固有缺陷（空位）的形成能及其电荷态，揭示了空位驱动的电子结构重构机制，为通过缺陷调控二维材料物性提供了理论依据。（注：由于摘要截断，具体的能量数值和最终结论未能完全呈现。）",
+      "main_content_zh": "核心发现：摘要未完整给出，但根据已提供信息可判断：该工作系统研究了单层${\\mathrm{PtSe}}_{2}$中固有缺陷（空位）的形成能及其电荷态，揭示了空位驱动的电子结构重构机制，为通过缺陷调控二维材料物性提供了理论依据。（注：由于摘要截断，具体的能量数值和最终结论未能完全呈现。）；创新点：摘要未突出说明，但可推测其创新性在于对${\\mathrm{PtSe}}_{2}$这一特定TMDC材料中空位缺陷的热力学稳定性和电荷态进行了系统性的第一性原理研究，填补了该材料缺陷物理方面的空白。（注：由于摘要不完整，此判断部分基于推断。）",
+      "method_zh": "第一性原理计算（first-principles calculations），具体技术细节（如是否使用DFT+U、杂化泛函等）摘要未明确说明。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "structure",
@@ -519,10 +1438,10 @@
         "prb"
       ],
       "abstract": "We investigate the Anderson metal-insulator transition in three-dimensional lattices with systematically enhanced local connectivity. By introducing modified cubic lattices with seven- and eight-nearest neighbors (7NN and 8NN) per site, we tune the coordination number in a controlled manner while pr…",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要关键词为“We investigate”（我们研究）、“three-dimensional lattices”（三维晶格）、“introducing modified cubic lattices”（引入修饰的立方晶格），属于典型的数值模拟或理论建模研究。；研究对象：三维晶格中的安德森金属-绝缘体相变，具体关注**局域连接性（local connectivity）** 对相变的影响。体系为具有增强近邻配位数的修饰立方晶格（7NN 和 8NN 结构）。",
-      "abstract_summary_zh": "摘要未明确说明最终物理结论（如临界指数变化或相变是否属于同一普适类），仅指出研究目的是“调控配位数以系统性地增强局域连接性”。核心发现需见全文，摘要未给出明确结果。",
-      "main_content_zh": "核心发现：摘要未明确说明最终物理结论（如临界指数变化或相变是否属于同一普适类），仅指出研究目的是“调控配位数以系统性地增强局域连接性”。核心发现需见全文，摘要未给出明确结果。；创新点：在以往研究中，增强连接性通常仅被视为“带宽展宽”（bandwidth broadening）效应，而本工作旨在区分**局域连接性本身**对安德森转变的独立影响，超越单纯的带宽效应。这是对传统认知的重要修正或深化。",
-      "method_zh": "通过构造具有每个格点七近邻（7NN）和八近邻（8NN）的修饰立方晶格，以受控方式改变配位数（coordination number），从而研究局域连接性对安德森转变的影响。具体数值方法（如传递矩阵法、KPM 等）摘要未明确说明。",
+      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中出现“We investigate”（理论研究常用表述）、“three-dimensional lattices”（模型体系）、“introducing modified cubic lattices”（构建模型），未提及实验手段或样品制备。；研究对象：三维晶格中的Anderson金属-绝缘体转变，具体关注**局域连接性（local connectivity，即配位数）**对无序体系中量子相变的影响。体系为具有增强配位数的改进型立方晶格（7NN和8NN模型）。",
+      "abstract_summary_zh": "摘要未完整给出最终物理结论（因截断）。目前可确认的是：通过系统调控配位数（从标准立方晶格的6近邻增加到7和8近邻），可以**在仅改变带宽展宽效应之外**，独立研究局域连接性对Anderson转变的影响。具体临界行为或相图变化需见全文。",
+      "main_content_zh": "核心发现：摘要未完整给出最终物理结论（因截断）。目前可确认的是：通过系统调控配位数（从标准立方晶格的6近邻增加到7和8近邻），可以**在仅改变带宽展宽效应之外**，独立研究局域连接性对Anderson转变的影响。具体临界行为或相图变化需见全文。；创新点：摘要未突出说明，但可推断：以往研究通常将配位数变化与带宽变化耦合，本工作通过设计特定晶格结构，**将局域连接性（配位数）的影响从带宽展宽效应中分离出来**，从而更纯粹地考察几何因素对Anderson转变的作用。具体创新细节（如是否发现新的普适类或临界指数变化）需见全文。",
+      "method_zh": "理论建模与数值计算。具体为：构建具有7个和8个最近邻（7NN、8NN）的改进型立方晶格模型，以受控方式调节配位数，并研究无序诱导的金属-绝缘体转变。摘要未明确说明具体数值方法（如传输矩阵法、KPM、精确对角化等），也未提及是否采用有限尺寸标度分析。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "inhomogeneous",
@@ -559,10 +1478,10 @@
         "prb"
       ],
       "abstract": "In single-crystal trigonal Te, the low-temperature Fano line shape of the Raman-active A1 mode reflects interference between the phonon and an electronic continuum, whereas four-phonon scattering substantially shortens the lifetimes of low-frequency heat-carrying phonons and lowers the lattice thermal conductivity.",
-      "study_overview_zh": "研究类型：实验与计算混合类型。判断依据：摘要中同时涉及“低温Fano线形”的实验观测（Raman光谱）与“四声子散射”的理论/计算分析。；研究对象：单晶三方碲（trigonal Te），具体研究其拉曼活性A1模的Fano共振行为，以及低频导热声子的非谐性衰减机制。",
+      "study_overview_zh": "研究类型：实验与计算混合类型。判断依据：摘要中同时涉及“低温Fano线形”的实验观测，以及“四声子散射”对声子寿命和热导率的计算分析。；研究对象：单晶三方结构碲（trigonal Te），具体研究其拉曼活性A1模的Fano共振行为，以及低频导热声子的非谐性衰减机制。",
       "abstract_summary_zh": "在单晶Te中，低温下A1模的Fano线形源于声子与电子连续谱的干涉；同时，四声子散射显著缩短了低频载热声子的寿命，从而降低了晶格热导率。",
-      "main_content_zh": "核心发现：在单晶Te中，低温下A1模的Fano线形源于声子与电子连续谱的干涉；同时，四声子散射显著缩短了低频载热声子的寿命，从而降低了晶格热导率。；创新点：将A1模的Fano干涉效应与四阶非谐性（四声子过程）对热输运的贡献在同一材料中关联起来，揭示了电子-声子干涉与高阶声子散射共同影响碲的振动和热学性质。摘要未突出说明更细分的创新点。",
-      "method_zh": "低温拉曼光谱（用于观测Fano线形）；声子非谐性理论计算（用于分析四声子散射过程及其对声子寿命和热导率的影响）。摘要未明确说明具体计算框架（如DFT级别或玻尔兹曼输运方程求解细节）。",
+      "main_content_zh": "核心发现：在单晶Te中，低温下A1模的Fano线形源于声子与电子连续谱的干涉；同时，四声子散射显著缩短了低频载热声子的寿命，从而降低了晶格热导率。；创新点：将A1模的低温Fano响应与四声子散射主导的热输运行为在同一单晶Te体系中关联讨论，揭示了电子-声子干涉与高阶非谐性对宏观热导率的共同影响。摘要未突出说明更细化的创新点。",
+      "method_zh": "低温拉曼光谱（用于观测A1模的Fano线形）；声子非谐性理论计算（用于分析四声子散射过程及其对声子寿命和热导率的影响）。摘要未明确说明具体的第一性原理软件或泛函类型。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "dynamics",
@@ -595,10 +1514,10 @@
         "prb"
       ],
       "abstract": "Author(s): Douglas Hendry, Alessandro Sinibaldi, and Giuseppe Carleo Excited states play a central role in determining the physical properties of quantum matter, yet their accurate computation in many-body systems remains a formidable challenge for numerical methods. While neural quantum states have delivered outstanding results for ground-state problems, extending t…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要关键词为“numerical methods”（数值方法）、“neural quantum states”（神经量子态）、“Variational Monte Carlo”（变分蒙特卡洛），属于典型的计算物理/计算方法研究。；研究对象：量子多体系统的激发态（Excited states）。摘要明确指出激发态对量子物质物理性质至关重要，但未指明具体材料或模型（如 Hubbard 模型、量子自旋链等），因此研究对象为一般性的强关联量子多体系统。",
-      "abstract_summary_zh": "摘要未完整给出，但可推断：该工作将神经网络波函数（神经量子态）从基态计算扩展至激发态计算，并引入了基于 Grassmann 变量的变分蒙特卡洛方法。具体物理结论（如能谱精度、可扩展性等）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出，但可推断：该工作将神经网络波函数（神经量子态）从基态计算扩展至激发态计算，并引入了基于 Grassmann 变量的变分蒙特卡洛方法。具体物理结论（如能谱精度、可扩展性等）摘要未明确说明。；创新点：摘要未突出说明，但可推断：首次（或系统地）将 Grassmann 变量引入神经量子态框架，以处理费米子激发态计算中的反对称性和符号问题。具体与已有神经量子态激发态方法（如基于对称性破缺或子空间对角化）的差异，摘要未明确说明。",
-      "method_zh": "Grassmann 变分蒙特卡洛（Grassmann variational Monte Carlo）结合神经网络波函数（neural wave functions）。这是一种基于变分原理的量子蒙特卡洛方法，利用 Grassmann 代数处理费米子符号问题，并用神经网络参数化波函数。",
+      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中出现“numerical methods”“neural quantum states”“variational Monte Carlo”等关键词，属于计算方法研究。；研究对象：量子多体系统的激发态。摘要明确指出激发态对量子物性至关重要，但未指明具体材料或体系（如晶格模型、分子或连续系统），摘要未明确说明具体研究对象。",
+      "abstract_summary_zh": "摘要未完整给出最终物理结论（因摘要被截断），但可确认该工作旨在将神经量子态方法从基态问题扩展到激发态计算，并引入Grassmann变量处理费米子符号问题。具体物理发现摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整给出最终物理结论（因摘要被截断），但可确认该工作旨在将神经量子态方法从基态问题扩展到激发态计算，并引入Grassmann变量处理费米子符号问题。具体物理发现摘要未明确说明。；创新点：将神经量子态方法从基态问题拓展到激发态计算，并引入Grassmann变量以更自然地处理费米子系统的反对称性。摘要未突出说明与已有激发态方法（如DMRG或量子化学方法）的具体对比优势。",
+      "method_zh": "Grassmann变分蒙特卡洛（Grassmann variational Monte Carlo）结合神经波函数（neural wave functions）。这是一种基于神经量子态（neural quantum states）的变分蒙特卡洛方法，利用Grassmann代数处理费米子反对称性。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "magnetism",
@@ -634,10 +1553,10 @@
         "prb"
       ],
       "abstract": "We investigate the impact of quantum and thermal phase fluctuations on the suppression of superconducting order in two-dimensional systems. Within the two-dimensional quantum XY model in the phase representation, where on-site interaction terms govern quantum phase fluctuations, we perform extensive…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要提及“two-dimensional quantum XY model in the phase representation”，并计划进行“extensive…”（推测为大规模数值模拟，如蒙特卡洛），属于理论模型与数值计算结合的研究。；研究对象：二维超导体中由于相位涨落导致的超导序抑制现象，具体体系为二维量子XY模型（相位表示），其中格点上的在位相互作用项控制量子相位涨落。物理现象聚焦于量子涨落与热涨落对超导相变的竞争作用。",
-      "abstract_summary_zh": "摘要未完整给出最终结论，但可推断核心发现是：在二维超导体中，量子相位涨落与热相位涨落对超导序的抑制机制不同，二者共同决定了超导转变温度及相图边界（具体数值结论需待摘要补全）。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论，但可推断核心发现是：在二维超导体中，量子相位涨落与热相位涨落对超导序的抑制机制不同，二者共同决定了超导转变温度及相图边界（具体数值结论需待摘要补全）。；创新点：摘要未突出说明，但可推测创新点在于：在统一的量子XY模型框架下，系统区分并比较量子涨落与热涨落对二维超导相变的相对贡献，可能揭示零温量子相变与有限温BKT（Berezinskii-Kosterlitz-Thouless）转变之间的交叉或竞争行为。具体新意需待摘要完整后确认。",
-      "method_zh": "理论框架为二维量子XY模型（相位表示），其中量子相位涨落由在位相互作用项描述。计划采用大规模数值模拟（推测为量子蒙特卡洛或张量网络方法，但摘要截断，未明确说明具体算法）。",
+      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要提及“two-dimensional quantum XY model in the phase representation”，并计划进行“extensive…”（推测为大规模数值模拟或解析计算），属于理论建模与数值计算范畴。；研究对象：二维超导体中由于量子相位涨落和热相位涨落导致的超导序抑制现象。具体体系为二维量子XY模型（相位表示），其中格点上的在位相互作用项控制量子相位涨落的强度。",
+      "abstract_summary_zh": "摘要未完整给出最终结论，但核心研究问题是：在二维超导体中，量子涨落与热涨落对超导转变的抑制机制有何不同，以及二者如何共同决定超导序的失稳条件。摘要未明确说明具体数值结果或相图结论。",
+      "main_content_zh": "核心发现：摘要未完整给出最终结论，但核心研究问题是：在二维超导体中，量子涨落与热涨落对超导转变的抑制机制有何不同，以及二者如何共同决定超导序的失稳条件。摘要未明确说明具体数值结果或相图结论。；创新点：摘要未突出说明。但可推断其新意在于：在统一的二维量子XY模型框架下，系统区分并比较量子（由相互作用驱动的零点运动）与热（由温度驱动的经典涨落）两类相位涨落对超导序的破坏作用，而非仅关注其中一种。具体创新结论需待摘要补全。",
+      "method_zh": "理论框架为二维量子XY模型（相位表示），其中相位涨落被显式处理，量子涨落由在位相互作用项（on-site interaction terms）引入。计划采用大规模数值计算（摘要截断，推测为量子蒙特卡洛或张量网络方法，但未明确说明）。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "superfluidity and superconductivity",
@@ -672,10 +1591,10 @@
         "prb"
       ],
       "abstract": "Author(s): Xinyu Xu, Kehan Cai, Yubai Shi, Peichen Zhong, and Pinchen Xie",
-      "study_overview_zh": "研究类型：勘误（Erratum）。判断依据：论文标题明确标注为“Erratum”，摘要内容为作者列表，属于对已发表论文的更正说明。；研究对象：弛豫铁电体（relaxor ferroelectrics）的**本征结构**（intrinsic structure）。摘要未明确说明具体材料体系。",
-      "abstract_summary_zh": "摘要未提供任何物理结论或发现，仅说明这是对原论文的更正。",
-      "main_content_zh": "核心发现：摘要未提供任何物理结论或发现，仅说明这是对原论文的更正。；创新点：摘要未突出说明。作为勘误，其目的在于修正原论文中的错误或补充说明，而非提出新的科学发现。",
-      "method_zh": "摘要未明确说明。原论文标题提及“from first principles”，推测可能涉及第一性原理计算，但本勘误摘要未提供具体方法信息。",
+      "study_overview_zh": "研究类型：勘误（Erratum）。判断依据：论文标题明确标注为“Erratum”，摘要内容为作者列表，无具体研究内容描述。；研究对象：摘要未明确说明。根据原论文标题推测，研究对象为弛豫铁电体（relaxor ferroelectrics）的**本征结构**，但勘误内容是否涉及研究对象变更，摘要未说明。",
+      "abstract_summary_zh": "摘要未明确说明。勘误通常涉及对原论文中错误或遗漏的更正，但具体更正内容摘要中未给出。",
+      "main_content_zh": "核心发现：摘要未明确说明。勘误通常涉及对原论文中错误或遗漏的更正，但具体更正内容摘要中未给出。；创新点：摘要未突出说明。勘误本身不涉及新研究成果，其意义在于修正原论文中的错误，具体修正内容需查阅勘误全文。",
+      "method_zh": "摘要未明确说明。原论文标题提及“from first principles”，推测原研究采用第一性原理计算方法，但勘误本身不涉及新方法。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "errata",
@@ -712,10 +1631,10 @@
         "prb"
       ],
       "abstract": "Author(s): Jian Yuan, Junyi Yang, Yuchong Kang, Shunwei Yao, Dongyang Liu, Si Shen, and Huashan Li Domain-wall-induced ferroic phases offer an emerging platform for reconfigurable nanoelectronics, yet their microscopic formation mechanisms and switching kinetics remain poorly understood. Here, combining machine-learning interatomic potentials with large-scale molecular dynamics simulations, we re…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要明确提到“machine-learning interatomic potentials”和“large-scale molecular dynamics simulations”。；研究对象：反铁电材料PbZrO₃中铁电相（ferrielectric phases）的极化翻转行为及其微观畴结构演化，特别是由畴壁诱导的亚稳铁电相。",
-      "abstract_summary_zh": "通过机器学习原子间势与大规模分子动力学模拟，揭示了PbZrO₃中铁电相的微观形成机制与极化翻转动力学，阐明了畴壁诱导铁电相在电场下的畴演化路径（摘要未给出具体数值或最终态细节）。",
-      "main_content_zh": "核心发现：通过机器学习原子间势与大规模分子动力学模拟，揭示了PbZrO₃中铁电相的微观形成机制与极化翻转动力学，阐明了畴壁诱导铁电相在电场下的畴演化路径（摘要未给出具体数值或最终态细节）。；创新点：首次从原子尺度系统研究了PbZrO₃中铁电相的极化翻转与畴演化动力学，弥补了此前对其微观形成机制和开关动力学认识的不足。摘要未突出说明其他创新点。",
-      "method_zh": "机器学习原子间势（machine-learning interatomic potentials）结合大规模分子动力学（large-scale molecular dynamics）模拟。",
+      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提及“machine-learning interatomic potentials”（机器学习原子间势）与“large-scale molecular dynamics simulations”（大规模分子动力学模拟）。；研究对象：反铁电材料锆酸铅（${\\mathrm{PbZrO}}_{3}$）中的铁电相。具体物理现象为：由畴壁诱导产生的亚铁电相的极化翻转行为及其微观畴结构演化动力学。",
+      "abstract_summary_zh": "摘要未完整给出最终结论，但明确指出该工作旨在揭示畴壁诱导铁电相（此处为亚铁电相）的微观形成机制与翻转动力学，而目前这些机制“仍知之甚少”（remain poorly understood）。",
+      "main_content_zh": "核心发现：摘要未完整给出最终结论，但明确指出该工作旨在揭示畴壁诱导铁电相（此处为亚铁电相）的微观形成机制与翻转动力学，而目前这些机制“仍知之甚少”（remain poorly understood）。；创新点：利用高精度的机器学习势函数进行大规模分子动力学模拟，以研究${\\mathrm{PbZrO}}_{3}$中此前难以通过传统方法（如第一性原理或经验势）触及的畴壁诱导亚铁电相的微观动力学过程。摘要未突出说明其他创新点。",
+      "method_zh": "结合机器学习原子间势（machine-learning interatomic potentials）的大规模分子动力学（molecular dynamics, MD）模拟。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "structure",
@@ -755,10 +1674,10 @@
         "prb"
       ],
       "abstract": "The search for candidate Kitaev materials has largely focused on 4d and 5d transition-metal compounds with various lattice geometries. In contrast, investigations of rare-earth 4f systems have thus far been restricted mainly to honeycomb and triangular lattices. In this work, we investigate the rare…",
-      "study_overview_zh": "研究类型：混合类型（实验与理论/计算结合）。判断依据：摘要中使用了“investigate”（研究）一词，且研究对象为具体材料，通常涉及实验合成与表征，但摘要未明确提及具体实验手段或计算方法，因此判断为混合类型，但具体侧重需看全文。；研究对象：稀土4f电子体系中的自旋-轨道耦合与受抑磁性。具体材料为面心立方（fcc）双钙钛矿结构化合物 ${\\mathrm{Ba}}_{2}(\\mathrm{Yb},\\mathrm{Nd}){\\mathrm{NbO}}_{6}$，其中Yb和Nd为稀土离子，可能形成有效的自旋-轨道纠缠态。",
-      "abstract_summary_zh": "摘要未完整给出，但可推断：该工作探索了在fcc晶格（而非常见的蜂窝或三角晶格）中实现Kitaev型或自旋-轨道纠缠的受抑磁性的可能性。具体物理结论（如基态性质、磁序类型）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出，但可推断：该工作探索了在fcc晶格（而非常见的蜂窝或三角晶格）中实现Kitaev型或自旋-轨道纠缠的受抑磁性的可能性。具体物理结论（如基态性质、磁序类型）摘要未明确说明。；创新点：将Kitaev材料候选体系的研究从4d/5d过渡金属化合物拓展到稀土4f体系，且将晶格几何从常见的蜂窝/三角晶格推广到fcc双钙钛矿结构。摘要明确指出此前稀土4f体系研究“主要限于蜂窝和三角晶格”，因此本工作的新意在于探索新的晶格几何与自旋-轨道耦合机制的组合。",
-      "method_zh": "摘要未明确说明。但根据研究对象（双钙钛矿稀土磁性材料）推测可能涉及：多晶或单晶样品合成、磁化率与比热测量、中子散射等实验手段，以及可能的模型计算（如交换耦合参数拟合、自旋模型分析）。具体方法需参考全文。",
+      "study_overview_zh": "研究类型：实验文章（摘要中提及“investigate”，且研究对象为具体材料，但未明确给出实验手段关键词，判断为实验或混合类型；摘要未明确说明计算方法或理论框架）。；研究对象：稀土4f电子体系中的自旋-轨道耦合阻挫磁性材料，具体为面心立方（fcc）结构的双钙钛矿化合物 ${\\mathrm{Ba}}_{2}(\\mathrm{Yb},\\mathrm{Nd}){\\mathrm{NbO}}_{6}$。",
+      "abstract_summary_zh": "摘要未完整给出，但明确指出该工作将稀土4f体系的Kitaev候选材料研究从常见的蜂窝和三角晶格拓展至面心立方（fcc）晶格，并研究了该双钙钛矿中的自旋-轨道纠缠阻挫磁性。",
+      "main_content_zh": "核心发现：摘要未完整给出，但明确指出该工作将稀土4f体系的Kitaev候选材料研究从常见的蜂窝和三角晶格拓展至面心立方（fcc）晶格，并研究了该双钙钛矿中的自旋-轨道纠缠阻挫磁性。；创新点：首次（或此前少有）在稀土4f体系中探索fcc晶格上的Kitaev磁性，突破了以往4f体系仅局限于蜂窝和三角晶格的研究范围。",
+      "method_zh": "摘要未明确说明具体实验手段或计算方法（如中子散射、磁化率测量、DFT等均未提及）。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "magnetism",
@@ -790,10 +1709,10 @@
         "prb"
       ],
       "abstract": "We compare extensive ab initio simulations and embedded-atom-model molecular dynamics for analysis of collective dynamics in liquid Fe at several experimental pressures and temperatures of 2200 and 2700 K [Y. Kuwayama et al., Phys. Rev. Lett. 124, 165701 (2020)]. Dynamic eigenmodes of the generalize…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要明确提到“ab initio simulations”和“embedded-atom-model molecular dynamics”，属于计算模拟研究。；研究对象：液态铁（liquid Fe）在实验高压条件下的集体动力学行为。具体涉及多个实验压力点以及2200 K和2700 K两个温度下的动力学性质。",
-      "abstract_summary_zh": "摘要未明确说明具体物理结论，仅指出研究目的是对比两种模拟方法对液态铁集体动力学的分析结果。摘要未突出说明最终发现。",
-      "main_content_zh": "核心发现：摘要未明确说明具体物理结论，仅指出研究目的是对比两种模拟方法对液态铁集体动力学的分析结果。摘要未突出说明最终发现。；创新点：摘要未突出说明。但可推断其新意在于将两种不同精度的模拟方法（第一性原理与经验势）在实验高压条件下对液态铁集体动力学进行系统对比，并与实验数据（Y. Kuwayama et al., PRL 2020）直接对照。",
-      "method_zh": "第一性原理（ab initio）模拟与嵌入原子模型（embedded-atom-model, EAM）分子动力学模拟。分析手段为广义动力学本征模（dynamic eigenmodes of the generalized...，摘要截断，未完整给出）。",
+      "study_overview_zh": "研究类型：计算文章。判断依据：摘要明确提及“ab initio simulations”和“embedded-atom-model molecular dynamics”，属于大规模原子模拟与理论分析。；研究对象：液态铁（liquid Fe）在实验高压（对应约2200 K和2700 K温度）下的集体动力学行为，具体包括其动态本征模（dynamic eigenmodes）等集体激发性质。",
+      "abstract_summary_zh": "通过对比第一性原理模拟与嵌入原子模型分子动力学结果，分析了液态铁在实验高压条件下的集体动力学，并对其动态本征模进行了表征（摘要未给出具体数值结论，如色散关系或衰减率等）。",
+      "main_content_zh": "核心发现：通过对比第一性原理模拟与嵌入原子模型分子动力学结果，分析了液态铁在实验高压条件下的集体动力学，并对其动态本征模进行了表征（摘要未给出具体数值结论，如色散关系或衰减率等）。；创新点：摘要未突出说明。但可推断其创新在于将第一性原理与经验势模拟在高压液态铁体系上进行系统对比，并利用动态本征模方法解析集体激发，而非仅停留在静态结构或扩散系数层面。具体新意（如是否首次给出某压力下的纵/横模分裂等）摘要未明确说明。",
+      "method_zh": "第一性原理（ab initio）模拟（未明确具体泛函，如DFT或QMC，摘要未说明）与嵌入原子模型（embedded-atom-model, EAM）分子动力学模拟；分析手段为广义动态本征模分解（generalized dynamic eigenmodes）。实验压力与温度条件取自文献[Y. Kuwayama et al., Phys. Rev. Lett. 124, 165701 (2020)]。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "inhomogeneous",
@@ -828,10 +1747,10 @@
         "prb"
       ],
       "abstract": "Author(s): Anish Das, Guijian Pang, Yuwen Zhang, Xiao-Ping Yao, and Wu Li MAX phase Ti2SC comes under the category of hexagonal ternary carbides whose room-temperature (RT) total thermal conductivity (κT=κe+κph) is experimentally reported to be the highest amongst all in the 211 category and one of the highest values across the broader MAX-phase family. It shows anomalous…",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中未提及实验手段，且作者列表包含理论计算领域学者（如Wu Li），研究内容围绕热导率与电子-声子相互作用展开，属于凝聚态理论计算范畴。；研究对象：MAX相材料Ti₂SC（六方三元碳化物，211家族），具体研究其晶格热导率（κph）以及电子-声子相互作用对其热输运性质的影响。",
-      "abstract_summary_zh": "Ti₂SC在室温下具有极高的总热导率（实验报道为211家族中最高，且在MAX相家族中名列前茅），其晶格热导率贡献显著，且电子-声子相互作用对其热输运行为起重要作用。摘要还提及该材料表现出“反常”行为（具体反常内容摘要未展开）。",
-      "main_content_zh": "核心发现：Ti₂SC在室温下具有极高的总热导率（实验报道为211家族中最高，且在MAX相家族中名列前茅），其晶格热导率贡献显著，且电子-声子相互作用对其热输运行为起重要作用。摘要还提及该材料表现出“反常”行为（具体反常内容摘要未展开）。；创新点：摘要未突出说明，但可推断其新意在于系统揭示Ti₂SC中电子-声子相互作用对晶格热导率的显著影响，并解释其超高热导率的微观机制。具体创新细节摘要未明确。",
-      "method_zh": "摘要未明确说明具体计算方法，但结合研究主题（热导率、电子-声子耦合）及作者背景，推测采用第一性原理计算（如DFT）结合玻尔兹曼输运方程或声子-电子耦合计算框架。摘要未给出具体软件或泛函细节。",
+      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中未提及实验手段，且作者列表包含理论计算领域学者（如Wu Li），研究内容围绕热导率与电子-声子相互作用展开，属于凝聚态物性计算范畴。；研究对象：MAX相材料Ti₂SC（六方三元碳化物，211家族），具体研究其晶格热导率（κph）以及电子-声子相互作用对其热输运性质的影响。",
+      "abstract_summary_zh": "Ti₂SC在室温下的总热导率（κT = κe + κph）是实验报道中所有211型MAX相中最高的，也是整个MAX相家族中最高值之一；该材料表现出异常的（anomalous）热输运行为，其中晶格热导率（κph）很大，且电子-声子相互作用在其中扮演重要角色。",
+      "main_content_zh": "核心发现：Ti₂SC在室温下的总热导率（κT = κe + κph）是实验报道中所有211型MAX相中最高的，也是整个MAX相家族中最高值之一；该材料表现出异常的（anomalous）热输运行为，其中晶格热导率（κph）很大，且电子-声子相互作用在其中扮演重要角色。；创新点：揭示了Ti₂SC在MAX相家族中异常高的晶格热导率，并指出电子-声子相互作用对其热输运性质有显著影响——这一机制在以往MAX相热导率研究中可能未被充分重视。摘要未突出说明更多细节。",
+      "method_zh": "摘要未明确说明具体计算方法（如DFT、BTE等），但结合研究内容（热导率、电子-声子耦合）及作者背景，推测采用第一性原理计算结合玻尔兹曼输运方程或相关理论框架。摘要未明确说明具体手段。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "dynamics",
@@ -864,10 +1783,10 @@
         "prb"
       ],
       "abstract": "We develop a self-energy-dressed Green's function framework for terahertz-induced phonon angular momentum in polar crystals. The rectified angular-momentum response is formulated as a second-order response and, within a dressed-bubble approximation, is expressed in terms of retarded phonon propagato…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中出现“Green's function framework”“formulated as a second-order response”“expressed in terms of retarded phonon propagato…”等理论推导关键词，未涉及实验或数值计算细节。；研究对象：极性晶体中由太赫兹光场诱导的声子角动量（phonon angular momentum）现象，属于光-物质相互作用与晶格动力学交叉领域。",
-      "abstract_summary_zh": "摘要未明确说明具体物理结论，仅指出该工作建立了太赫兹诱导声子角动量的自能修正（self-energy-dressed）格林函数理论，并将整流角动量响应表述为二阶响应，在“dressed-bubble”近似下用延迟声子传播子表示。具体数值或物性结论摘要未给出。",
-      "main_content_zh": "核心发现：摘要未明确说明具体物理结论，仅指出该工作建立了太赫兹诱导声子角动量的自能修正（self-energy-dressed）格林函数理论，并将整流角动量响应表述为二阶响应，在“dressed-bubble”近似下用延迟声子传播子表示。具体数值或物性结论摘要未给出。；创新点：将太赫兹诱导声子角动量的响应理论提升到有限温度、自能修正的格林函数层次，超越了裸（bare）声子近似，能够纳入声子寿命与相互作用修正。摘要未突出说明与其他具体工作的对比差异。",
-      "method_zh": "有限温度格林函数理论（finite-temperature Green's function theory），具体采用自能修正的推迟声子传播子（retarded phonon propagator）框架，并引入“dressed-bubble”近似来处理二阶响应。",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提及“develop a ... Green's function framework”（发展格林函数理论框架）、“formulated as a second-order response”（构建为二阶响应），属于纯理论推导。；研究对象：极性晶体（polar crystals）中由太赫兹（THz）光场诱导产生的声子角动量（phonon angular momentum）现象。具体关注的是该响应在有限温度下的物理行为。",
+      "abstract_summary_zh": "摘要未明确说明具体的物理结论（如声子角动量的大小、符号或温度依赖趋势），仅指出该响应可被表达为二阶响应，并在“dressed-bubble approximation”（戴森气泡近似）下用推迟声子传播子表示。核心发现需见正文。",
+      "main_content_zh": "核心发现：摘要未明确说明具体的物理结论（如声子角动量的大小、符号或温度依赖趋势），仅指出该响应可被表达为二阶响应，并在“dressed-bubble approximation”（戴森气泡近似）下用推迟声子传播子表示。核心发现需见正文。；创新点：摘要未突出说明。但从框架描述可推断，其新意在于将太赫兹诱导声子角动量的计算推广到有限温度，并引入自能修饰（即考虑声子寿命或相互作用修正）的格林函数方法，超越了无相互作用的理想声子近似。具体对比对象摘要未明确说明。",
+      "method_zh": "有限温度格林函数理论（Finite-temperature Green's function theory）。具体技术包括：自能修饰（self-energy-dressed）的格林函数框架、二阶响应理论（second-order response formalism）、以及戴森气泡近似（dressed-bubble approximation）来简化响应函数，最终将整流角动量响应（rectified angular-momentum response）用推迟声子传播子（retarded phonon propagators）表达。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "dynamics",
@@ -904,10 +1823,10 @@
         "prb"
       ],
       "abstract": "The essence of the quantum anomalous Hall (QAH) effect is that, in the absence of an external magnetic field, the bulk of a material remains insulating while its boundaries host a quantized number of dissipation-free chiral edge channels determined precisely by the Chern number. A high Chern number …",
-      "study_overview_zh": "研究类型：计算/理论文章（摘要关键词：“Chern number”、“layer-resolved”等，涉及拓扑不变量计算与能带拓扑分析，未提及实验手段）。；研究对象：MnBi₂Te₄材料中的量子反常霍尔效应，具体聚焦于**高陈数**（high Chern number）下的**层分辨**（layer-resolved）霍尔效应。",
-      "abstract_summary_zh": "摘要未完整给出，但可判断其核心结论与“在MnBi₂Te₄中实现高陈数量子反常霍尔效应，且该效应具有层分辨特征”相关。具体物理图像（如陈数数值、边界态数目等）需待摘要补全。",
-      "main_content_zh": "核心发现：摘要未完整给出，但可判断其核心结论与“在MnBi₂Te₄中实现高陈数量子反常霍尔效应，且该效应具有层分辨特征”相关。具体物理图像（如陈数数值、边界态数目等）需待摘要补全。；创新点：摘要未突出说明，但“层分辨”与“高陈数”的结合暗示该工作可能首次在MnBi₂Te₄中揭示了不同层对整体拓扑输运的独立贡献，或实现了陈数大于1的量子反常霍尔态。具体创新点需待摘要补全。",
-      "method_zh": "摘要未明确说明具体计算方法，但根据研究对象（拓扑绝缘体/磁性拓扑材料）推测可能采用**第一性原理计算**（如DFT）结合**紧束缚模型**或**拓扑不变量计算**（如陈数、Wilson loop）。具体技术细节摘要未提及。",
+      "study_overview_zh": "研究类型：计算/理论文章（判断依据：摘要中未提及实验生长或测量手段，而是聚焦于物理机制“本质”和“Chern number”的阐述，属于理论预言或第一性原理计算范畴。但摘要不完整，无法完全排除混合类型。）；研究对象：MnBi₂Te₄材料中的量子反常霍尔（QAH）效应，具体为**层分辨的量子反常霍尔效应**，且关注**高陈数（high Chern number）** 的边界态行为。",
+      "abstract_summary_zh": "在无外磁场条件下，MnBi₂Te₄体态保持绝缘，而其边界承载由高陈数精确决定的、无耗散手性边缘通道。摘要强调该效应具有“层分辨”（layer-resolved）特性，暗示不同磁性层的拓扑贡献可独立调控并叠加产生高陈数。",
+      "main_content_zh": "核心发现：在无外磁场条件下，MnBi₂Te₄体态保持绝缘，而其边界承载由高陈数精确决定的、无耗散手性边缘通道。摘要强调该效应具有“层分辨”（layer-resolved）特性，暗示不同磁性层的拓扑贡献可独立调控并叠加产生高陈数。；创新点：将QAH效应从传统的“总陈数”描述拓展到**逐层（layer-resolved）** 的拓扑响应，并实现高陈数态。这一概念可能为多层磁性拓扑绝缘体中的量子化输运调控提供新自由度。但具体与已有MnBi₂Te₄工作的差异，**摘要未突出说明**。",
+      "method_zh": "摘要未明确说明。可能涉及基于密度泛函理论（DFT）的能带计算或紧束缚模型分析，但**摘要未明确说明**具体计算框架。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "electronic structure and strongly correlated systems",
@@ -940,10 +1859,10 @@
         "prb"
       ],
       "abstract": "We investigate the interplay between superconductivity and nematic order in a two-dimensional electron gas with competing pairing and quadrupolar forward-scattering interactions. The model includes both s-wave and d-wave superconducting channels. We compute the mean-field free energy density and det…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中出现“mean-field free energy density”（平均场自由能密度）、“compute”（计算）等关键词，属于基于模型的理论计算研究。；研究对象：二维电子气（two-dimensional electron gas）中**超导性（superconductivity）与向列序（nematic order）的竞争与共存**。具体涉及具有四极子前向散射相互作用（quadrupolar forward-scattering interactions）的电子系统，并同时包含s波和d波超导配对通道。",
-      "abstract_summary_zh": "摘要未完整给出最终结论，但研究目标明确为：在同时存在配对相互作用（导致超导）和四极子前向散射（导致向列序）的二维电子气中，确定超导与向列序之间是相互竞争还是可以共存，并计算了平均场自由能密度以比较不同相的稳定性。**（具体结论因摘要截断而缺失）**",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论，但研究目标明确为：在同时存在配对相互作用（导致超导）和四极子前向散射（导致向列序）的二维电子气中，确定超导与向列序之间是相互竞争还是可以共存，并计算了平均场自由能密度以比较不同相的稳定性。**（具体结论因摘要截断而缺失）**；创新点：摘要未突出说明。但可推断其新意在于：在单一模型中同时考虑**s波与d波两种超导通道**与**向列序（四极子序）** 的相互作用，并研究其竞争与共存，而非仅关注单一配对对称性或单一有序态。**（具体创新细节需结合全文判断）**",
-      "method_zh": "**平均场理论（mean-field theory）**。具体为计算系统的平均场自由能密度（mean-field free energy density），并比较包含s波和d波超导通道以及向列序通道的竞争相。",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提到“We compute the mean-field free energy density”（计算平均场自由能密度），属于解析或半解析的理论建模工作。；研究对象：二维电子气（two-dimensional electron gas）中**超导序**与**向列序**（nematic order）的竞争与共存现象。具体考虑了同时存在配对相互作用（pairing）和四极前向散射相互作用（quadrupolar forward-scattering interactions）的模型，并包含s波与d波两个超导通道。",
+      "abstract_summary_zh": "摘要未完整呈现最终结论（因文本截断）。目前可确认的是：该工作研究了在四极相互作用存在时，超导与向列序如何相互影响，并试图确定二者在相图中的竞争或共存区域。具体物理结论（如基态相图、临界温度行为等）摘要未明确说明。",
+      "main_content_zh": "核心发现：摘要未完整呈现最终结论（因文本截断）。目前可确认的是：该工作研究了在四极相互作用存在时，超导与向列序如何相互影响，并试图确定二者在相图中的竞争或共存区域。具体物理结论（如基态相图、临界温度行为等）摘要未明确说明。；创新点：摘要未突出说明。但从模型设定看，其新意可能在于**同时引入s波与d波超导通道**，并考察它们与**四极（而非通常的偶极或自旋）前向散射**诱导的向列序之间的相互作用，这比以往仅考虑单一配对通道或纯电荷向列涨落的模型更为一般。具体创新点需结合全文判断。",
+      "method_zh": "**平均场理论**（mean-field theory）。具体而言，作者计算了系统的平均场自由能密度（mean-field free energy density），并以此为基础分析不同序参量（超导与向列）的稳定性与耦合。未使用数值量子蒙特卡洛或精确对角化等数值手段（摘要未提及）。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "electronic structure and strongly correlated systems",
@@ -981,10 +1900,10 @@
         "prb"
       ],
       "abstract": "This phenomenon manifests as a resistance R change proportional to the first power of both the electric current I and applied magnetic fie…",
-      "study_overview_zh": "研究类型：理论/计算文章（判断依据：摘要中提及“quantum geometry”（量子几何），这通常是理论计算或第一性原理计算中用于解释物性的核心概念，而非直接实验测量手段。但摘要不完整，无法完全排除混合类型。）；研究对象：p型碲烯（$p$-type tellurene）中的极性单向磁输运（polar unidirectional magnetotransport）现象。该现象表现为电阻R随电流I和磁场B的一次方成比例变化，即一种非互易的磁电阻效应。",
-      "abstract_summary_zh": "在p型碲烯中，由于量子几何（quantum geometry）效应，产生了极性单向磁输运现象，即电阻对电流方向和磁场方向具有极性依赖，且该响应与电流和磁场均呈线性关系。",
-      "main_content_zh": "核心发现：在p型碲烯中，由于量子几何（quantum geometry）效应，产生了极性单向磁输运现象，即电阻对电流方向和磁场方向具有极性依赖，且该响应与电流和磁场均呈线性关系。；创新点：将单向磁输运现象与材料的“量子几何”特性直接关联，并在碲烯这一具体材料体系中预言或解释了极性（即依赖于晶体极性方向）的线性磁电阻效应。摘要未突出说明其与以往工作的具体差异。",
-      "method_zh": "摘要未明确说明具体计算方法（如是否使用DFT、紧束缚模型等）。仅提及“from quantum geometry”，暗示可能采用基于量子几何张量（贝里曲率/量子度规）的理论框架或第一性原理计算来分析其输运性质。",
+      "study_overview_zh": "研究类型：理论/计算文章（判断依据：标题强调“from quantum geometry”，摘要描述电阻变化与电流和磁场的线性关系，这通常涉及基于量子几何（贝里曲率等）的理论推导或第一性原理计算，而非直接的实验测量报告。）；研究对象：p型碲烯（$p$-type tellurene）中的极性单向磁输运（polar unidirectional magnetotransport）现象。这是一种在非中心对称材料中，电阻随电流方向和磁场方向改变而呈现非线性（线性于电流和磁场）的输运效应。",
+      "abstract_summary_zh": "在p型碲烯中，观测到一种电阻变化（ΔR），该变化与外加电流（I）和磁场（B）的一次方均成正比，即表现为极性单向磁电阻效应。该效应被归因于材料的量子几何性质（如贝里曲率或量子度规）而非传统的自旋相关散射。",
+      "main_content_zh": "核心发现：在p型碲烯中，观测到一种电阻变化（ΔR），该变化与外加电流（I）和磁场（B）的一次方均成正比，即表现为极性单向磁电阻效应。该效应被归因于材料的量子几何性质（如贝里曲率或量子度规）而非传统的自旋相关散射。；创新点：首次在元素碲的二维形态——碲烯中，从量子几何的角度（而非传统的洛伦兹力或自旋轨道耦合机制）预言或解释了极性单向磁电阻效应。该工作将量子几何（贝里曲率/量子度规）与非线性磁输运联系起来，为在非磁性、非中心对称材料中实现单向磁电阻提供了新的物理机制。**（注：摘要未完整展示，此点部分基于标题推断）**",
+      "method_zh": "摘要未明确说明具体计算方法。但根据标题和领域惯例，推测可能采用了基于密度泛函理论（DFT）的能带结构计算，并结合半经典玻尔兹曼输运方程或量子输运理论（如基于贝里曲率和量子度规的修正）来分析磁输运系数。**（注：摘要未明确说明具体技术细节）**",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "surface physics",
@@ -1016,10 +1935,10 @@
         "prb"
       ],
       "abstract": "We show that a hybrid moiré one-dimensional (moiré-1D) superlattice gives electrical control over whether a Dirac-Dirac momentum resonance opens a charge-neutrality gap, and through which mass channel. In twisted bilayer graphene subject to a layer-dependent unidirectional scalar potential, the char…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中使用了“We show that...”，并描述了通过施加势场来实现电学调控的物理机制，属于理论预言和模型计算范畴，未提及任何实验测量手段。；研究对象：混合莫尔-一维（moiré-1D）超晶格体系，具体为受到层依赖的单向标量势场作用的扭转双层石墨烯（tBG）。研究聚焦于该体系中狄拉克-狄拉克动量共振是否打开电荷中性隙，以及通过何种质量通道打开。",
-      "abstract_summary_zh": "在混合莫尔-一维超晶格中，可以通过电学方式控制狄拉克-狄拉克动量共振是否打开电荷中性隙，并选择打开间隙所对应的质量通道（即具有宇称和手性选择性）。",
-      "main_content_zh": "核心发现：在混合莫尔-一维超晶格中，可以通过电学方式控制狄拉克-狄拉克动量共振是否打开电荷中性隙，并选择打开间隙所对应的质量通道（即具有宇称和手性选择性）。；创新点：实现了对狄拉克质量产生（gap opening）的“宇称”和“手性”双重选择，且该选择可通过电学方式（施加势场）进行调控。这为在莫尔体系中按需设计拓扑相和量子输运性质提供了新机制。",
-      "method_zh": "摘要未明确说明具体的理论框架或计算方法（如是否采用连续模型、紧束缚模型或第一性原理计算）。仅提及了“层依赖的单向标量势”这一模型设定。具体技术细节摘要未提供。",
+      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中使用了“We show that...”，并描述了通过施加势场来实现电学调控，属于理论模型构建与计算预测的范畴，未提及实验样品制备或测量。；研究对象：混合莫尔-一维（moiré-1D）超晶格体系，具体为受到层依赖单向标量势场作用的扭转双层石墨烯（twisted bilayer graphene）。研究聚焦于该体系中狄拉克-狄拉克动量共振（Dirac-Dirac momentum resonance）是否打开电荷中性隙（charge-neutrality gap）及其质量通道（mass channel）的选择。",
+      "abstract_summary_zh": "该混合莫尔-一维超晶格能够通过电学方式（即施加层依赖的单向势场）控制狄拉克-狄拉克动量共振是否打开电荷中性隙，并决定其通过何种质量通道（即奇偶性或手性选择的质量项）来实现。",
+      "main_content_zh": "核心发现：该混合莫尔-一维超晶格能够通过电学方式（即施加层依赖的单向势场）控制狄拉克-狄拉克动量共振是否打开电荷中性隙，并决定其通过何种质量通道（即奇偶性或手性选择的质量项）来实现。；创新点：实现了对狄拉克-狄拉克共振打开能隙这一过程的电学开关控制，并进一步实现了对能隙质量通道的奇偶性（parity）和手性（chirality）选择。这为在莫尔体系中按需调控拓扑或关联物态提供了新的自由度。摘要未突出说明与具体已有工作的对比细节。",
+      "method_zh": "摘要未明确说明具体的计算方法（如第一性原理、紧束缚模型或连续模型等），但基于“混合莫尔-一维超晶格”和“层依赖单向势场”的描述，推测采用了基于连续模型或紧束缚近似的理论建模与能带计算。摘要未明确说明具体技术细节。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "electronic structure and strongly correlated systems",
@@ -1055,10 +1974,10 @@
         "prb"
       ],
       "abstract": "Author(s): Yongshuo Chen, Cheng Ma, Shaohua Lu, Qiang Xu, Wenhui Mi, and Yanchao Wang Orbital-free density functional theory (OFDFT) is a promising route to large-scale first-principles simulations, but its application to second-row covalent systems remains limited by the inaccurate description of localized, highly inhomogeneous densities and by the lack of angular-momentum dependenc…",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要关键词为“Orbital-free density functional theory (OFDFT)”、“first-principles simulations”，属于第一性原理计算方法的发展。；研究对象：第二行（second-row）共价体系（covalent systems），即包含如碳、氮、氧等第二周期元素的共价键合材料。摘要未明确说明具体化合物。",
-      "abstract_summary_zh": "摘要未完整给出最终结论（文本被截断），但明确指出：现有OFDFT在描述局域、高度不均匀的电子密度时存在不准确性，且缺乏角动量依赖性，这限制了其对第二行共价体系的应用。论文旨在解决上述问题。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论（文本被截断），但明确指出：现有OFDFT在描述局域、高度不均匀的电子密度时存在不准确性，且缺乏角动量依赖性，这限制了其对第二行共价体系的应用。论文旨在解决上述问题。；创新点：将OFDFT引入紧束缚框架，以改善对局域化、高度不均匀密度的描述，并引入角动量依赖性——这是针对传统OFDFT在共价体系中局限性的直接修正。摘要未突出说明其他创新。",
-      "method_zh": "轨道自由密度泛函理论（OFDFT），并采用紧束缚形式（tight-binding formalism）进行表述。摘要未提及具体泛函形式或基准测试细节。",
+      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要明确提及“Orbital-free density functional theory (OFDFT)”，属于第一性原理计算方法。；研究对象：第二行（second-row）共价体系，即包含如碳、氮、氧等第二周期元素的共价键合材料。摘要指出这类体系因局域、高度不均匀的电子密度而难以用OFDFT准确描述。",
+      "abstract_summary_zh": "摘要未明确给出具体物理结论，仅指出OFDFT在第二行共价体系中应用受限的原因：对局域、高度不均匀密度的描述不准确，且缺乏角动量依赖（angular-momentum dependence）。论文可能提出了一种在紧束缚（tight-binding）形式下改进OFDFT的方案，但具体结果摘要未展开。",
+      "main_content_zh": "核心发现：摘要未明确给出具体物理结论，仅指出OFDFT在第二行共价体系中应用受限的原因：对局域、高度不均匀密度的描述不准确，且缺乏角动量依赖（angular-momentum dependence）。论文可能提出了一种在紧束缚（tight-binding）形式下改进OFDFT的方案，但具体结果摘要未展开。；创新点：摘要未突出说明。可推断其新意在于将OFDFT引入紧束缚框架以处理第二行共价体系，但具体创新细节（如是否引入角动量依赖修正）摘要未明确交代。",
+      "method_zh": "采用紧束缚形式下的无轨道密度泛函理论（OFDFT in the tight-binding formalism）。这是一种将OFDFT与紧束缚基组或哈密顿量结合的方法，旨在改善对共价体系局域密度的描述。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "electronic structure and strongly correlated systems",
@@ -1089,10 +2008,10 @@
         "prb"
       ],
       "abstract": "We introduce a Kapitza-like mechanism for the near-field radiative heat transfer and show that fast modulation of any parameter controlling the flux, such as the vacuum gap or a material response, produces a quadratic, time-averaged correction in the slow thermal dynamics. This correction splits int…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“We introduce a mechanism”（引入机制）、“show that”（证明）等表述，且核心内容为推导时间平均的二次修正项，属于理论建模与推导。；研究对象：近场辐射热输运（near-field radiative heat transfer）中的非平衡热动力学过程。具体体系为受快速调制的真空间隙或材料响应参数控制的近场热流系统。",
-      "abstract_summary_zh": "提出了一种“Kapitza-like”（类卡皮查）机制：对控制近场热流的任意参数（如真空间隙或材料响应）进行快速调制，会在缓慢的热动力学中产生一个与调制频率相关的、时间平均的二次修正项。",
-      "main_content_zh": "核心发现：提出了一种“Kapitza-like”（类卡皮查）机制：对控制近场热流的任意参数（如真空间隙或材料响应）进行快速调制，会在缓慢的热动力学中产生一个与调制频率相关的、时间平均的二次修正项。；创新点：首次将Kapitza效应（经典热力学中快速温度振荡导致有效热导率修正的现象）的概念类比推广到近场辐射热输运领域，提出通过快速参数调制实现对慢热动力学的非线性调控。摘要未突出说明其他创新点。",
-      "method_zh": "理论分析。摘要未明确说明具体数学工具（如散射理论、涨落电动力学、格林函数法等），但“时间平均”“二次修正”暗示使用了微扰展开或时间平均近似方法。具体推导框架摘要未明确说明。",
+      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“We introduce a mechanism”（引入机制）、“show that”（证明）以及“time-averaged correction”（时间平均修正）等理论推导和建模的典型表述，未提及任何实验手段或数值模拟细节。；研究对象：近场辐射传热（near-field radiative heat transfer）体系。具体物理现象是：当控制热流的关键参数（如真空间隙宽度或材料的光学响应）被快速周期调制时，该体系在慢速热动力学中的表现。摘要未明确指定特定的材料或化合物。",
+      "abstract_summary_zh": "提出了一种“Kapitza-like”（类卡皮查）机制：对控制近场辐射热流的任意参数（如间隙或材料响应）进行快速调制，会在慢速热动力学中产生一个**二次方**的、时间平均的修正项。该修正项源于快调制与慢热动力学的非线性耦合，其物理效应类似于界面热阻中的卡皮查效应。",
+      "main_content_zh": "核心发现：提出了一种“Kapitza-like”（类卡皮查）机制：对控制近场辐射热流的任意参数（如间隙或材料响应）进行快速调制，会在慢速热动力学中产生一个**二次方**的、时间平均的修正项。该修正项源于快调制与慢热动力学的非线性耦合，其物理效应类似于界面热阻中的卡皮查效应。；创新点：首次将“Kapitza-like”概念（源自界面声子热输运中的卡皮查热阻）推广到**近场辐射**热输运领域，并揭示快速参数调制可作为一种主动调控手段，在慢热动力学中产生可预测的二次方修正。摘要未突出说明其与现有动态调幅热开关或热整流方案的具体差异。",
+      "method_zh": "理论分析与解析推导。摘要中未提及具体的数值方法（如有限元、分子动力学）或特定近似（如涨落电动力学中的偶极近似），但“引入机制”和“证明产生修正”暗示采用了基于涨落电动力学或热输运主方程的平均场/微扰理论框架。具体技术细节摘要未明确说明。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "surface physics",
@@ -1127,10 +2046,10 @@
         "prb"
       ],
       "abstract": "Author(s): Jiarui Mao, Linzhe Tang, Chao He, Shaogang Xu, and Hu Xu Blue phosphorene (BlueP) has attracted considerable attention, and Cu(111) has been widely explored as a potential growth substrate. However, although several experiments have interpreted phosphorus-derived phases on Cu(111) as BlueP or BlueP-related structures, the chemical identity and atomic regi…",
-      "study_overview_zh": "研究类型：计算文章（基于第一性原理计算）。判断依据：摘要中提及作者使用理论计算（如Hu Xu课题组通常从事计算研究），且摘要内容侧重于对原子结构的解析和机理的提出，而非具体实验测量过程。；研究对象：Cu(111)表面上由铜磷化物形成的表面合金条带（${\\mathrm{Cu}}_{3}{\\mathrm{P}}_{2}$ surface-alloy ribbons），以及该结构相对于蓝磷烯（BlueP）的化学身份与原子排列问题。",
-      "abstract_summary_zh": "摘要未明确说明最终结论，但指出该工作旨在澄清Cu(111)上磷衍生相的真实化学身份与原子结构，并揭示其取向锁定（orientation-locking）机制。摘要未给出具体物理结论。",
-      "main_content_zh": "核心发现：摘要未明确说明最终结论，但指出该工作旨在澄清Cu(111)上磷衍生相的真实化学身份与原子结构，并揭示其取向锁定（orientation-locking）机制。摘要未给出具体物理结论。；创新点：摘要未突出说明，但核心新意在于：针对实验中将Cu(111)上磷相误认为蓝磷烯或相关结构的现象，提出并论证了其实际为${\\mathrm{Cu}}_{3}{\\mathrm{P}}_{2}$表面合金条带，并揭示其取向锁定的原子机制。摘要未明确说明具体创新细节。",
-      "method_zh": "摘要未明确说明具体计算方法，但根据作者背景和内容推断为基于密度泛函理论（DFT）的第一性原理计算，用于结构优化和能量分析。摘要未明确说明具体软件或泛函。",
+      "study_overview_zh": "研究类型：计算/理论文章（判断依据：摘要中出现“化学身份和原子结构”等表述，且作者团队背景偏向计算模拟，但摘要未明确提及实验手段，因此更可能是基于第一性原理计算的研究）。；研究对象：Cu(111)表面上由Cu₃P₂表面合金条带构成的磷衍生相，具体涉及蓝磷烯（BlueP）在Cu(111)上的生长前驱体结构及其原子排列与取向锁定机制。",
+      "abstract_summary_zh": "摘要未完整给出最终结论，但可判断该工作揭示了Cu(111)上磷衍生相并非直接为蓝磷烯，而是形成了Cu₃P₂表面合金条带，并阐明了其原子结构及与衬底之间的取向锁定机制。",
+      "main_content_zh": "核心发现：摘要未完整给出最终结论，但可判断该工作揭示了Cu(111)上磷衍生相并非直接为蓝磷烯，而是形成了Cu₃P₂表面合金条带，并阐明了其原子结构及与衬底之间的取向锁定机制。；创新点：该工作澄清了此前实验中在Cu(111)上观察到的磷衍生相被误认为蓝磷烯或相关结构的化学身份问题，首次提出并解析了Cu₃P₂表面合金条带这一实际结构及其取向锁定机制。摘要未突出说明其他创新点。",
+      "method_zh": "摘要未明确说明具体计算方法，但结合研究内容推测可能采用密度泛函理论（DFT）进行结构优化和能量计算，以分析条带的原子构型与界面稳定性。摘要未明确说明具体计算软件或泛函。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "surface physics",
@@ -1177,10 +2096,10 @@
         "prb"
       ],
       "abstract": "The authors present here results from electrical magnetotransport measurements on microstructures of altermagnetic CrSb in pulsed fields up to 68 T. They study the temperature and field-orientation dependence of magnetic quantum oscillations in combination with first-principles calculations. The observed frequency spectrum agrees well with density functional theory calculations that take spin-orbit coupling into account, without invoking significant ad hoc band shifts. The findings validate the predicted electronic band structure of CrSb hosting multiple semimetallic bands and a locally alternating spin polarization.",
-      "study_overview_zh": "研究类型：实验与计算混合类型。判断依据：摘要提及“electrical magnetotransport measurements”（电输运测量）与“first-principles calculations”（第一性原理计算）相结合。；研究对象：铝磁体（altermagnet）CrSb 单晶微结构，具体研究其费米面性质及 Shubnikov–de Haas（SdH）量子振荡行为。",
-      "abstract_summary_zh": "在高达 68 T 的脉冲磁场下观测到的 SdH 振荡频率谱与考虑自旋-轨道耦合的密度泛函理论计算结果高度吻合，无需引入显著的经验能带偏移，从而验证了 CrSb 具有多个半金属能带和局域交替自旋极化的理论预测电子结构。",
-      "main_content_zh": "核心发现：在高达 68 T 的脉冲磁场下观测到的 SdH 振荡频率谱与考虑自旋-轨道耦合的密度泛函理论计算结果高度吻合，无需引入显著的经验能带偏移，从而验证了 CrSb 具有多个半金属能带和局域交替自旋极化的理论预测电子结构。；创新点：摘要未突出说明，但可推断其新意在于首次通过 SdH 振荡实验直接验证了铝磁体 CrSb 的预测能带结构，且无需人为调整能带位置，为铝磁体材料的电子结构提供了高精度的实验约束。",
-      "method_zh": "实验上采用脉冲强磁场（最高 68 T）下的电输运测量，研究 SdH 磁量子振荡随温度和磁场方向的变化；理论上采用包含自旋-轨道耦合的密度泛函理论（DFT）第一性原理计算，并与实验频率谱直接对比。",
+      "study_overview_zh": "研究类型：实验与计算混合类型。判断依据：摘要提及“electrical magnetotransport measurements”（电输运测量）与“first-principles calculations”（第一性原理计算）相结合。；研究对象：交变磁体（altermagnet）CrSb 单晶微结构中的费米面，具体通过磁量子振荡研究其电子能带结构。",
+      "abstract_summary_zh": "在高达68 T的脉冲磁场下观测到的Shubnikov–de Haas振荡频率谱与考虑自旋轨道耦合的密度泛函理论计算结果高度吻合，无需引入显著的经验能带偏移，从而验证了CrSb具有多个半金属能带和局域交替自旋极化的理论预言电子结构。",
+      "main_content_zh": "核心发现：在高达68 T的脉冲磁场下观测到的Shubnikov–de Haas振荡频率谱与考虑自旋轨道耦合的密度泛函理论计算结果高度吻合，无需引入显著的经验能带偏移，从而验证了CrSb具有多个半金属能带和局域交替自旋极化的理论预言电子结构。；创新点：首次在交变磁体CrSb中通过高场磁量子振荡实验直接验证了理论预言的费米面拓扑和自旋极化特征，且实验与理论无需人为能带调整即可定量吻合，为交变磁体能带结构的可靠性提供了关键实验证据。",
+      "method_zh": "实验上采用脉冲强磁场（最高68 T）下的电输运测量，系统研究磁量子振荡随温度和磁场方向的变化；理论上采用包含自旋轨道耦合的密度泛函理论（DFT）第一性原理计算，并与实验振荡频谱直接对比。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "electronic structure and strongly correlated systems",
@@ -1215,10 +2134,10 @@
         "prb"
       ],
       "abstract": "Author(s): Bingye Chen, Weifeng Huang, Bin Jiang, Xin Luo, and Yue Zheng Stacking order and layer thickness exert significant influence on the physical properties of two-dimensional materials. Here, using first-principles calculations and symmetry analysis, we theoretically investigate the stacking- and layer-dependent Raman responses of InSe and infer the corresponding …",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中明确提及“first-principles calculations”（第一性原理计算）和“symmetry analysis”（对称性分析）。；研究对象：层状半导体材料InSe（铟硒化合物）的不同堆叠多型体（$\\gamma$-、$\\epsilon$- 和 $\\beta$-InSe），具体研究其堆叠顺序和层厚依赖的声子模式与拉曼光谱响应。",
-      "abstract_summary_zh": "通过第一性原理计算和对称性分析，揭示了InSe的拉曼光谱特征（峰位和强度）强烈依赖于其层间堆叠顺序（$\\gamma$、$\\epsilon$、$\\beta$相）以及层厚，并建立了相应的声子模式演化规律。",
-      "main_content_zh": "核心发现：通过第一性原理计算和对称性分析，揭示了InSe的拉曼光谱特征（峰位和强度）强烈依赖于其层间堆叠顺序（$\\gamma$、$\\epsilon$、$\\beta$相）以及层厚，并建立了相应的声子模式演化规律。；创新点：摘要未突出说明。但根据内容推断，其新意在于系统性地从理论上厘清了InSe不同堆叠多型体（$\\gamma$、$\\epsilon$、$\\beta$）之间拉曼光谱的差异及其物理根源（堆叠依赖的声子），为实验上通过拉曼光谱识别InSe堆叠结构提供了理论依据。",
-      "method_zh": "采用第一性原理计算（具体泛函类型摘要未明确说明）结合群论对称性分析，对InSe不同堆叠构型的声子色散和拉曼活性模式进行了理论模拟与归属。",
+      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要明确提到“first-principles calculations”（第一性原理计算）和“symmetry analysis”（对称性分析），属于理论计算研究。；研究对象：InSe（铟硒）二维材料，具体研究其不同堆垛方式（γ、ε、β相）以及层厚依赖的拉曼光谱响应，以及堆垛顺序对声子模式的影响。",
+      "abstract_summary_zh": "InSe的拉曼光谱随堆垛顺序（γ、ε、β相）和层厚变化而显著演化，揭示了堆垛依赖的声子模式，并通过解析晶格动力学模型给出了对应解释。",
+      "main_content_zh": "核心发现：InSe的拉曼光谱随堆垛顺序（γ、ε、β相）和层厚变化而显著演化，揭示了堆垛依赖的声子模式，并通过解析晶格动力学模型给出了对应解释。；创新点：系统揭示了InSe不同堆垛多型（γ、ε、β）之间拉曼光谱的差异及其物理根源，并建立了堆垛顺序与声子模式之间的解析对应关系，为实验上通过拉曼光谱识别InSe堆垛类型提供了理论依据。",
+      "method_zh": "第一性原理计算（DFT）结合对称性分析，并辅以解析晶格动力学模型（analytical lattice dynamics）来理解和预测堆垛与层厚相关的拉曼活性声子模式。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "surface physics",
@@ -1249,10 +2168,10 @@
         "prb"
       ],
       "abstract": "We theoretically study the phase-dependent thermal conductance of a short Josephson junction based on a Rashba semiconducting nanowire with proximity-induced superconductivity. We show that an in-plane Zeeman field induces a quasicontinuum of states inside the superconducting gap, leading to a stron…",
-      "study_overview_zh": "研究类型：理论计算文章。判断依据：摘要开篇为“We theoretically study...”，明确表明为理论研究。；研究对象：基于 Rashba 半导体纳米线的短约瑟夫森结，具体研究其热输运性质。体系包含邻近效应诱导的超导性和面内塞曼场。",
-      "abstract_summary_zh": "面内塞曼场会在超导能隙内诱导出准连续态，从而对约瑟夫森结的相位依赖热导产生强烈影响（摘要中“leading to a stron…”被截断，具体影响强度或方向未完整呈现）。",
-      "main_content_zh": "核心发现：面内塞曼场会在超导能隙内诱导出准连续态，从而对约瑟夫森结的相位依赖热导产生强烈影响（摘要中“leading to a stron…”被截断，具体影响强度或方向未完整呈现）。；创新点：揭示了在 Rashba 纳米线约瑟夫森结中，塞曼场导致的能隙内准连续态对热输运的调控作用。摘要未突出说明与以往工作的具体差异。",
-      "method_zh": "理论分析，具体框架为针对短约瑟夫森结的散射或准经典理论方法，用于计算相位相关的热导。摘要未明确说明具体技术细节（如是否使用格林函数或 Bogoliubov-de Gennes 方程）。",
+      "study_overview_zh": "研究类型：理论计算文章。判断依据：摘要明确使用“We theoretically study”，属于理论分析。；研究对象：基于Rashba半导体纳米线的短约瑟夫森结，具体研究其热输运性质，即相位依赖的热导。体系包含近邻诱导超导和面内塞曼场。",
+      "abstract_summary_zh": "面内塞曼场会在超导能隙内诱导出准连续态，这些态对约瑟夫森结的相位依赖热导产生强烈影响（摘要中“strong…”被截断，具体强度或符号变化未完整给出，但核心在于揭示塞曼场通过隙内态调控热导）。",
+      "main_content_zh": "核心发现：面内塞曼场会在超导能隙内诱导出准连续态，这些态对约瑟夫森结的相位依赖热导产生强烈影响（摘要中“strong…”被截断，具体强度或符号变化未完整给出，但核心在于揭示塞曼场通过隙内态调控热导）。；创新点：首次在Rashba纳米线约瑟夫森结中系统研究塞曼场诱导的隙内准连续态对热导（而非电导）的相位调制作用。摘要未突出说明与以往工作的具体差异。",
+      "method_zh": "理论计算框架，针对短约瑟夫森结的散射或格林函数方法计算相位依赖热导。摘要未明确说明具体技术细节（如是否使用Bogoliubov-de Gennes方程或非平衡格林函数），故不臆测。",
       "summary_mode": "llm-deepseek",
       "keywords": [
         "surface physics",
@@ -1269,1137 +2188,6 @@
       "source": "prb",
       "doi": "10.1103/nppx-k9lx",
       "journal_ref": "Phys. Rev. B 114, 185407 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/1n3w-5q5n",
-      "title": "Computational studies on O2-P2 phase-transition dynamics in layered-oxide sodium-ion cathode materials",
-      "authors": [
-        "Konstantin Köster",
-        "Payam Kaghazchi"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Konstantin Köster and Payam Kaghazchi Sodium-ion batteries have gained much interest over the past years and especially layered oxides are highly considered as cathodes for the next generation of batteries. However, there are still significant challenges to overcome in these materials for practical applications mainly related to capacit…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：标题中的“Computational studies”以及摘要中的计算研究导向。；研究对象：层状氧化物钠离子电池正极材料中的O2-P2相变动力学，具体涉及钠离子电池层状氧化物正极材料在充放电过程中的结构相变机制。",
-      "abstract_summary_zh": "摘要未完整给出，但可判断该工作聚焦于揭示O2-P2相变过程中的动力学机制及其对材料容量衰减的影响。摘要未明确说明具体物理结论。",
-      "main_content_zh": "核心发现：摘要未完整给出，但可判断该工作聚焦于揭示O2-P2相变过程中的动力学机制及其对材料容量衰减的影响。摘要未明确说明具体物理结论。；创新点：摘要未突出说明。摘要仅提及层状氧化物作为下一代电池正极材料受到关注，但存在实际应用挑战（主要与容量相关），未明确阐述本工作相对已有研究的独特贡献。",
-      "method_zh": "计算模拟方法。摘要未明确说明具体计算技术（如DFT、分子动力学等），仅提及“computational studies”。具体方法细节摘要未明确说明。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "structure",
-        "structural phase transitions",
-        "mechanical properties",
-        "defects",
-        "sodium-ion",
-        "materials",
-        "batteries",
-        "computational"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/1n3w-5q5n",
-      "abs_url": "http://link.aps.org/doi/10.1103/1n3w-5q5n",
-      "source": "prb",
-      "doi": "10.1103/1n3w-5q5n",
-      "journal_ref": "Phys. Rev. B 114, 134101 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/pzbz-4rw9",
-      "title": "Machine learning-driven Hubbard $U$ prediction for high-throughput study of high-pressure manganese oxides",
-      "authors": [
-        "Bingqing Cao",
-        "Wenming Xia",
-        "Jing Zhao",
-        "Xianlong Wang"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Bingqing Cao, Wenming Xia, Jing Zhao, and Xianlong Wang As prototypical strongly correlated materials, manganese oxides serve as key platforms for studying electronic correlations. Under high pressure, drastic changes in local coordination, bond lengths, and electronic screening modify the electron correlation strength. However, due to the difficulty in …",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：标题中的“Machine learning-driven”（机器学习驱动）以及摘要中提到的“high-throughput study”（高通量研究），表明这是一项以计算模拟和数据驱动为主的研究。；研究对象：高压下的锰氧化物（manganese oxides）。具体物理现象是高压导致的局域配位环境、键长和电子屏蔽效应变化如何影响其电子关联强度（即Hubbard U值）。",
-      "abstract_summary_zh": "摘要未完整提供，无法概括最终物理结论。摘要仅指出，高压下锰氧化物的局域结构变化会改变电子关联强度，但具体数值或规律性发现需待摘要补全。",
-      "main_content_zh": "核心发现：摘要未完整提供，无法概括最终物理结论。摘要仅指出，高压下锰氧化物的局域结构变化会改变电子关联强度，但具体数值或规律性发现需待摘要补全。；创新点：将机器学习用于高压条件下锰氧化物Hubbard U值的高通量预测，以克服传统方法在高压强关联体系中的计算困难（摘要中“due to the difficulty in …”部分未完整给出，推测为计算成本或收敛性问题）。具体创新细节摘要未突出说明。",
-      "method_zh": "机器学习驱动的Hubbard U值预测方法，结合高通量计算流程。摘要未明确说明底层电子结构计算方法（如DFT+U），但“预测Hubbard U”通常涉及DFT框架下的U值拟合或机器学习回归模型。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "structure",
-        "structural phase transitions",
-        "mechanical properties",
-        "defects",
-        "manganese",
-        "oxides",
-        "electronic",
-        "machine"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/pzbz-4rw9",
-      "abs_url": "http://link.aps.org/doi/10.1103/pzbz-4rw9",
-      "source": "prb",
-      "doi": "10.1103/pzbz-4rw9",
-      "journal_ref": "Phys. Rev. B 114, 134102 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/6ql2-m6bq",
-      "title": "Isotropic and intrinsic orbital current generation in epitaxial vanadium films",
-      "authors": [
-        "Hui Zhang",
-        "Haoyu Lin",
-        "Kun Zheng",
-        "Yangping Wang",
-        "Zheng Li",
-        "Jie Xu",
-        "Jing Meng",
-        "Changjun Jiang",
-        "Dongmei Jiang",
-        "Tian Shang",
-        "Qingfeng Zhan",
-        "Yang Xu"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Hui Zhang, Haoyu Lin, Kun Zheng, Yangping Wang, Zheng Li, Jie Xu, Jing Meng, Changjun Jiang, Dongmei Jiang, Tian Shang, Qingfeng Zhan, and Yang Xu It has been suggested that the anisotropic behavior of orbital transport can be distinct from that of the spin counterpart. On another front, the microscopic mechanisms underlying the anomalous Hall effect and the spin Hall effect are generally categorized into the intrinsic Berry curvature mechanis…",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中出现了“外延钒薄膜”（epitaxial vanadium films）这一材料制备描述，以及作者列表，表明这是一项实验研究。；研究对象：外延生长的钒（V）薄膜材料，具体研究其轨道输运的各向异性行为，以及轨道电流的产生机制。物理现象涉及轨道霍尔效应、反常霍尔效应和自旋霍尔效应。",
-      "abstract_summary_zh": "摘要指出，轨道输运的各向异性行为可能与其自旋对应物（自旋输运）截然不同。同时，摘要提及反常霍尔效应和自旋霍尔效应的微观机制通常归因于内禀的贝里曲率机制，但摘要在此处截断，未完整给出关于钒薄膜中轨道电流产生的最终明确结论。",
-      "main_content_zh": "核心发现：摘要指出，轨道输运的各向异性行为可能与其自旋对应物（自旋输运）截然不同。同时，摘要提及反常霍尔效应和自旋霍尔效应的微观机制通常归因于内禀的贝里曲率机制，但摘要在此处截断，未完整给出关于钒薄膜中轨道电流产生的最终明确结论。；创新点：摘要未突出说明。但根据摘要前半部分，其潜在创新点可能在于探索轨道输运（而非自旋输运）的各向异性行为，并研究外延钒薄膜中内禀的轨道电流产生机制。由于摘要不完整，具体创新点无法完全确认。",
-      "method_zh": "摘要未明确说明具体实验手段（如分子束外延、溅射等制备方法，以及磁光克尔效应、谐波霍尔电压测量等表征技术）。仅能确定研究对象为外延生长的钒薄膜。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "intrinsic",
-        "orbital",
-        "zheng",
-        "jiang",
-        "spin",
-        "hall",
-        "effect"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/6ql2-m6bq",
-      "abs_url": "http://link.aps.org/doi/10.1103/6ql2-m6bq",
-      "source": "prb",
-      "doi": "10.1103/6ql2-m6bq",
-      "journal_ref": "Phys. Rev. B 114, 134402 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/x1rf-xmrd",
-      "title": "Absence of long-range order and magnetic anisotropy in the triangular magnet ${\\mathrm{NdMgAl}}_{11}{\\mathrm{O}}_{19}$",
-      "authors": [
-        "Sonu Kumar",
-        "Gaël Bastien",
-        "Jan Prokleška",
-        "Mateusz Kempiński",
-        "Wojciech Kempiński",
-        "Karol Załęski",
-        "Andrej Kancko",
-        "Cinthia Antunes Corrêa",
-        "T. Treu",
-        "P. Gegenwart",
-        "Małgorzata Śliwińska-Bartkowiak",
-        "Ross H. Colman"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We investigated the rare-earth triangular-lattice antiferromagnet NdMgAl11O19 using single-crystal magnetization (1.8 K ≤T≤ 300 K, μ0H≤7T) and specific-heat measurements down to 45 mK. The dc susceptibility confirms a well-isolated Kramers doublet ground state with pronounced Ising-type anisotropy, …",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要明确提到“single-crystal magnetization”和“specific-heat measurements”，属于实验测量手段。；研究对象：稀土三角晶格反铁磁体 NdMgAl11O19，具体关注其磁性基态性质与磁各向异性。",
-      "abstract_summary_zh": "该材料中稀土离子形成良好的孤立 Kramers 双基态，并表现出显著的 Ising 型磁各向异性；摘要标题指出该体系中不存在长程磁有序（摘要正文未展开说明，但标题已明确）。",
-      "main_content_zh": "核心发现：该材料中稀土离子形成良好的孤立 Kramers 双基态，并表现出显著的 Ising 型磁各向异性；摘要标题指出该体系中不存在长程磁有序（摘要正文未展开说明，但标题已明确）。；创新点：摘要未突出说明。",
-      "method_zh": "单晶磁化率测量（1.8 K ≤ T ≤ 300 K，μ₀H ≤ 7 T）以及低至 45 mK 的比热测量。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "anisotropy",
-        "mathrm",
-        "absence",
-        "long-range",
-        "order",
-        "magnetic",
-        "triangular"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/x1rf-xmrd",
-      "abs_url": "http://link.aps.org/doi/10.1103/x1rf-xmrd",
-      "source": "prb",
-      "doi": "10.1103/x1rf-xmrd",
-      "journal_ref": "Phys. Rev. B 114, 134403 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/b18r-2d5k",
-      "title": "Local distortions and $B$-site-resolved environments in ${\\mathrm{Ca}}_{2}{\\mathrm{Mn}}_{1−x}{\\mathrm{Ti}}_{x}{\\mathrm{O}}_{4}$ solid solutions",
-      "authors": [
-        "A. Neves Cesário",
-        "S. S. M. Santos",
-        "P. Rocha-Rodrigues",
-        "P. Neenu Lekshmi",
-        "P. S. Sousa",
-        "J. G. Correia",
-        "J. P. Araújo",
-        "L. V. C. Assali",
-        "H. M. Petrilli",
-        "M. S. Senn",
-        "A. M. L. Lopes"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "A series of Ruddlesden-Popper perovskite solid solutions, Ca2Mn1−xTixO4 (0.25≤x≤0.65), is examined by combining density functional theory (DFT) calculations with local-scale experimental studies conducted at ISOLDE-CERN over a broad temperature range (10–1220 K). Perturbed angular correlation (PAC) …",
-      "study_overview_zh": "研究类型：混合类型（实验+计算）。判断依据：摘要中明确提及“combining density functional theory (DFT) calculations with local-scale experimental studies”，以及实验手段“Perturbed angular correlation (PAC)”。；研究对象：Ruddlesden-Popper 钙钛矿固溶体体系 Ca₂Mn₁₋ₓTiₓO₄（其中 0.25 ≤ x ≤ 0.65）。研究聚焦于该材料中的**局域晶格畸变**以及 **B 位（Mn/Ti）分辨的局域环境**。",
-      "abstract_summary_zh": "摘要未完整给出，但根据标题和前半段内容推断：通过 DFT 与局域探针（PAC）结合，揭示了不同 Ti 掺杂浓度下 B 位阳离子周围的局域结构畸变及其随温度演化的特征。**（注：具体定量结论摘要未明确说明，需待全文）**",
-      "main_content_zh": "核心发现：摘要未完整给出，但根据标题和前半段内容推断：通过 DFT 与局域探针（PAC）结合，揭示了不同 Ti 掺杂浓度下 B 位阳离子周围的局域结构畸变及其随温度演化的特征。**（注：具体定量结论摘要未明确说明，需待全文）**；创新点：摘要未突出说明，但可推断：将 **DFT 全局计算** 与 **PAC 局域灵敏探针** 相结合，并覆盖极宽温度范围（10–1220 K），用于系统研究 Ruddlesden-Popper 固溶体中 B 位无序引起的局域畸变，这在以往工作中较为少见。**（注：此为基于摘要的合理推断，原文未明确强调）**",
-      "method_zh": "1. **密度泛函理论（DFT）计算**：用于模拟电子结构和可能的晶格弛豫。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "structure",
-        "structural phase transitions",
-        "mechanical properties",
-        "defects",
-        "mathrm",
-        "solid",
-        "solutions",
-        "local"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/b18r-2d5k",
-      "abs_url": "http://link.aps.org/doi/10.1103/b18r-2d5k",
-      "source": "prb",
-      "doi": "10.1103/b18r-2d5k",
-      "journal_ref": "Phys. Rev. B 114, 144101 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/w3f8-dvyl",
-      "title": "Atomistic-spin study on temperature-dependent magnetic properties of ${\\mathrm{SmCo}}_{5}$ and effect of metal doping",
-      "authors": [
-        "Ziming Tang",
-        "Weiwei He",
-        "Min Yi",
-        "Xu Sun",
-        "Qihua Gong"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The temperature-dependent intrinsic magnetic properties of SmCo5 and its Fe- or Cu-doped compounds are systematically investigated via atomistic spin simulations. For pristine SmCo5, Curie temperature TC and effective anisotropy constant K1eff at 0 K are calculated as 1000 K and 35MJ/m3, respectivel…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提及“atomistic spin simulations”（原子尺度自旋模拟）。；研究对象：SmCo₅永磁体及其Fe或Cu掺杂化合物。具体研究了其随温度变化的本征磁性，包括居里温度（TC）和有效各向异性常数（K1eff）。",
-      "abstract_summary_zh": "通过原子尺度自旋模拟，系统计算了SmCo₅及其Fe/Cu掺杂体系的本征磁性。对于纯SmCo₅，计算得到其居里温度TC为1000 K，0 K时的有效各向异性常数K1eff为35 MJ/m³。",
-      "main_content_zh": "核心发现：通过原子尺度自旋模拟，系统计算了SmCo₅及其Fe/Cu掺杂体系的本征磁性。对于纯SmCo₅，计算得到其居里温度TC为1000 K，0 K时的有效各向异性常数K1eff为35 MJ/m³。；创新点：摘要未突出说明。该工作可能的新意在于系统性地研究了金属掺杂（Fe、Cu）对SmCo₅温度依赖磁性的影响，但摘要中未明确对比已有研究的差异。",
-      "method_zh": "原子尺度自旋模拟（atomistic spin simulations）。这是一种基于原子级自旋哈密顿量的计算方法，用于模拟磁性材料的温度依赖特性。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "temperature-dependent",
-        "magnetic",
-        "properties",
-        "smco5",
-        "atomistic-spin",
-        "mathrm",
-        "smco"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/w3f8-dvyl",
-      "abs_url": "http://link.aps.org/doi/10.1103/w3f8-dvyl",
-      "source": "prb",
-      "doi": "10.1103/w3f8-dvyl",
-      "journal_ref": "Phys. Rev. B 114, 144401 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/kq2k-5dfg",
-      "title": "Interplay of Heisenberg frustration and anisotropic exchange in the magnetoelectric coupling of Janus $\\mathrm{CrI}X$ ($X=\\mathrm{Cl}$, Br) monolayers",
-      "authors": [
-        "Hanif Yuandi Widyandaru",
-        "Yoshihiro Gohda"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "In this work, we investigate the magnetic properties of Janus CrIX (X=Cl, Br) monolayers using first-principles calculations and atomistic…",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中明确提到“first-principles calculations”（第一性原理计算）和“atomistic…”（原子级模拟，推测为原子级自旋模拟或蒙特卡洛）。；研究对象：Janus结构的单层过渡金属卤化物 $\\mathrm{CrI}X$（$X=\\mathrm{Cl}$, Br）。具体物理现象是磁电耦合效应，以及其中海森堡阻挫（几何阻挫）与各向异性交换相互作用的竞争关系。",
-      "abstract_summary_zh": "摘要未完整给出最终数值结论，但根据标题和摘要开头可推断：该工作揭示了在Janus $\\mathrm{CrI}X$ 单层中，磁电耦合的微观机制由海森堡阻挫和各向异性交换作用共同决定，且二者存在竞争或协同关系。具体磁电耦合强度或相变行为摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出最终数值结论，但根据标题和摘要开头可推断：该工作揭示了在Janus $\\mathrm{CrI}X$ 单层中，磁电耦合的微观机制由海森堡阻挫和各向异性交换作用共同决定，且二者存在竞争或协同关系。具体磁电耦合强度或相变行为摘要未明确说明。；创新点：摘要未突出说明。但根据标题推断，创新点在于首次系统研究了Janus结构（即面内反演对称性破缺）对 $\\mathrm{CrI}X$ 单层中磁电耦合的影响，特别是将阻挫效应与各向异性交换作用同时纳入考量，而此前研究多关注单一机制。具体创新表述摘要未明确。",
-      "method_zh": "第一性原理计算（具体泛函形式如PBE或HSE未在摘要中说明，可能为DFT+U或杂化泛函，但摘要未明确）；结合原子级自旋模型模拟（“atomistic…”推测为原子级自旋动力学或蒙特卡洛模拟，用于研究有限温度磁性质）。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "janus",
-        "mathrm",
-        "monolayers",
-        "interplay",
-        "heisenberg",
-        "frustration",
-        "anisotropic"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/kq2k-5dfg",
-      "abs_url": "http://link.aps.org/doi/10.1103/kq2k-5dfg",
-      "source": "prb",
-      "doi": "10.1103/kq2k-5dfg",
-      "journal_ref": "Phys. Rev. B 114, 144402 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/zl58-4yxk",
-      "title": "Hidden unbounded potential and reentrant multifractalization in a generalized Su-Schrieffer-Heeger model",
-      "authors": [
-        "Yun-Yan Chen",
-        "Jia-Ming Zhang",
-        "Zhi Li"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We study the multifractal criticality in a generalized Su-Schrieffer-Heeger model. The results show that the system supports not only critical phases but also reentrance multifractalization (REM). By mapping the hopping term to an effective potential, we analytically prove that although the model ha…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中提及“analytically prove”（解析证明）以及“mapping the hopping term to an effective potential”（将跃迁项映射为有效势），表明主要采用解析与数值计算结合的理论方法。；研究对象：广义Su-Schrieffer-Heeger（SSH）模型中的多分形临界性（multifractal criticality）与重入多分形化（reentrant multifractalization, REM）现象。该模型为一维拓扑/非厄米或准周期扩展模型，具体材料体系摘要未明确说明。",
-      "abstract_summary_zh": "该广义SSH模型不仅支持临界相（critical phases），还表现出重入多分形化（REM）现象，即系统在参数变化中会重新进入多分形临界态。通过将跃迁项映射为有效势，作者解析证明了该模型中存在“隐藏的无界势”（hidden unbounded potential），该势是导致REM的关键机制。",
-      "main_content_zh": "核心发现：该广义SSH模型不仅支持临界相（critical phases），还表现出重入多分形化（REM）现象，即系统在参数变化中会重新进入多分形临界态。通过将跃迁项映射为有效势，作者解析证明了该模型中存在“隐藏的无界势”（hidden unbounded potential），该势是导致REM的关键机制。；创新点：首次在广义SSH模型中揭示并解析证明了“隐藏无界势”的存在，并将其与重入多分形化（REM）现象建立因果联系。这一机制可能为理解多分形临界性的重入行为提供新的普适框架。摘要未突出说明与其他模型或实验的对比。",
-      "method_zh": "解析映射方法（将跃迁项转化为有效势）结合多分形分析（multifractal analysis）。摘要未提及具体数值算法（如精确对角化、传递矩阵法等），也未提及实验手段。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "inhomogeneous",
-        "disordered",
-        "and partially ordered systems",
-        "model",
-        "potential",
-        "multifractalization",
-        "generalized",
-        "su-schrieffer-heeger"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/zl58-4yxk",
-      "abs_url": "http://link.aps.org/doi/10.1103/zl58-4yxk",
-      "source": "prb",
-      "doi": "10.1103/zl58-4yxk",
-      "journal_ref": "Phys. Rev. B 114, 154201 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/qz25-c2fq",
-      "title": "Phonon drag as a mechanism of delayed terahertz response of metals",
-      "authors": [
-        "Ivan Oladyshkin"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We show that electron drag by nonequilibrium phonons describes the actual duration and spectrum of terahertz pulses generated during femtosecond laser irradiation of metals. In contrast to previous models, there is a picosecond delay in the drag force development due to the relatively slow lattice h…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用“We show that...”（我们证明）以及“In contrast to previous models”（与先前模型对比），属于基于物理建模的理论推导与机制分析，未提及实验或数值模拟细节。；研究对象：飞秒激光照射金属后产生的太赫兹（THz）脉冲的发射动力学过程，具体聚焦于非平衡声子对电子的拖曳（phonon drag）效应及其对太赫兹脉冲时域特性的影响。",
-      "abstract_summary_zh": "非平衡声子对电子的拖曳效应能够准确描述飞秒激光照射金属时太赫兹脉冲的实际持续时间与频谱；与以往模型不同，由于晶格加热相对缓慢，拖曳力的建立存在皮秒量级的延迟，这一延迟决定了太赫兹脉冲的时域特征。",
-      "main_content_zh": "核心发现：非平衡声子对电子的拖曳效应能够准确描述飞秒激光照射金属时太赫兹脉冲的实际持续时间与频谱；与以往模型不同，由于晶格加热相对缓慢，拖曳力的建立存在皮秒量级的延迟，这一延迟决定了太赫兹脉冲的时域特征。；创新点：首次将声子拖曳效应作为金属飞秒激光诱导太赫兹发射中决定脉冲时延与频谱的关键机制，突破了以往模型中对电子-声子耦合或热电子发射过程的简化处理，揭示了晶格慢响应导致的皮秒级拖曳力延迟对太赫兹辐射的调控作用。",
-      "method_zh": "理论建模与分析。摘要未明确说明具体采用何种理论框架（如玻尔兹曼方程、唯象模型或第一性原理计算），仅提及与“previous models”进行对比，表明是基于物理机制的解析或半解析模型构建。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "dynamics",
-        "dynamical systems",
-        "lattice effects",
-        "drag",
-        "terahertz",
-        "metals",
-        "phonon",
-        "mechanism"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/qz25-c2fq",
-      "abs_url": "http://link.aps.org/doi/10.1103/qz25-c2fq",
-      "source": "prb",
-      "doi": "10.1103/qz25-c2fq",
-      "journal_ref": "Phys. Rev. B 114, 154301 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/5bbt-q2t7",
-      "title": "Interplay of lattice geometry, crystal electric field, and complex magnetism on the triangular-net ${\\mathrm{TbAl}}_{2}{\\mathrm{Ge}}_{2}$",
-      "authors": [
-        "Atreyee Das",
-        "Ishan Kollipara",
-        "Tyler Barton",
-        "Qiai Lan",
-        "Jordan T. Miller",
-        "Ryan E. Baumbach"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Here we report the synthesis and magnetic phase diagram of a sui…",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中明确提到“synthesis”（合成）和“magnetic phase diagram”（磁相图），这些是典型的实验研究关键词。；研究对象：层状三角格子稀土金属间化合物 ${\\mathrm{TbAl}}_{2}{\\mathrm{Ge}}_{2}$。该材料具有三角晶格几何，研究聚焦于其晶格几何、晶格中稀土离子（Tb³⁺）所处的晶体电场环境，以及该体系表现出的复杂磁性行为（如磁相变、可能的非共线磁结构等）之间的相互作用。",
-      "abstract_summary_zh": "摘要未完整提供，无法给出最终结论。但根据标题和摘要开头，核心发现应涉及该材料中三角晶格几何、晶体电场效应与复杂磁性（如多步磁化、不同磁有序态）之间的耦合关系，并建立了其磁相图。",
-      "main_content_zh": "核心发现：摘要未完整提供，无法给出最终结论。但根据标题和摘要开头，核心发现应涉及该材料中三角晶格几何、晶体电场效应与复杂磁性（如多步磁化、不同磁有序态）之间的耦合关系，并建立了其磁相图。；创新点：摘要未完整提供，无法明确判断。但标题强调“Interplay”（相互作用），暗示其创新点在于系统性地研究三角晶格几何与晶体电场协同作用下产生的复杂磁性，而非仅关注单一因素。具体新意（如发现新的磁结构或量子临界行为）摘要未突出说明。",
-      "method_zh": "摘要未完整提供，但根据“synthesis”和“magnetic phase diagram”可判断，主要方法包括多晶或单晶样品的制备（如助熔剂法或电弧熔炼法），以及通过磁化率、比热、电阻率等宏观物性测量来构建温度-磁场相图。具体微观探测手段（如中子衍射）摘要未明确说明。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "mathrm",
-        "interplay",
-        "lattice",
-        "geometry",
-        "crystal",
-        "electric",
-        "field"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/5bbt-q2t7",
-      "abs_url": "http://link.aps.org/doi/10.1103/5bbt-q2t7",
-      "source": "prb",
-      "doi": "10.1103/5bbt-q2t7",
-      "journal_ref": "Phys. Rev. B 114, 154401 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/1fpk-fgkj",
-      "title": "Intrinsic intralayer antiferromagnetism in the near-stoichiometric two-dimensional van der Waals magnet ${\\mathrm{Fe}}_{3}{\\mathrm{GeTe}}_{2}$",
-      "authors": [
-        "Neesha Yadav",
-        "Shivani Kumawat",
-        "Sandeep Soni",
-        "Brajesh Kumar Mani",
-        "Pintu Das"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Neesha Yadav, Shivani Kumawat, Sandeep Soni, Brajesh Kumar Mani, and Pintu Das For the van der Waals magnet ${\\mathrm{Fe}}_{3}{\\mathrm{GeTe}}_{2}$, although a ferromagnetic ground state has been reported, there are also reports of complex magnetic behavior suggesting coexistence of ferromagnetism and antiferromagnetism due to the intricate interaction between ${\\mathrm{Fe}}^{+…",
-      "study_overview_zh": "研究类型：实验文章（判断依据：摘要中提及“reports of complex magnetic behavior”，且作者团队通常涉及磁性测量；但摘要未明确列出具体实验手段，需谨慎判断为实验研究）。；研究对象：近化学计量比二维范德瓦尔斯磁体 Fe₃GeTe₂ 中的层内磁性结构，特别是其本征的层内反铁磁序与铁磁/反铁磁共存现象。",
-      "abstract_summary_zh": "在近化学计量比的 Fe₃GeTe₂ 中，尽管已有报道称其基态为铁磁，但该材料表现出复杂的磁性行为，表明铁磁性与反铁磁性共存，且存在本征的层内反铁磁序。该反铁磁序源于 Fe 离子之间复杂的相互作用（摘要中因截断未完全展开）。",
-      "main_content_zh": "核心发现：在近化学计量比的 Fe₃GeTe₂ 中，尽管已有报道称其基态为铁磁，但该材料表现出复杂的磁性行为，表明铁磁性与反铁磁性共存，且存在本征的层内反铁磁序。该反铁磁序源于 Fe 离子之间复杂的相互作用（摘要中因截断未完全展开）。；创新点：摘要未突出说明。但可推断其新意在于揭示近化学计量比 Fe₃GeTe₂ 中本征层内反铁磁序的存在，挑战了其单纯铁磁基态的简单图像，并强调 Fe 离子间相互作用的复杂性。",
-      "method_zh": "摘要未明确说明具体实验手段（如磁化测量、中子衍射、X射线磁圆二色等）或计算方法。仅提及对磁性行为的观测与分析。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "mathrm",
-        "antiferromagnetism",
-        "van",
-        "der",
-        "waals",
-        "magnet",
-        "gete"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/1fpk-fgkj",
-      "abs_url": "http://link.aps.org/doi/10.1103/1fpk-fgkj",
-      "source": "prb",
-      "doi": "10.1103/1fpk-fgkj",
-      "journal_ref": "Phys. Rev. B 114, 154402 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/smf3-dnfd",
-      "title": "Optical spin precession",
-      "authors": [
-        "Abanoub Mikhail",
-        "Maxim Mazanov",
-        "Ilya Deiry",
-        "Mingzhao Song",
-        "Ivan Iorsh",
-        "Andrey Bogdanov"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "A precessing magnetic dipole realizes source-driven spin dynamics in the near field, while bichromatic two-wave interference additionally produces nutation. A generalized spin-continuity equation shows how sources act on optical spin through torque, establishing a direct link between photonic spin and magnetization dynamics.",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中涉及“广义自旋连续性方程”“建立联系”等理论推导性表述，未提及实验或数值计算手段。；研究对象：光学近场中进动磁偶极子产生的光子自旋（光学自旋）及其与磁化动力学之间的耦合关系，属于纳米光学与磁光耦合的交叉物理现象。",
-      "abstract_summary_zh": "进动的磁偶极子在近场中可实现源驱动的自旋动力学，而双色双波干涉可额外产生章动（nutation）；通过广义自旋连续性方程可证明光学自旋源以“力矩”形式作用于磁化动力学，从而在光子自旋与磁化进动之间建立直接联系。",
-      "main_content_zh": "核心发现：进动的磁偶极子在近场中可实现源驱动的自旋动力学，而双色双波干涉可额外产生章动（nutation）；通过广义自旋连续性方程可证明光学自旋源以“力矩”形式作用于磁化动力学，从而在光子自旋与磁化进动之间建立直接联系。；创新点：摘要未突出说明。",
-      "method_zh": "理论推导：构建进动磁偶极子的近场辐射模型，分析单色源驱动与双色干涉下的自旋动力学；引入广义自旋连续性方程，将光学自旋的源项与力矩作用形式化关联。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "spin",
-        "optical",
-        "dynamics",
-        "precession",
-        "precessing",
-        "magnetic",
-        "dipole"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/smf3-dnfd",
-      "abs_url": "http://link.aps.org/doi/10.1103/smf3-dnfd",
-      "source": "prb",
-      "doi": "10.1103/smf3-dnfd",
-      "journal_ref": "Phys. Rev. B 114, 154403 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/gjmr-w4s5",
-      "title": "Diode effect in a skyrmion-coupled high-temperature Josephson junction",
-      "authors": [
-        "Digvijay Singh",
-        "Pankaj Sharma",
-        "Narayan Mohanta"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We show that a planar Josephson junction having d-wave superconducting regions, with a skyrmion crystal placed underneath, produces a robust gate-tunable superconducting diode effect. The spatially varying exchange field of the skyrmion crystal breaks both inversion and time-reversal symmetries, lea…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中使用“We show that...”（我们证明）这一表述，且未提及任何具体的实验手段或设备，属于典型的理论推导或数值模拟研究。；研究对象：研究对象是一个平面约瑟夫森结，其电极由d波超导体构成，并在结下方放置一个斯格明子晶体。核心物理现象是超导二极管效应。",
-      "abstract_summary_zh": "该体系能够产生一种鲁棒的、可通过栅极调控的超导二极管效应。其物理根源在于斯格明子晶体提供的空间变化的交换场同时打破了体系的反演对称性和时间反演对称性。",
-      "main_content_zh": "核心发现：该体系能够产生一种鲁棒的、可通过栅极调控的超导二极管效应。其物理根源在于斯格明子晶体提供的空间变化的交换场同时打破了体系的反演对称性和时间反演对称性。；创新点：首次提出将斯格明子晶体的空间非均匀交换场与高温d波超导约瑟夫森结相结合，利用其同时破缺时间反演和空间反演对称性的特性，实现了无需外加磁场且栅极可调的二极管效应。",
-      "method_zh": "摘要未明确说明具体的理论框架或计算方法（如是否使用BdG方程、格林函数方法或数值模拟等）。摘要仅提及了物理机制的分析（对称性破缺）。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "superfluidity and superconductivity",
-        "diode",
-        "effect",
-        "josephson",
-        "junction",
-        "superconducting",
-        "skyrmion",
-        "crystal"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/gjmr-w4s5",
-      "abs_url": "http://link.aps.org/doi/10.1103/gjmr-w4s5",
-      "source": "prb",
-      "doi": "10.1103/gjmr-w4s5",
-      "journal_ref": "Phys. Rev. B 114, 154502 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/llyv-nn5q",
-      "title": "Algebra of free fermions: Classifying spaces, Hamiltonians, and computation",
-      "authors": [
-        "Tian Yuan",
-        "Yang Qi"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Tian Yuan and Yang Qi Research on topological phases of matter is a core field in modern condensed matter physics. Free fermion systems, such as topological insulators and superconductors, have been studied using the “tenfold way” and K-theory. Building on Kitaev's idea of Ω-spectrum and classifying space, as well as Fre…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提及“K-theory”（K理论）、“Ω-spectrum”（Ω谱）等数学物理理论工具，且作者为理论物理研究者，属于对拓扑相进行分类和计算的理论推导。；研究对象：自由费米子体系，包括拓扑绝缘体和拓扑超导体等无相互作用的拓扑物态。具体关注其拓扑分类空间（classifying space）以及对应的哈密顿量。",
-      "abstract_summary_zh": "摘要未完整给出最终结论，但可看出该工作旨在基于Kitaev的Ω谱与分类空间思想，构建一套代数框架，用于系统分类自由费米子拓扑相，并可能实现相关拓扑不变量的计算。具体物理结论摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论，但可看出该工作旨在基于Kitaev的Ω谱与分类空间思想，构建一套代数框架，用于系统分类自由费米子拓扑相，并可能实现相关拓扑不变量的计算。具体物理结论摘要未明确说明。；创新点：摘要未突出说明。但可推断其新意在于将Kitaev的拓扑分类思想进一步代数化、系统化，可能提供一种更普适或更便于计算的分类方案，而非针对某一具体材料。具体创新细节摘要未明确说明。",
-      "method_zh": "理论框架：结合“十重分类”（tenfold way）与K理论，推广Kitaev提出的Ω谱和分类空间方法，采用代数语言（可能涉及Clifford代数、算子代数等）对自由费米子体系进行统一描述和分类。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "free",
-        "classifying",
-        "topological",
-        "matter",
-        "algebra",
-        "fermions",
-        "spaces"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/llyv-nn5q",
-      "abs_url": "http://link.aps.org/doi/10.1103/llyv-nn5q",
-      "source": "prb",
-      "doi": "10.1103/llyv-nn5q",
-      "journal_ref": "Phys. Rev. B 114, 165101 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/ftvb-x737",
-      "title": "Symplectic symmetry of quadratic-band-touching Hamiltonians in two dimensions",
-      "authors": [
-        "Igor F. Herbut",
-        "Samson C. H. Ling"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The internal low-energy symmetry of the massless Lorentz-invariant Dirac Hamiltonian in (2+1) dimensions is known to be O(2N), where N is the number of two-component Dirac fermions. Here we point out that there exists an analogous internal symmetry of the single-particle quadratic-band-touching Hami…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“point out that there exists”等表述，且讨论的是哈密顿量的对称性结构，属于理论推导范畴。；研究对象：二维（2D）体系中具有二次能带交叉（quadratic-band-touching）的哈密顿量，具体关注其单粒子层面的内部低能对称性。",
-      "abstract_summary_zh": "摘要未完整给出最终结论，但已明确指出：与(2+1)维无质量洛伦兹不变狄拉克哈密顿量具有O(2N)内部对称性类似，二维二次能带交叉哈密顿量也存在一个类似的内部对称性结构。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论，但已明确指出：与(2+1)维无质量洛伦兹不变狄拉克哈密顿量具有O(2N)内部对称性类似，二维二次能带交叉哈密顿量也存在一个类似的内部对称性结构。；创新点：将已知的狄拉克锥体系（线性色散）的O(2N)内部对称性概念，推广至二次能带交叉（抛物线色散）体系，揭示了这类非狄拉克型半金属可能隐藏的更高对称性。摘要未突出说明其他创新点。",
-      "method_zh": "对称性分析（基于群论与哈密顿量代数结构），属于解析理论推导，未涉及数值计算或实验手段。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "symmetry",
-        "quadratic-band-touching",
-        "dimensions",
-        "internal",
-        "dirac",
-        "symplectic",
-        "hamiltonians"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/ftvb-x737",
-      "abs_url": "http://link.aps.org/doi/10.1103/ftvb-x737",
-      "source": "prb",
-      "doi": "10.1103/ftvb-x737",
-      "journal_ref": "Phys. Rev. B 114, 165102 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/ml9d-pzwl",
-      "title": "Orbital-selective Mott and antiferromagnetic phases in diagonally compressed kagome lattice",
-      "authors": [
-        "Jiewei Ding",
-        "Ho-Kin Tang",
-        "Wing Chi Yu"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We perform determinant quantum Monte Carlo simulations of the half-filled Hubbard model on a diagonally compressed kagome lattice, introducing exponential decay long-range hopping t(r)=t0exp−r/r0 to account for the evolving bond length. By varying the lattice angle θ and the on-site interaction U, d…",
-      "study_overview_zh": "研究类型：计算文章。判断依据：摘要中明确提及“determinant quantum Monte Carlo simulations”（行列式量子蒙特卡洛模拟），属于数值计算方法。；研究对象：对角压缩的kagome晶格上的强关联电子体系。具体研究了半填充（half-filled）Hubbard模型，并引入了随键长演化的指数衰减长程跃迁项。",
-      "abstract_summary_zh": "摘要未明确说明具体的物理结论（如相变临界点、相图结构等），仅提及研究了晶格角θ和相互作用U对体系的影响。摘要在此处截断，未给出最终物理结果。",
-      "main_content_zh": "核心发现：摘要未明确说明具体的物理结论（如相变临界点、相图结构等），仅提及研究了晶格角θ和相互作用U对体系的影响。摘要在此处截断，未给出最终物理结果。；创新点：摘要未突出说明。但可推断其新意在于将kagome晶格的“对角压缩”几何形变与长程跃迁的指数衰减相结合，并利用DQMC处理该几何阻挫体系中的关联效应。具体创新细节需阅读全文确认。",
-      "method_zh": "行列式量子蒙特卡洛（determinant Quantum Monte Carlo, DQMC）模拟。模型为半填充Hubbard模型，跃迁项采用指数衰减长程形式 t(r)=t0·exp(−r/r0)，以模拟压缩导致的键长变化。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "lattice",
-        "diagonally",
-        "compressed",
-        "kagome",
-        "orbital-selective",
-        "mott",
-        "antiferromagnetic"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/ml9d-pzwl",
-      "abs_url": "http://link.aps.org/doi/10.1103/ml9d-pzwl",
-      "source": "prb",
-      "doi": "10.1103/ml9d-pzwl",
-      "journal_ref": "Phys. Rev. B 114, 165103 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/6y9w-lx94",
-      "title": "Correlation-driven origin of shallow electron pocket in ${\\mathrm{Co}}_{1/3}{\\mathrm{TaS}}_{2}$ revealed by ARPES and cluster perturbation theory",
-      "authors": [
-        "Wojciech Sas",
-        "Yuki Utsumi Boucher",
-        "Seyed Ashkan Moghadam Ziabari",
-        "Gaurav Pransu",
-        "Trpimir Ivšić",
-        "Ivana Vobornik",
-        "Jun Fujii",
-        "Naveen Singh Dhami",
-        "Bruno Gudac",
-        "Mario Novak",
-        "László Forró",
-        "Neven Barišić",
-        "Ivo Batistić",
-        "Petar Popčević"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We investigate the electronic structure and Fermi surface of Co1/3TaS2 using angle-resolved photoemission spectroscopy (ARPES) combined with theoretical modeling beyond standard density functional theory (DFT+U). A shallow electron pocket, the so-called β feature, is observed at the Fermi level near…",
-      "study_overview_zh": "研究类型：混合类型（实验+理论计算）。判断依据：摘要中明确提到“angle-resolved photoemission spectroscopy (ARPES)”实验手段，以及“theoretical modeling beyond standard density functional theory (DFT+U)”和“cluster perturbation theory”理论方法。；研究对象：Co1/3TaS2（钴插层二硫化钽）的电子结构和费米面，特别是费米能级附近的一个浅电子口袋（称为β特征）。",
-      "abstract_summary_zh": "通过ARPES实验观测到费米能级附近存在一个浅电子口袋（β特征），并指出该电子口袋的起源与电子关联效应（correlation-driven）有关，而非标准DFT所能描述。",
-      "main_content_zh": "核心发现：通过ARPES实验观测到费米能级附近存在一个浅电子口袋（β特征），并指出该电子口袋的起源与电子关联效应（correlation-driven）有关，而非标准DFT所能描述。；创新点：揭示了Co1/3TaS2中浅电子口袋的关联驱动起源，表明标准DFT无法正确描述该体系，需引入电子关联修正（DFT+U和团簇微扰理论）才能与实验吻合。摘要未突出说明与以往工作的具体对比。",
-      "method_zh": "实验上使用角分辨光电子能谱（ARPES）；理论上采用超越标准密度泛函理论的方法，包括DFT+U以及团簇微扰理论（cluster perturbation theory）。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "shallow",
-        "electron",
-        "pocket",
-        "mathrm",
-        "arpes",
-        "theory",
-        "fermi"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/6y9w-lx94",
-      "abs_url": "http://link.aps.org/doi/10.1103/6y9w-lx94",
-      "source": "prb",
-      "doi": "10.1103/6y9w-lx94",
-      "journal_ref": "Phys. Rev. B 114, 165104 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/5r9j-382y",
-      "title": "Solving the Peierls-Boltzmann transport equation with matrix product states",
-      "authors": [
-        "Sangyeop Lee",
-        "Hirad Alipanah",
-        "Juan José Mendoza-Arenas"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The Peierls-Boltzmann transport equation (PBE), which governs nonequilibrium phonon transport, suffers from the curse of dimensionality because of its high-dimensional phase space including both real and modal spaces. We explore the use of matrix product states (MPS) for numerical simulation of the …",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要关键词为“数值模拟”（numerical simulation）、“矩阵乘积态”（matrix product states），属于计算方法开发与应用。；研究对象：非平衡声子输运现象，具体由Peierls-Boltzmann输运方程（PBE）描述。该方程因包含实空间和模态空间的高维相空间而面临“维度灾难”。摘要未明确指定具体材料（如某种晶体或合金），而是聚焦于一般性的声子输运方程求解方法。",
-      "abstract_summary_zh": "摘要被截断，未给出明确的物理结论。从已提供内容看，核心主张是：利用矩阵乘积态（MPS）可以有效地对高维PBE进行数值模拟，从而规避维度灾难。具体物理结果（如热导率数值、尺寸效应等）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要被截断，未给出明确的物理结论。从已提供内容看，核心主张是：利用矩阵乘积态（MPS）可以有效地对高维PBE进行数值模拟，从而规避维度灾难。具体物理结果（如热导率数值、尺寸效应等）摘要未明确说明。；创新点：首次（或较早）将矩阵乘积态（MPS）这一张量网络工具应用于高维Peierls-Boltzmann输运方程的求解，以克服其“维度灾难”。相比传统的蒙特卡洛或离散坐标法，MPS有望更高效地处理高维相空间中的声子分布函数。摘要未突出说明与其他数值方法的定量对比优势。",
-      "method_zh": "矩阵乘积态（MPS）方法，属于张量网络方法的一种，通常与密度矩阵重整化群（DMRG）相关。作者将MPS应用于求解Peierls-Boltzmann输运方程，这是一种将量子多体方法移植到经典输运方程数值求解的新尝试。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "transport",
-        "peierls-boltzmann",
-        "equation",
-        "matrix",
-        "product"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/5r9j-382y",
-      "abs_url": "http://link.aps.org/doi/10.1103/5r9j-382y",
-      "source": "prb",
-      "doi": "10.1103/5r9j-382y",
-      "journal_ref": "Phys. Rev. B 114, 165401 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/l7qg-hm2p",
-      "title": "Orthogonal excitation polarization dictated by site symmetry in upconversion luminescence of $β\\text{−}{\\mathrm{NaYF}}_{4}:{\\mathrm{Er}}^{3+}$ microrods",
-      "authors": [
-        "Liji Wang",
-        "Yan Liu",
-        "Siyu Guo",
-        "Long Zhang",
-        "Zhanghai Chen",
-        "Guanying Chen",
-        "Ai-Hua Li"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Using polarization-resolved spectroscopy and crystal field modeling, they assign full Stark levels and irreducible representations for Er3+ in β-NaYF4 microrods and identify an approximate C3 site symmetry. Since excited-state absorption inherits ground-state polarization constraints, both downshifting and upconversion luminescence exhibit excitation-wavelength-tunable, region-selective orthogonal excitation polarization responses.",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要提及“polarization-resolved spectroscopy”（偏振分辨光谱）和“crystal field modeling”（晶场建模），以实验测量为主，辅以模型分析。；研究对象：β-NaYF₄:Er³⁺ 微米棒的上转换发光现象，具体关注Er³⁺离子的Stark能级结构、局域晶格位点对称性，以及激发偏振方向对发光行为的调控。",
-      "abstract_summary_zh": "通过偏振分辨光谱与晶场建模，确定了β-NaYF₄微米棒中Er³⁺的完整Stark能级及不可约表示，并识别出其近似C₃位点对称性。由于激发态吸收继承了基态的偏振选择规则，下转换和上转换发光均表现出可由激发波长调谐、具有区域选择性的正交激发偏振响应。",
-      "main_content_zh": "核心发现：通过偏振分辨光谱与晶场建模，确定了β-NaYF₄微米棒中Er³⁺的完整Stark能级及不可约表示，并识别出其近似C₃位点对称性。由于激发态吸收继承了基态的偏振选择规则，下转换和上转换发光均表现出可由激发波长调谐、具有区域选择性的正交激发偏振响应。；创新点：摘要未突出说明。",
-      "method_zh": "偏振分辨光谱（polarization-resolved spectroscopy）结合晶场建模（crystal field modeling），用于能级归属和对称性判定。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "polarization",
-        "orthogonal",
-        "excitation",
-        "site",
-        "symmetry"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/l7qg-hm2p",
-      "abs_url": "http://link.aps.org/doi/10.1103/l7qg-hm2p",
-      "source": "prb",
-      "doi": "10.1103/l7qg-hm2p",
-      "journal_ref": "Phys. Rev. B 114, 165403 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/kh8y-fqvm",
-      "title": "Twist-induced optical transmission and cross-polarization effects in black-phosphorene–calcite heterostructures",
-      "authors": [
-        "C. H. Yang",
-        "M. V. Milošević",
-        "F. M. Peeters",
-        "Icaro R. Lavor"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The anisotropy of black phosphorene (BP) and calcite endows light transmission with novel tunable features. A multilayer dielectric structure incorporating BP-calcite is designed. Using the transfer matrix method, the modulation of light reflectance, transmittance, and absorptance by incident light …",
-      "study_overview_zh": "研究类型：计算/理论文章。判断依据：摘要中明确提及“使用传输矩阵方法”（transfer matrix method）进行理论计算。；研究对象：黑磷（black phosphorene, BP）与方解石（calcite）构成的异质结多层介电结构。研究的是该结构中光（反射、透射、吸收）的调控特性，特别是由材料各向异性与层间扭转（twist）引入的光学效应。",
-      "abstract_summary_zh": "摘要未明确说明具体的定量结论，但指出该BP-方解石异质结构的光透射具有新颖的可调谐特性，且入射光参数可调制反射率、透射率和吸收率。摘要未明确说明具体的物理结论或发现。",
-      "main_content_zh": "核心发现：摘要未明确说明具体的定量结论，但指出该BP-方解石异质结构的光透射具有新颖的可调谐特性，且入射光参数可调制反射率、透射率和吸收率。摘要未明确说明具体的物理结论或发现。；创新点：利用黑磷与方解石两者的天然各向异性，结合多层介电结构设计，并通过层间扭转（twist）来引入对光透射和交叉偏振效应的可调谐控制。摘要未突出说明与已有工作的具体差异。",
-      "method_zh": "传输矩阵方法（Transfer Matrix Method）。摘要未提及实验手段或第一性原理计算等其他方法。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "light",
-        "transmission",
-        "calcite",
-        "twist-induced",
-        "optical"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/kh8y-fqvm",
-      "abs_url": "http://link.aps.org/doi/10.1103/kh8y-fqvm",
-      "source": "prb",
-      "doi": "10.1103/kh8y-fqvm",
-      "journal_ref": "Phys. Rev. B 114, 165404 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/lxn4-s9j4",
-      "title": "Finite-frequency anomaly-induced electromechanical response of Dirac fermions in deformed graphene",
-      "authors": [
-        "Ara Sedrakyan"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "A deformation of a graphene sheet changes more than the positions of the atoms. In the low-energy Dirac theory it also produces geometric electron-phonon vertices. One of these vertices acts as an emergent phonon gauge field Aμ, which couples to the same Dirac current as the electromagnetic vector p…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中提及“低能狄拉克理论”（low-energy Dirac theory）、“几何电子-声子顶点”（geometric electron-phonon vertices）等概念，属于凝聚态理论推导范畴，未涉及实验或数值计算细节。；研究对象：变形石墨烯（deformed graphene）中的狄拉克费米子。具体研究的是石墨烯晶格形变如何影响其低能电子性质，特别是通过一种“涌现声子规范场”（emergent phonon gauge field）产生的电-机械（electromechanical）响应。",
-      "abstract_summary_zh": "摘要未完整给出最终结论。目前可确认的是：石墨烯的形变不仅改变原子位置，还会在低能狄拉克理论中产生几何电子-声子耦合顶点，其中一个顶点表现为一种与电磁矢量势耦合方式相同的涌现声子规范场 Aμ。关于有限频率下的具体响应行为，摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论。目前可确认的是：石墨烯的形变不仅改变原子位置，还会在低能狄拉克理论中产生几何电子-声子耦合顶点，其中一个顶点表现为一种与电磁矢量势耦合方式相同的涌现声子规范场 Aμ。关于有限频率下的具体响应行为，摘要未明确说明。；创新点：摘要未突出说明。但可推断其新意在于：将石墨烯形变诱导的几何效应与有限频率（finite-frequency）下的电-机械响应联系起来，并明确识别出“声子规范场”这一中间量，而非仅关注静态或绝热响应。更具体的创新点需待摘要完整内容确认。",
-      "method_zh": "理论框架为低能狄拉克方程（Dirac theory），结合几何扰动（形变）下的电子-声子耦合分析。具体推导了形变诱导的规范场结构及其与狄拉克电流的耦合形式。摘要未提及具体数值方法或实验手段。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "dirac",
-        "graphene",
-        "vertices",
-        "finite-frequency",
-        "anomaly-induced",
-        "electromechanical",
-        "response"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/lxn4-s9j4",
-      "abs_url": "http://link.aps.org/doi/10.1103/lxn4-s9j4",
-      "source": "prb",
-      "doi": "10.1103/lxn4-s9j4",
-      "journal_ref": "Phys. Rev. B 114, 175103 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/bvwr-y8gz",
-      "title": "Dirac semimetal phases in chiral carbon nanoscrolls",
-      "authors": [
-        "Tzu-Ching Hsu",
-        "Jhih-Shih You",
-        "Hsiu-Chuan Hsu",
-        "Ion Cosma Fulga"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "In this work we theoretically investigate the topological properties of carbon nanoscrolls under an axial magnetic field, focusing on structures in which chirality is encoded throug…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要关键词为“theoretically investigate”（理论研究），且研究对象为“拓扑性质”，通常涉及能带理论或紧束缚模型计算。；研究对象：手性碳纳米卷（chiral carbon nanoscrolls）在轴向磁场下的拓扑电子性质。碳纳米卷是由石墨烯卷曲而成的螺旋管状结构，其“手性”在此指卷曲方式或边缘构型导致的螺旋对称性。",
-      "abstract_summary_zh": "摘要未完整给出，但根据标题可推断：在手性碳纳米卷中可存在狄拉克半金属相（Dirac semimetal phases），且该相可能受轴向磁场调控。具体能带交叉点位置、拓扑保护机制等细节，摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出，但根据标题可推断：在手性碳纳米卷中可存在狄拉克半金属相（Dirac semimetal phases），且该相可能受轴向磁场调控。具体能带交叉点位置、拓扑保护机制等细节，摘要未明确说明。；创新点：摘要未突出说明。但可推测：将“手性”与“碳纳米卷”结合，并研究磁场下的狄拉克半金属相，可能区别于以往对非手性碳纳米管或平面石墨烯的研究，但具体新意需见全文。",
-      "method_zh": "理论分析，具体方法（如紧束缚模型、k·p微扰、连续模型等）摘要未明确说明。摘要仅提及“轴向磁场”作为外部参数，暗示可能采用单粒子哈密顿量加Peierls相位的处理方法。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "carbon",
-        "nanoscrolls",
-        "dirac",
-        "semimetal",
-        "phases"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/bvwr-y8gz",
-      "abs_url": "http://link.aps.org/doi/10.1103/bvwr-y8gz",
-      "source": "prb",
-      "doi": "10.1103/bvwr-y8gz",
-      "journal_ref": "Phys. Rev. B 114, 175402 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/6kv9-46kx",
-      "title": "Observation of charge dressing in ${\\mathrm{Bi}}_{4}{\\mathrm{Te}}_{3}$ topological insulator thin films: A terahertz and infrared spectroscopic study",
-      "authors": [
-        "Veronica Stopponi",
-        "Johannes Schmidt",
-        "Andrea Perucchi",
-        "Gregor Mussler",
-        "Abdur Rehman Jalil",
-        "Alexander Grüneis",
-        "Michele Zacchigna",
-        "Stefano Lupi",
-        "Paola Di Pietro"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Veronica Stopponi, Johannes Schmidt, Andrea Perucchi, Gregor Mussler, Abdur Rehman Jalil, Alexander Grüneis, Michele Zacchigna, Stefano Lupi, and Paola Di Pietro Bi4Te3 has been first realized as an element of the adaptive series (Bi2)m(Bi2Te3)n—deriving from stacking metallic Bi and topological insulator Bi2Te3 blocks—and studied for its promising thermoelectric properties. Recently, Bi4Te3 has also been found as a dual topological insulator hosting a compl…",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中明确提到“terahertz and infrared spectroscopic study”（太赫兹和红外光谱研究），并列出多位实验作者及实验手段。；研究对象：Bi4Te3拓扑绝缘体薄膜，属于(Bi2)m(Bi2Te3)n自适应系列，由金属Bi层与拓扑绝缘体Bi2Te3层堆叠而成。研究聚焦于该材料中的电荷 dressing（电荷重整化/屏蔽）现象。",
-      "abstract_summary_zh": "在Bi4Te3拓扑绝缘体薄膜中观测到了电荷 dressing 效应（即电荷与集体激发或电子-玻色子耦合导致的有效质量/光谱权重重整化），该效应通过太赫兹和红外光谱学手段被直接探测到。",
-      "main_content_zh": "核心发现：在Bi4Te3拓扑绝缘体薄膜中观测到了电荷 dressing 效应（即电荷与集体激发或电子-玻色子耦合导致的有效质量/光谱权重重整化），该效应通过太赫兹和红外光谱学手段被直接探测到。；创新点：首次在Bi4Te3这一双拓扑绝缘体材料中通过太赫兹和红外光谱实验观测到电荷 dressing 现象，将光谱学手段应用于该自适应系列材料的光电性质研究。摘要未突出说明其他创新点。",
-      "method_zh": "太赫兹时域光谱（THz-TDS）和红外光谱测量，结合薄膜样品制备（推测为分子束外延，摘要未明确说明具体生长方法）。摘要未提及理论计算或第一性原理方法。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "topological",
-        "insulator",
-        "mathrm",
-        "bi4te3",
-        "been",
-        "bi2te3",
-        "observation"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/6kv9-46kx",
-      "abs_url": "http://link.aps.org/doi/10.1103/6kv9-46kx",
-      "source": "prb",
-      "doi": "10.1103/6kv9-46kx",
-      "journal_ref": "Phys. Rev. B 114, 185102 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/s2ds-5n5k",
-      "title": "Variational preparation and characterization of chiral spin liquids in quantum circuits",
-      "authors": [
-        "Zi-Yang Zhang",
-        "Donghoon Kim",
-        "Ji-Yao Chen"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Zi-Yang Zhang, Donghoon Kim, and Ji-Yao Chen Quantum circuits have been shown to be a fertile ground for realizing long-range entangled phases of matter. While various quantum double models with nonchiral topological order have been theoretically investigated and experimentally implemented, the realization and characterization of chiral topolo…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要关键词为“Quantum circuits”（量子线路）、“theoretically investigated”（理论研究）、“realization and characterization”（实现与表征），且未提及具体实验设备或测量手段，属于量子信息与凝聚态交叉的理论/数值研究。；研究对象：手性自旋液体（chiral spin liquids）及其在量子线路（量子电路）中的变分制备与表征。具体体系为可在量子线路中编码的晶格自旋模型，摘要未明确说明具体晶格类型（如Kagome、三角格等）。",
-      "abstract_summary_zh": "摘要未完整给出核心结论。从现有片段推断，该工作可能展示了在量子线路中通过变分方法制备手性自旋液体态，并对其拓扑序（手性拓扑序）进行表征的可行性。具体物理结论（如基态性质、拓扑不变量等）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出核心结论。从现有片段推断，该工作可能展示了在量子线路中通过变分方法制备手性自旋液体态，并对其拓扑序（手性拓扑序）进行表征的可行性。具体物理结论（如基态性质、拓扑不变量等）摘要未明确说明。；创新点：相对于已有非手性拓扑序（如量子双模型）在量子线路中的实现，本工作聚焦于**手性**拓扑序，这是其核心新意。摘要指出“various quantum double models with nonchiral topological order have been theoretically investigated and experimentally implemented”，而本工作则针对手性情况，填补了这一空白。具体技术细节上的创新（如线路深度、误差缓解策略）摘要未突出说明。",
-      "method_zh": "变分量子本征求解器（VQE）或类似变分量子算法，结合量子线路（量子电路）作为拟设（ansatz）。摘要提及“variational preparation”（变分制备），暗示使用参数化量子线路优化基态。表征方法可能涉及拓扑序的测量（如Wilson loop、拓扑纠缠熵等），但摘要未明确说明具体测量协议。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "quantum",
-        "characterization",
-        "chiral",
-        "circuits",
-        "been",
-        "variational",
-        "preparation"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/s2ds-5n5k",
-      "abs_url": "http://link.aps.org/doi/10.1103/s2ds-5n5k",
-      "source": "prb",
-      "doi": "10.1103/s2ds-5n5k",
-      "journal_ref": "Phys. Rev. B 114, 185103 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/lwkc-hbx7",
-      "title": "Flat-band-modulated spectral and spatiotemporal radiative heat transfer in quasi-one-dimensional nanoparticle lattices",
-      "authors": [
-        "Zhen Gong",
-        "Wenbin Zhang",
-        "Changying Zhao"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Zhen Gong, Wenbin Zhang, and Changying Zhao Flat-band systems, characterized by dispersionless energy bands and compact localized states, have emerged as promising platforms for exploring strongly correlated phenomena in condensed-matter physics. While extensively studied in electronic systems, their potential in nanophotonics and thermal man…",
-      "study_overview_zh": "研究类型：理论/计算文章。判断依据：摘要中提及“flat-band systems”作为凝聚态物理中的概念平台，并探讨其在“nanophotonics and thermal man…”（热管理/热输运）中的应用，属于理论建模与数值模拟范畴。；研究对象：准一维纳米颗粒晶格（quasi-one-dimensional nanoparticle lattices）中的**光谱与时空辐射热输运**，特别关注由平带（flat band）调控的辐射热传递现象。",
-      "abstract_summary_zh": "平带系统（具有无色散能带和紧致局域态）在纳米光子学与热输运中可作为调控平台，其平带特性显著调制了准一维纳米颗粒晶格中的光谱及时空辐射热流。",
-      "main_content_zh": "核心发现：平带系统（具有无色散能带和紧致局域态）在纳米光子学与热输运中可作为调控平台，其平带特性显著调制了准一维纳米颗粒晶格中的光谱及时空辐射热流。；创新点：将凝聚态物理中广泛研究的平带物理（通常用于电子系统）拓展至纳米光子学与辐射热输运领域，揭示了平带对热辐射光谱和时空行为的调控作用。**摘要未突出说明与具体已有工作的对比细节。**",
-      "method_zh": "摘要未明确说明具体计算方法（如是否采用格林函数、耦合偶极近似或时域模拟等），仅从物理概念（平带、紧致局域态）出发进行理论分析。**摘要未明确说明具体技术手段。**",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "systems",
-        "flat-band-modulated",
-        "spectral",
-        "spatiotemporal",
-        "radiative"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/lwkc-hbx7",
-      "abs_url": "http://link.aps.org/doi/10.1103/lwkc-hbx7",
-      "source": "prb",
-      "doi": "10.1103/lwkc-hbx7",
-      "journal_ref": "Phys. Rev. B 114, 185404 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/5rk9-w686",
-      "title": "Class $C$ quantum network model with random tunneling and its nonlinear sigma model representation",
-      "authors": [
-        "D. S. Katkov",
-        "M. V. Parfenov",
-        "I. S. Burmistrov"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The spin quantum Hall effect is the superconducting counterpart of the integer quantum Hall effect. Here, the authors derive the long-distance nonlinear sigma model for a quantum network with random tunneling between chiral links carrying N channels. Strong even–odd tunneling asymmetry breaks the saddle point down. Also, the triplet sector stays coupled to the singlet one and can turn anomalously soft. The longitudinal and spin Hall conductances can be tuned independently, giving a flexible platform for class-C localization.",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提到“derive the long-distance nonlinear sigma model”（推导长距离非线性sigma模型），属于理论推导工作。；研究对象：自旋量子霍尔效应体系，具体为带有随机隧穿的无序量子网络模型，该网络由携带N个通道的手征（chiral）链路构成，属于凝聚态物理中的拓扑/无序量子输运体系。",
-      "abstract_summary_zh": "推导了该量子网络模型的长距离非线性sigma模型，发现强奇偶隧穿不对称性会破坏鞍点结构；同时，三重态（triplet）通道与单重态（singlet）通道保持耦合，且三重态可能变得反常地“软”（即低能涨落增强）。纵向电导与自旋霍尔电导可独立调节，为C类局域化提供了灵活的平台。",
-      "main_content_zh": "核心发现：推导了该量子网络模型的长距离非线性sigma模型，发现强奇偶隧穿不对称性会破坏鞍点结构；同时，三重态（triplet）通道与单重态（singlet）通道保持耦合，且三重态可能变得反常地“软”（即低能涨落增强）。纵向电导与自旋霍尔电导可独立调节，为C类局域化提供了灵活的平台。；创新点：摘要未突出说明，但可看出其新意在于：针对带随机隧穿的手征链路网络推导出非线性sigma模型，并揭示了奇偶隧穿不对称性对鞍点的影响以及三重态与单重态耦合导致的异常软化行为，同时指出该体系可独立调控纵向与自旋霍尔电导。",
-      "method_zh": "理论框架为非线性sigma模型（nonlinear sigma model）的场论推导，针对量子网络模型（quantum network model）进行长距离有效作用量的构建与分析，属于无序电子系统的标准场论方法。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "quantum",
-        "model",
-        "tunneling",
-        "hall",
-        "network"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/5rk9-w686",
-      "abs_url": "http://link.aps.org/doi/10.1103/5rk9-w686",
-      "source": "prb",
-      "doi": "10.1103/5rk9-w686",
-      "journal_ref": "Phys. Rev. B 114, 185405 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/byz8-31yp",
-      "title": "Self-induced spin-orbit torque switching in a synthetic antiferromagnetic ${\\mathrm{Co}}_{2}\\mathrm{MnGa}$/MnGa bilayer",
-      "authors": [
-        "Rongkun Han",
-        "Haohang Cheng",
-        "Dahai Wei",
-        "Yuan Lu",
-        "Jianhua Zhao"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The large intrinsic spin current in magnetic Weyl semimetals provides a promising platform for spin-orbit torque (SOT) devices. Here, we demonstrate SOT-driven magnetization switching in a synthetic antiferromagnet (SAF) composed of a Co2MnGa (CMG)/MnGa bilayer. In this heavy metal-free structure, C…",
-      "study_overview_zh": "研究类型：实验文章。判断依据：摘要中使用了“demonstrate”（展示/证实）来描述实验现象，并提及了“SOT-driven magnetization switching”（自旋轨道矩驱动的磁化翻转）这一实验观测结果。；研究对象：研究对象是一种不含重金属的合成反铁磁（SAF）异质结，具体为 Co₂MnGa (CMG)/MnGa 双层膜。该体系利用磁性 Weyl 半金属 Co₂MnGa 作为自旋电流源，研究其驱动的自旋轨道矩（SOT）磁化翻转现象。",
-      "abstract_summary_zh": "在无重金属的 Co₂MnGa/MnGa 合成反铁磁双层膜结构中，成功实现了自旋轨道矩（SOT）驱动的磁化翻转。该翻转机制被描述为“自诱导”（self-induced），即利用材料自身产生的自旋电流实现翻转。",
-      "main_content_zh": "核心发现：在无重金属的 Co₂MnGa/MnGa 合成反铁磁双层膜结构中，成功实现了自旋轨道矩（SOT）驱动的磁化翻转。该翻转机制被描述为“自诱导”（self-induced），即利用材料自身产生的自旋电流实现翻转。；创新点：该工作的主要新意在于，在**不含重金属**的合成反铁磁结构中实现了 SOT 翻转。传统 SOT 器件通常依赖重金属（如 Pt、Ta）产生自旋电流，而此工作利用磁性 Weyl 半金属 Co₂MnGa 的大内禀自旋电流来实现“自诱导”翻转，这为简化 SOT 器件结构提供了新思路。**（注：摘要中关于“合成反铁磁”的具体作用机制及与传统 SAF 对比的优势未详细展开，摘要未明确说明。）**",
-      "method_zh": "摘要未明确说明具体的实验手段（如薄膜生长方法、表征技术等）。仅能确定该研究涉及对 Co₂MnGa/MnGa 双层膜中磁化翻转行为的电学输运或磁学测量。**（摘要未明确说明具体实验手段）**",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "mnga",
-        "spin-orbit",
-        "torque",
-        "switching",
-        "synthetic",
-        "mathrm",
-        "bilayer"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/byz8-31yp",
-      "abs_url": "http://link.aps.org/doi/10.1103/byz8-31yp",
-      "source": "prb",
-      "doi": "10.1103/byz8-31yp",
-      "journal_ref": "Phys. Rev. B 114, L140401 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/s4k5-qs9g",
-      "title": "Interaction-induced topological magnon in electron-magnon coupled systems",
-      "authors": [
-        "Kosuke Fujiwara",
-        "Takahiro Morimoto"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We theoretically study the emergence of topological magnons in electron-magnon coupled systems. The magnon dispersion in a ferromagnet usually possesses an antiunitary symmetry consisting of a combination of time-reversal and spin-rotation operations in the absence of a Dzyaloshinskii-Moriya (DM) in…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要开头明确使用“We theoretically study”（我们理论研究）这一关键词。；研究对象：电子-磁振子耦合系统中的拓扑磁振子（topological magnon）。具体体系为铁磁体（ferromagnet），并考虑了磁振子色散与时间反演、自旋旋转联合反幺正对称性以及Dzyaloshinskii-Moriya（DM）相互作用的关系。",
-      "abstract_summary_zh": "摘要未完整给出最终结论。根据现有文本推断，核心发现可能是：在不存在DM相互作用的情况下，电子-磁振子耦合本身可以诱导出拓扑非平庸的磁振子能带（即拓扑磁振子）。但具体能带拓扑性质、边界态等细节，摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论。根据现有文本推断，核心发现可能是：在不存在DM相互作用的情况下，电子-磁振子耦合本身可以诱导出拓扑非平庸的磁振子能带（即拓扑磁振子）。但具体能带拓扑性质、边界态等细节，摘要未明确说明。；创新点：摘要未突出说明。但根据文本推断，创新点可能在于：提出了一种不依赖DM相互作用（通常被认为是产生拓扑磁振子的必要条件）而仅通过电子-磁振子耦合即可实现拓扑磁振子的新机制。这一推断基于摘要中“in the absence of a Dzyaloshinskii-Moriya (DM) in…”的表述，但完整结论需待摘要补全。",
-      "method_zh": "理论推导与分析。摘要提及了对称性分析（时间反演与自旋旋转的组合反幺正对称性），并讨论了DM相互作用的影响。但未给出具体的模型哈密顿量、计算方法（如线性自旋波理论、Bogoliubov变换等）或数值手段，摘要未明确说明。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "magnetism",
-        "topological",
-        "magnon",
-        "electron-magnon",
-        "coupled",
-        "systems",
-        "interaction-induced",
-        "theoretically"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/s4k5-qs9g",
-      "abs_url": "http://link.aps.org/doi/10.1103/s4k5-qs9g",
-      "source": "prb",
-      "doi": "10.1103/s4k5-qs9g",
-      "journal_ref": "Phys. Rev. B 114, L140402 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/qbr7-dpdr",
-      "title": "Nonlinearity induced hierarchy of topological singularities",
-      "authors": [
-        "Liang Fang",
-        "Meng Xiao"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Liang Fang and Meng Xiao Topological singularities are fundamental organizing principles in wave physics, yet whether nonlinearity can intrinsically generate new singular structures remains largely unexplored. Here, we show that even a minimal nonlinear system—consisting of a single Kerr-nonlinear cavity coupled to a linear…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中使用了“我们证明”（we show that）等表述，并描述了理论模型（“最小非线性系统”），未提及实验或数值模拟细节。；研究对象：非线性波动物理学中的拓扑奇异性（topological singularities）。具体体系为：一个耦合到线性环境（摘要截断，未明确说明具体环境类型）的单个Kerr非线性腔。",
-      "abstract_summary_zh": "即使在一个仅包含单个Kerr非线性腔的最小系统中，非线性本身也能内在产生新的拓扑奇异性结构，并导致拓扑奇异性出现层级结构（hierarchy）。",
-      "main_content_zh": "核心发现：即使在一个仅包含单个Kerr非线性腔的最小系统中，非线性本身也能内在产生新的拓扑奇异性结构，并导致拓扑奇异性出现层级结构（hierarchy）。；创新点：首次证明非线性本身（而非仅作为微扰）能够内在生成新的拓扑奇异性，打破了以往认为非线性仅能调控或修饰线性拓扑结构的认知。摘要未突出说明其与具体已有工作的对比细节。",
-      "method_zh": "理论分析与模型构建。摘要中明确提及构建了一个由单个Kerr非线性腔与线性系统耦合的最小模型，但未给出具体的理论框架（如散射矩阵、有效哈密顿量等）或计算方法。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "nonlinearity",
-        "topological",
-        "singularities",
-        "induced",
-        "hierarchy",
-        "author",
-        "liang"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/qbr7-dpdr",
-      "abs_url": "http://link.aps.org/doi/10.1103/qbr7-dpdr",
-      "source": "prb",
-      "doi": "10.1103/qbr7-dpdr",
-      "journal_ref": "Phys. Rev. B 114, L171103 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/btb3-gww3",
-      "title": "Magnetism and superconductivity in bilayer nickelate",
-      "authors": [
-        "Hui Yang",
-        "Ya-Hui Zhang"
-      ],
-      "published": "2026-09-02T10:00:00+00:00",
-      "updated": "2026-09-02T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The discovery of high-temperature superconductivity in bilayer nickelate La3Ni2O7 necessitates a minimal theoretical model that unifies the superconducting phase with the spin-density-wave (SDW) phase without external pressure or strain. We propose a model where half-filled dz2 local moments interac…",
-      "study_overview_zh": "研究类型：理论文章。判断依据：摘要中明确提到“We propose a model”（我们提出一个模型），旨在构建统一超导相与自旋密度波相的最小理论模型，属于理论建模工作。；研究对象：双层镍酸盐（bilayer nickelate）材料La3Ni2O7，具体研究其无外部压力或应变条件下的高温超导相与自旋密度波（SDW）相之间的关联。",
-      "abstract_summary_zh": "摘要未完整给出最终结论，但明确指出该工作提出了一个最小理论模型，该模型将半填充的dz2局域磁矩（local moments）作为关键自由度，用以统一描述La3Ni2O7中的超导与自旋密度波相。具体物理结论（如配对机制、相图细节）摘要未明确说明。",
-      "main_content_zh": "核心发现：摘要未完整给出最终结论，但明确指出该工作提出了一个最小理论模型，该模型将半填充的dz2局域磁矩（local moments）作为关键自由度，用以统一描述La3Ni2O7中的超导与自旋密度波相。具体物理结论（如配对机制、相图细节）摘要未明确说明。；创新点：提出了一个无需外部压力或应变即可同时涵盖超导与SDW相的最小理论模型，并将半填充dz2局域磁矩的相互作用作为核心要素。这一模型框架相对于以往仅关注超导或单一磁序的模型更具统一性。",
-      "method_zh": "理论建模与解析/数值分析（具体方法如是否采用强耦合展开、重整化群或量子蒙特卡洛等，摘要未明确说明）。摘要仅提及“propose a model”，未给出具体计算框架。",
-      "summary_mode": "llm-deepseek",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "superconductivity",
-        "bilayer",
-        "nickelate",
-        "model",
-        "phase",
-        "magnetism",
-        "discovery"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/btb3-gww3",
-      "abs_url": "http://link.aps.org/doi/10.1103/btb3-gww3",
-      "source": "prb",
-      "doi": "10.1103/btb3-gww3",
-      "journal_ref": "Phys. Rev. B 114, L171104 (2026)"
     }
   ]
 }
