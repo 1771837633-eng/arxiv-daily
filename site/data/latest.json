@@ -1,6 +1,6 @@
 {
   "site_title": "凝聚态论文日报",
-  "generated_at": "2026-10-03T04:02:11.375470+00:00",
+  "generated_at": "2026-10-04T04:39:58.864036+00:00",
   "query": "(cat:cond-mat.dis-nn OR cat:cond-mat.mes-hall OR cat:cond-mat.mtrl-sci OR cat:cond-mat.other OR cat:cond-mat.quant-gas OR cat:cond-mat.soft OR cat:cond-mat.stat-mech OR cat:cond-mat.str-el OR cat:cond-mat.supr-con)",
   "categories": [
     "cond-mat.dis-nn",
@@ -504,34 +504,9 @@
         "PRB:10.1103/nqcs-jd2g",
         "PRB:10.1103/4xp6-nlns"
       ]
-    },
-    {
-      "title": "Physical Review B - 2026-09-30",
-      "ids": [
-        "PRB:10.1103/wtds-jlcz",
-        "PRB:10.1103/1gzp-yq6h",
-        "PRB:10.1103/pbc1-yzvd",
-        "PRB:10.1103/w6jy-7tk6",
-        "PRB:10.1103/7tlr-cmqq",
-        "PRB:10.1103/fh3c-61jn",
-        "PRB:10.1103/3hcv-nckk",
-        "PRB:10.1103/vgd5-ycxb",
-        "PRB:10.1103/tdg3-1yg2",
-        "PRB:10.1103/5fwf-wws8",
-        "PRB:10.1103/6c3l-8n19",
-        "PRB:10.1103/47j8-8kll",
-        "PRB:10.1103/335v-xff7",
-        "PRB:10.1103/z696-28zn",
-        "PRB:10.1103/3pqw-ydt8",
-        "PRB:10.1103/9lf3-7p6p",
-        "PRB:10.1103/skwd-9vcl",
-        "PRB:10.1103/3rrz-z4dm",
-        "PRB:10.1103/g3pz-tnq7",
-        "PRB:10.1103/5z1f-x493"
-      ]
     }
   ],
-  "count": 53,
+  "count": 33,
   "papers": [
     {
       "arxiv_id": "PRB:10.1103/sryb-sd6w",
@@ -552,7 +527,7 @@
       "abstract_summary_zh": "摘要要点：The superconducting diode effect (SDE) enables nonreciprocal dissipationless transport when inversion and time-reversal symmetries are simultaneously broken.。Rashba nanowires proximitized by conventional s-wave superconductors provide a minimal setting in which spin-orbit coupling and Zeeman fields …",
       "main_content_zh": "本文属于超导领域，核心关注 superconducting、diode、effect、multichannel。The superconducting diode effect (SDE) enables nonreciprocal dissipationless transport when inversion and time-reversal symmetries are simultaneously broken.。Rashba nanowires proximitized by conventional s-wave superconductors provide a minimal setting in which spin-orbit coupling and Zeeman fields …",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3684b201-0ad4-4811-b0b0-197ed9b2e01c)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: e379b895-eb29-4ab4-9f81-3f7f06ae3b5b)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "superconducting",
@@ -589,7 +564,7 @@
       "abstract_summary_zh": "摘要要点：We theoretically investigate spin-dependent transport in altermagnet/triplet-superconductor/altermagnet (AM/TSC/AM) junctions in the presence of interfacial Rashba spin-orbit coupling (RSOC).。Within a microscopic Bogoliubov–de Gennes scattering formalism, we compute angle- and energy-resolved conduc…",
       "main_content_zh": "本文属于磁性领域，核心关注 rashba、spin-orbit、coupling、altermagnet。We theoretically investigate spin-dependent transport in altermagnet/triplet-superconductor/altermagnet (AM/TSC/AM) junctions in the presence of interfacial Rashba spin-orbit coupling (RSOC).。Within a microscopic Bogoliubov–de Gennes scattering formalism, we compute angle- and energy-resolved conduc…",
       "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 10f7fb2f-80c2-431d-95ea-7bec12624a5b)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 1d652545-e681-47af-a068-32fafc5ceb32)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "rashba",
@@ -625,7 +600,7 @@
       "abstract_summary_zh": "摘要要点：We present a theoretical study of proximitized planar Josephson junctions (JJs) with Rashba spin-orbit coupling (SOC) subject to an in-plane magnetic field and demonstrate that the magnetocurrent-phas...",
       "main_content_zh": "本文属于超导、拓扑领域，核心关注 josephson、topological、magnetocurrent-phase、relation。We present a theoretical study of proximitized planar Josephson junctions (JJs) with Rashba spin-orbit coupling (SOC) subject to an in-plane magnetic field and demonstrate that the magnetocurrent-phas...",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 181774cd-26c1-48ee-8666-60a840765c98)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 6594b2e8-a009-4f5a-ad21-4e3bb962af13)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "josephson",
@@ -662,7 +637,7 @@
       "abstract_summary_zh": "摘要要点：We investigate self-consistent unconventional superconductivity in a two-dimensional d-wave altermagnetic metal.。We find that momentum-dependent altermagnetic spin splitting suppresses opposite-spin-singlet pairing and stabilizes highly anisotropic equal-spin triplet order.。In the spin-conserving li…",
       "main_content_zh": "本文属于磁性领域，核心关注 altermagnetic、triplet、pairing、direction-selective。We investigate self-consistent unconventional superconductivity in a two-dimensional d-wave altermagnetic metal.。We find that momentum-dependent altermagnetic spin splitting suppresses opposite-spin-singlet pairing and stabilizes highly anisotropic equal-spin triplet order.。In the spin-conserving li…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: c2e5bd02-246a-4c3c-96f8-133823548ebf)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4fe7a3bb-60d7-4ac8-836d-f96ebe867ad9)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "altermagnetic",
@@ -699,7 +674,7 @@
       "abstract_summary_zh": "摘要要点：We study a one-dimensional quasiperiodic tight-binding model with simultaneous off-diagonal (hopping) and diagonal (on-site) modulations.。Using the inverse participation ratio and the wave-function centroid, we construct localization-delocalization phase diagrams for both equilibrium and nonequilibr…",
       "main_content_zh": "本文属于量子领域，核心关注 quasiperiodic、quantum、mpemba、effect。We study a one-dimensional quasiperiodic tight-binding model with simultaneous off-diagonal (hopping) and diagonal (on-site) modulations.。Using the inverse participation ratio and the wave-function centroid, we construct localization-delocalization phase diagrams for both equilibrium and nonequilibr…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 88c016a7-7191-459b-9efe-a8f91504c45e)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 93a51ec4-ec51-48f6-805c-ee883408a507)\",\"t...",
       "keywords": [
         "inhomogeneous",
         "disordered",
@@ -734,7 +709,7 @@
       "abstract_summary_zh": "摘要要点：The interplay of non-Hermiticity, nonreciprocal hopping, and interparticle interactions provides new possibilities for tuning localization and emergent phase transitions in quasiperiodic systems.。Here we investigate, within the two-body Fock space, the effects of nearest-neighbor dipolar interaction…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 phase、transitions、nearest-neighbor、dipolar。The interplay of non-Hermiticity, nonreciprocal hopping, and interparticle interactions provides new possibilities for tuning localization and emergent phase transitions in quasiperiodic systems.。Here we investigate, within the two-body Fock space, the effects of nearest-neighbor dipolar interaction…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 34aba375-e6bc-4b83-8253-e83b3d21f7df)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 8e36316b-e6e1-4e3f-a38e-9253593565de)\",\"t...",
       "keywords": [
         "dynamics",
         "dynamical systems",
@@ -772,7 +747,7 @@
       "abstract_summary_zh": "摘要要点：We examine this identifiability problem for a two-dimensional d-wave altermagnet within a unified semiclassical fra…",
       "main_content_zh": "本文属于磁性领域，核心关注 boltzmann-constrained、extraction、spin、splitting。We examine this identifiability problem for a two-dimensional d-wave altermagnet within a unified semiclassical fra…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 35e719bb-9dc0-4205-91d5-74a578fd8ff2)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ae732a65-d258-488b-83e0-dc9cce25f8e6)\",\"t...",
       "keywords": [
         "magnetism",
         "boltzmann-constrained",
@@ -812,7 +787,7 @@
       "abstract_summary_zh": "摘要要点：The crystal structure of high-pressure solid hydrogen remains a fundamental open problem.。Although the research frontier has mostly shifted toward ultra-high pressure phases above 400 GPa, we show that even the broken symmetry phase observed around 130 GPa requires revisiting due to its in...",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 revisiting、broken、symmetry、phase。The crystal structure of high-pressure solid hydrogen remains a fundamental open problem.。Although the research frontier has mostly shifted toward ultra-high pressure phases above 400 GPa, we show that even the broken symmetry phase observed around 130 GPa requires revisiting due to its in...",
       "method_zh": "蒙特卡洛模拟。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 5038b0f9-16db-4982-8fa0-8f077922dc61)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b9cb44a2-77cb-47b8-af1a-284cb3d55246)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "revisiting",
@@ -846,7 +821,7 @@
       "abstract_summary_zh": "摘要要点：The three-dimensional cubic conformal field theory governs the critical behavior of Heisenberg magnets with cubic anisotropy.。Studying this theory nonperturbatively is challenging because its most easily accessible observables are numerically very close to those of the more symmetric O(3) model.。In …",
       "main_content_zh": "本文属于量子领域，核心关注 cubic、theory、conformal、field。The three-dimensional cubic conformal field theory governs the critical behavior of Heisenberg magnets with cubic anisotropy.。Studying this theory nonperturbatively is challenging because its most easily accessible observables are numerically very close to those of the more symmetric O(3) model.。In …",
       "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: f6e4473e-4b4f-41cc-8c90-7d9f61932fd5)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b8eb792c-6b63-4484-84f8-37c0194ac248)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "cubic",
@@ -882,7 +857,7 @@
       "abstract_summary_zh": "摘要要点：The plethora of possible ground states of spinor bosons placed in an external lattice and a cavity are revisited.。We discuss the simplest configuration when the external lattice nodes coincide with the antinodes of the cavity field.。We analyze the problem within the grand-canonical mean-field approa…",
       "main_content_zh": "本文属于磁性领域，核心关注 cavity、mean-field、spinor、bosons。The plethora of possible ground states of spinor bosons placed in an external lattice and a cavity are revisited.。We discuss the simplest configuration when the external lattice nodes coincide with the antinodes of the cavity field.。We analyze the problem within the grand-canonical mean-field approa…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4e239e0d-d229-41ef-8573-7e95442808b0)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 19904153-b433-4951-ad94-09cf27ac25a8)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "cavity",
@@ -916,7 +891,7 @@
       "abstract_summary_zh": "摘要要点：We develop a projector-based formulation of the coherent potential approximation (CPA) within a pseudopotential Hamiltonian in the framework of density functional theory.。In the pseudoatomic-sphere scheme, the projectors are constructed from corelike orbitals localized near each pseudoatomic site, w…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 projector-based、coherent、potential、approximation。We develop a projector-based formulation of the coherent potential approximation (CPA) within a pseudopotential Hamiltonian in the framework of density functional theory.。In the pseudoatomic-sphere scheme, the projectors are constructed from corelike orbitals localized near each pseudoatomic site, w…",
       "method_zh": "密度泛函理论 (DFT) 计算。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b061f37e-cfac-4484-b7e0-f2199e8fc8ad)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 18f3ff31-9a02-4172-8ef0-a38ee6f59ea6)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "projector-based",
@@ -957,7 +932,7 @@
       "abstract_summary_zh": "摘要要点：The atomic-layer dependence of friction is a fundamental characteristic of two-dimensional (2D) materials, yet the impact of atomic defects on it remains largely unexplored.。Here, we report the reversal of frictional layer-number dependence in chemical vapor deposition grown MoSe2 by tuning the sele…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 reversal、friction、two-dimensional、dependence。The atomic-layer dependence of friction is a fundamental characteristic of two-dimensional (2D) materials, yet the impact of atomic defects on it remains largely unexplored.。Here, we report the reversal of frictional layer-number dependence in chemical vapor deposition grown MoSe2 by tuning the sele…",
       "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: e4b2f373-b4cc-46a1-af0d-2cd7f37a5d56)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 73ad8f3f-c432-4c9d-b406-11cc3f8fafc8)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -993,7 +968,7 @@
       "abstract_summary_zh": "摘要要点：In ultraclean 2D materials, electron viscosity is as important as Ohmic dissipation, and electron transport exhibits hydrodynamic features.。Using a simple framework of Brinkman equations, we find that hydrodynamic electron flows give rise to a geometric skin effect: sharp obstacles locally enhance t…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 electron、skin、effect、hydrodynamic。In ultraclean 2D materials, electron viscosity is as important as Ohmic dissipation, and electron transport exhibits hydrodynamic features.。Using a simple framework of Brinkman equations, we find that hydrodynamic electron flows give rise to a geometric skin effect: sharp obstacles locally enhance t…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 2b509a12-bcde-4549-9b80-8840f556d42f)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3c777b42-be84-486a-a306-e374dc310b2a)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1035,7 +1010,7 @@
       "abstract_summary_zh": "摘要要点：An identity term in the Hamiltonian is conventionally regarded as spectrally inert; it shifts energies but does not alter eigenstate topology.。We show that under non-Hermitian skin pumping, this paradigm fails: a momentum-dependent identity term actively deforms the generalized Brillouin zone, there…",
       "main_content_zh": "本文属于拓扑领域，核心关注 identity、term、non-hermitian、topology。An identity term in the Hamiltonian is conventionally regarded as spectrally inert; it shifts energies but does not alter eigenstate topology.。We show that under non-Hermitian skin pumping, this paradigm fails: a momentum-dependent identity term actively deforms the generalized Brillouin zone, there…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 83f21ffe-a9b8-430d-8ce5-2df5b1610c50)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: d892b888-8985-4163-a75c-da8e4b568f7f)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "identity",
@@ -1069,7 +1044,7 @@
       "abstract_summary_zh": "摘要要点：We analytically describe the dynamically separated Z2 skin channels (wave-packet evolutions) under a periodic boundary condition in non-Hermitian systems with anomalous time-reversal symmetry by combi...。These c…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 skin、channels、dynamical、mathbb。We analytically describe the dynamically separated Z2 skin channels (wave-packet evolutions) under a periodic boundary condition in non-Hermitian systems with anomalous time-reversal symmetry by combi...。These c…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: cb00d11c-b8fb-4241-87d3-1f23f77b8419)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ba2c128e-8c05-48a0-a85a-5ce5620ef0b7)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1104,7 +1079,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Sung-Hoon Lee and Kyusung Hwang Dimensional extension by adiabatic phase evolution connects one-dimensional (1D) Peierls chains to two-dimensional (2D) Chern insulators and identifies chira...。Here, we show that this framework cannot generate the 1D counterparts of quantum spin…",
       "main_content_zh": "本文属于量子领域，核心关注 solitons、dimensional、extension、one-dimensional。Author(s): Sung-Hoon Lee and Kyusung Hwang Dimensional extension by adiabatic phase evolution connects one-dimensional (1D) Peierls chains to two-dimensional (2D) Chern insulators and identifies chira...。Here, we show that this framework cannot generate the 1D counterparts of quantum spin…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: d672d5c0-633a-4feb-8aa8-b456467a2425)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 86626b30-a78c-420a-804a-c6e2b1953da2)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1139,7 +1114,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Fereshte Ildarabadi and Stephen R.。Power Electrostatically defined quantum dots (QDs) with layer-antisymmetric gating in Bernal-stacked bilayer graphene (BLG) open a local gap and generate a masslike term with opposite sign in the two...",
       "main_content_zh": "本文属于二维材料、量子领域，核心关注 valley-dependent、quantum、dots、bilayer。Author(s): Fereshte Ildarabadi and Stephen R.。Power Electrostatically defined quantum dots (QDs) with layer-antisymmetric gating in Bernal-stacked bilayer graphene (BLG) open a local gap and generate a masslike term with opposite sign in the two...",
       "method_zh": "quantum dots in bilayer graphene。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4b4e63ac-3513-4a9c-ba49-36aadcdc4f58)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3e3c8b91-a12c-4c77-b3ab-06a4d3f29d90)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1194,7 +1169,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): M.。Schneider, T.。A.",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 domains、mathrm、soft、x-ray。Author(s): M.。Schneider, T.。A.",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: a35dfd8d-cbf0-477c-a3e0-58155df9dfdb)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: a4e1b24c-36d9-4389-a956-a9dc097cf2b4)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1229,7 +1204,7 @@
       "abstract_summary_zh": "摘要要点：We study a one-dimensional non-Hermitian Stark chain with nonreciprocal, linearly graded hopping.。A diagonal similarity transformation eliminates the bond asymmetry and changes the usual exponential skin factor into an algebraic accumulation, dj∼jη, with η=γ/F2.。At fixed spectral energy, the charact…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 stark、graded、hopping、non-hermitian。We study a one-dimensional non-Hermitian Stark chain with nonreciprocal, linearly graded hopping.。A diagonal similarity transformation eliminates the bond asymmetry and changes the usual exponential skin factor into an algebraic accumulation, dj∼jη, with η=γ/F2.。At fixed spectral energy, the charact…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 43f2eb32-975d-4bca-bf44-eaf505a7f400)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 6a8c38e3-9c9d-4895-afd5-d2981241bcab)\",\"t...",
       "keywords": [
         "dynamics",
         "dynamical systems",
@@ -1265,7 +1240,7 @@
       "abstract_summary_zh": "摘要要点：In this work, we consider a long JJ chain that effectively realizes a multimode cavity with nonline…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 plasmon、decay、nonequilibrium、steady。In this work, we consider a long JJ chain that effectively realizes a multimode cavity with nonline…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 9a8f80bf-28db-4708-9090-aa3f0f818122)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 57fa8335-c3a8-4492-a703-7557b439ebf8)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "plasmon",
@@ -1299,7 +1274,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Mungo Frost et al.。Under extreme conditions hydrocarbons are known to demix, forming diamond and a hydrogen-rich phase.。Here, the authors probe the timescale of this process as a function of pressure and composition.",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 diamond、pressure、composition、hydrocarbon。Author(s): Mungo Frost et al.。Under extreme conditions hydrocarbons are known to demix, forming diamond and a hydrogen-rich phase.。Here, the authors probe the timescale of this process as a function of pressure and composition.",
       "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4858c8a0-33a6-47fb-9069-815fcfa3bbfb)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 802e2dab-6477-47a8-b5f4-bf14f0e100a6)\",\"t...",
       "keywords": [
         "structure",
         "structural phase transitions",
@@ -1335,7 +1310,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Srimal Rathnayaka, Luke Daemen, and Despina Louca Evidence for multiple magnetic transitions and unconventional spin exchange interactions in the ilmenite insulator MnTiO3 is provided via n...。On cooling, while G-type antiferromagnetic (AFM) order sets in first at 63 K with a k1=(000) characteristic wave vector, a weaker second magne…",
       "main_content_zh": "本文属于磁性领域，核心关注 exchange、magnetic、transitions、ilmenite。Author(s): Srimal Rathnayaka, Luke Daemen, and Despina Louca Evidence for multiple magnetic transitions and unconventional spin exchange interactions in the ilmenite insulator MnTiO3 is provided via n...。On cooling, while G-type antiferromagnetic (AFM) order sets in first at 63 K with a k1=(000) characteristic wave vector, a weaker second magne…",
       "method_zh": "neutron scattering。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3880bb76-0720-4077-aa5e-9d7266c3727f)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: fb993b3d-6dfa-4118-822c-da1e8f203832)\",\"t...",
       "keywords": [
         "magnetism",
         "exchange",
@@ -1368,7 +1343,7 @@
       "abstract_summary_zh": "摘要要点：The interplay between quantum geometry and electron correlation has emerged as a compelling paradigm in quantum many-body physics.。Recent studies have highlighted the diagnostic utility of quantum geometry in identifying magnetic instabilities within itinerant electron systems.。In the present work, …",
       "main_content_zh": "本文属于磁性、量子领域，核心关注 quantum、itinerant、magnetic、instabilities。The interplay between quantum geometry and electron correlation has emerged as a compelling paradigm in quantum many-body physics.。Recent studies have highlighted the diagnostic utility of quantum geometry in identifying magnetic instabilities within itinerant electron systems.。In the present work, …",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b99bc8a5-6728-47fd-b709-44303ab04333)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 045fcfc7-c778-4927-8509-c3ce3b75ba78)\",\"t...",
       "keywords": [
         "magnetism",
         "quantum",
@@ -1402,7 +1377,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Bui D.。Hoi Altermagnets, characterized by time-reversal symmetry breaking without net magnetization and momentum-dependent spin-split bands, offer a promising platform for spintronics due to their anisotropi...。Here, we theoretically investigate the …",
       "main_content_zh": "本文属于热/声子领域，核心关注 altermagnets、phonon-renormalized、noncollinear、rkky。Author(s): Bui D.。Hoi Altermagnets, characterized by time-reversal symmetry breaking without net magnetization and momentum-dependent spin-split bands, offer a promising platform for spintronics due to their anisotropi...。Here, we theoretically investigate the …",
       "method_zh": "time-reversal symmetry breaking without net magnetization and momentum-dependent spin-split bands。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 835ec65a-6da7-4954-8856-74c2c76a298b)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b618a7fa-0fd8-48c9-b91e-f4076d552953)\",\"t...",
       "keywords": [
         "magnetism",
         "altermagnets",
@@ -1438,7 +1413,7 @@
       "abstract_summary_zh": "摘要要点：In this work, we numerically investigate the role of disorder in orbital transport in mesoscopic two-dimensional square lattices hosting atomic or…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 orbital、mesoscopic、extrinsic、hall。In this work, we numerically investigate the role of disorder in orbital transport in mesoscopic two-dimensional square lattices hosting atomic or…",
       "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ceadd216-ac3a-45a6-9c83-486aca3ea1b9)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 466039a6-242e-4645-ba4d-f8ae903dc904)\",\"t...",
       "keywords": [
         "magnetism",
         "orbital",
@@ -1476,7 +1451,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Marius Scholten, Steffen Bötzel, Frank Lechermann, Peayush Choubey, and Ilya M.。Eremin Recent Scanning Tunneling Microscopy (STM) experiments measuring the superconducting gap features in thin films of superconducting bilayer nickelates La2PrNi2O7 at ambient pressure and compress...",
       "main_content_zh": "本文属于超导领域，核心关注 scanning、tunneling、microscopy、bilayer。Author(s): Marius Scholten, Steffen Bötzel, Frank Lechermann, Peayush Choubey, and Ilya M.。Eremin Recent Scanning Tunneling Microscopy (STM) experiments measuring the superconducting gap features in thin films of superconducting bilayer nickelates La2PrNi2O7 at ambient pressure and compress...",
       "method_zh": "扫描隧道显微镜 (STM)。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: f92c3cbb-d9a2-46e3-9bb0-213c685dc177)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: da265655-4fed-4c73-b907-5134e7280311)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "scanning",
@@ -1511,7 +1486,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Mikhail S.。Kalenkov and Andrei D.。Zaikin Microscopic description of ac Josephson effect in superconducting junctions beyond the tunneling limit should account for subtle nonequilibrium effects.",
       "main_content_zh": "本文属于量子领域，核心关注 quantum、andreev、states、dissipative。Author(s): Mikhail S.。Kalenkov and Andrei D.。Zaikin Microscopic description of ac Josephson effect in superconducting junctions beyond the tunneling limit should account for subtle nonequilibrium effects.",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4e59a05d-4b09-45df-ad6d-2313528c4c92)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: be40cff9-ca8b-414f-b43b-c58856a124a1)\",\"t...",
       "keywords": [
         "superfluidity and superconductivity",
         "quantum",
@@ -1547,7 +1522,7 @@
       "abstract_summary_zh": "摘要要点：The concept was defined in the field theory context using the idea of topological defects.。On the lattice, an immediate consequence is that a symmetry twist is moved a…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 symmetry、lattice、sequential、circuits。The concept was defined in the field theory context using the idea of topological defects.。On the lattice, an immediate consequence is that a symmetry twist is moved a…",
       "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 827793fb-0761-4682-bdab-f51d05f5a29a)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 27f7c72a-8aa2-4da0-8ce2-639c86950899)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "symmetry",
@@ -1590,7 +1565,7 @@
       "abstract_summary_zh": "摘要要点：The authors uncover the role of slowly fluctuating nuclear spins in the spin relaxation at low magnetic fields and show that a two-LO-phonon Raman process governs the temperature dependence of the spi...",
       "main_content_zh": "本文属于磁性领域，核心关注 spin、magnetic、relaxation、millisecond-long。The authors uncover the role of slowly fluctuating nuclear spins in the spin relaxation at low magnetic fields and show that a two-LO-phonon Raman process governs the temperature dependence of the spi...",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 80f54dc4-08ea-47f9-b75c-3ccd0672ec23)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3e4fe724-f745-4da2-bb52-97f012b65d22)\",\"t...",
       "keywords": [
         "semiconductors ii: surfaces",
         "interfaces",
@@ -1624,7 +1599,7 @@
       "abstract_summary_zh": "摘要要点：The coexistence of surface superconductivity and Fermi arcs in trigonal γ−PtBi2 has recently attracted attention for possible realization of topological superconductivity.。The Fermi arcs on the two different (0001) surface terminations have been associated with the set of Weyl points just above the …",
       "main_content_zh": "本文属于超导领域，核心关注 weyl、points、trigonal、surface。The coexistence of surface superconductivity and Fermi arcs in trigonal γ−PtBi2 has recently attracted attention for possible realization of topological superconductivity.。The Fermi arcs on the two different (0001) surface terminations have been associated with the set of Weyl points just above the …",
       "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: c6f3d685-d402-4833-a250-082c1ab95d03)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 4811231d-2286-4ec6-9965-46f6f6fb2d5c)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "weyl",
@@ -1663,7 +1638,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Arun Babu, Mukund Kumar, Himanshu Singhal, Ajmal Ansari, Juzer Ali Chakera, and Dipanshu Bansal Precise control of the surface acoustic wave (SAW) frequency is essential for the reliable op...。However, the effect of transducer width L, or equivalently, the L/P ratio, on frequency remain…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 transducer、acoustic、width、surface。Author(s): Arun Babu, Mukund Kumar, Himanshu Singhal, Ajmal Ansari, Juzer Ali Chakera, and Dipanshu Bansal Precise control of the surface acoustic wave (SAW) frequency is essential for the reliable op...。However, the effect of transducer width L, or equivalently, the L/P ratio, on frequency remain…",
       "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: a86d4026-90a1-43e5-af7f-8641700dc62d)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 73835014-4319-49e7-8e16-c189457b7f5d)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1699,7 +1674,7 @@
       "abstract_summary_zh": "摘要要点：The voltage-driven breakdown of a Mott insulating state is a phenomenon where both interactions and nonequilibrium effects play crucial roles.。This interesting effect has generated significant theoretical and experimental interest, and may also prove technologically relevant.。Recent experiments have…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 voltage-driven、breakdown、electronic、order。The voltage-driven breakdown of a Mott insulating state is a phenomenon where both interactions and nonequilibrium effects play crucial roles.。This interesting effect has generated significant theoretical and experimental interest, and may also prove technologically relevant.。Recent experiments have…",
       "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: e4f588e1-2a9e-4c2e-9fe8-455c623ad2f1)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 188ab51f-4e16-48de-bc5e-64c5fd7a59f5)\",\"t...",
       "keywords": [
         "electronic structure and strongly correlated systems",
         "voltage-driven",
@@ -1741,7 +1716,7 @@
       "abstract_summary_zh": "摘要要点：Author(s): Jiachang Bi, Tian-Yu Sun, Xiaoran Liu, Mikhail Kareev, Ruyi Zhang, Zhen Wang, Liang-Feng Huang, Yanwei Cao, and Jak Chakhalian Polar metals, a category of materials exhibiting the unexpecte...。Despite several experimental studies, the effect of polar distortions on the electronic structure (such as orbital configuration)…",
       "main_content_zh": "本文属于凝聚态物理领域，核心关注 polar、electronic、structure、artificial。Author(s): Jiachang Bi, Tian-Yu Sun, Xiaoran Liu, Mikhail Kareev, Ruyi Zhang, Zhen Wang, Liang-Feng Huang, Yanwei Cao, and Jak Chakhalian Polar metals, a category of materials exhibiting the unexpecte...。Despite several experimental studies, the effect of polar distortions on the electronic structure (such as orbital configuration)…",
       "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3660cf6c-0652-4aed-b837-9820c35bbcb6)\",\"t...",
+      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 96e77225-43cc-4ad0-9df0-c6c42540a1fe)\",\"t...",
       "keywords": [
         "surface physics",
         "nanoscale physics",
@@ -1757,761 +1732,6 @@
       "source": "prb",
       "doi": "10.1103/4xp6-nlns",
       "journal_ref": "Phys. Rev. B 114, 245401 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/wtds-jlcz",
-      "title": "Local micromechanics in a mean-field model of glasses reveal key properties of its nonequilibrium replica-symmetry-breaking phase",
-      "authors": [
-        "Makoto Suda",
-        "Edan Lerner",
-        "Eran Bouchbinder"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "A recently formulated disordered mean-field model of soft spins features a nonequilibrium Replica Symmetry Breaking (RSB) phase, whose properties closely resemble low-temperature glasses. Here, the authors develop a micromechanical framework, based on the model’s linear response to force monopoles, and derive exact results supported by numerical computations. These allow to identify collective degrees of freedom in the model’s RSB energy landscape, to extract a characteristic frequency and to relate local properties to global susceptibilities, all in relation to realistic glasses.",
-      "study_overview_zh": "这是一篇计算 + 理论 文章；研究对象为 its nonequilibrium replica-symmetry-breaking phase。",
-      "abstract_summary_zh": "摘要要点：A recently formulated disordered mean-field model of soft spins features a nonequilibrium Replica Symmetry Breaking (RSB) phase, whose properties closely resemble low-temperature glasses.。Here, the authors develop a micromechanical framework, based on the model’s linear response to force monopoles, and derive exact results supported by numerical computations.。These allow to identify collective degrees of freedom in the model’s RSB energy landscape, to extract a characteristic frequency and to relate local properties to global susceptibilities, all in relat...",
-      "main_content_zh": "本文属于凝聚态物理领域，核心关注 model、glasses、properties、local。A recently formulated disordered mean-field model of soft spins features a nonequilibrium Replica Symmetry Breaking (RSB) phase, whose properties closely resemble low-temperature glasses.。Here, the authors develop a micromechanical framework, based on the model’s linear response to force monopoles, and derive exact results supported by numerical computations.。These allow to identify collective degrees of freedom in the model’s RSB energy landscape, to extract a characteristic frequency and to relate local properties to global susceptibilities, all in relat...",
-      "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 776ff992-e061-4702-9aa1-740d23bf1371)\",\"t...",
-      "keywords": [
-        "structure",
-        "structural phase transitions",
-        "mechanical properties",
-        "defects",
-        "model",
-        "glasses",
-        "properties",
-        "local"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/wtds-jlcz",
-      "abs_url": "http://link.aps.org/doi/10.1103/wtds-jlcz",
-      "source": "prb",
-      "doi": "10.1103/wtds-jlcz",
-      "journal_ref": "Phys. Rev. B 114, 134113 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/1gzp-yq6h",
-      "title": "Enhanced spin-current generation in Dirac altermagnets through Klein tunneling",
-      "authors": [
-        "Tomas T. Osterholt",
-        "Lumen Eek",
-        "Cristiane Morais Smith",
-        "Rembert A. Duine"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Tomas T. Osterholt, Lumen Eek, Cristiane Morais Smith, and Rembert A. Duine Altermagnets have recently emerged as a new platform for spintronics applications, offering spin-split electronic bands despite vanishing net magnetization. Here, we investigate spin-current generation in Dirac altermagnets and identify Klein tunneling as an efficient mechanism for enhancing spin tr…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Enhanced spin-current generation in Dirac altermagnets through Klein tunneling。",
-      "abstract_summary_zh": "摘要要点：Author(s): Tomas T.。Osterholt, Lumen Eek, Cristiane Morais Smith, and Rembert A.。Duine Altermagnets have recently emerged as a new platform for spintronics applications, offering spin-split electronic bands despite vanishing net magnetization.",
-      "main_content_zh": "本文属于磁性领域，核心关注 altermagnets、spin-current、generation、dirac。Author(s): Tomas T.。Osterholt, Lumen Eek, Cristiane Morais Smith, and Rembert A.。Duine Altermagnets have recently emerged as a new platform for spintronics applications, offering spin-split electronic bands despite vanishing net magnetization.",
-      "method_zh": "Klein tunneling。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: da3ec728-e185-4a67-87cc-93f149130d16)\",\"t...",
-      "keywords": [
-        "magnetism",
-        "altermagnets",
-        "spin-current",
-        "generation",
-        "dirac",
-        "klein",
-        "tunneling",
-        "enhanced"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/1gzp-yq6h",
-      "abs_url": "http://link.aps.org/doi/10.1103/1gzp-yq6h",
-      "source": "prb",
-      "doi": "10.1103/1gzp-yq6h",
-      "journal_ref": "Phys. Rev. B 114, 134434 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/pbc1-yzvd",
-      "title": "Microscopic theory of an atomic spin diode",
-      "authors": [
-        "William J. Huddie",
-        "Rembert A. Duine"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We present a microscopic theory of an atomic spin diode. Our proposed system consists of two magnetic adatoms deposited on the surface of a two-dimensional electron gas with Rashba spin-orbit coupling. A local s-d type coupling between the local spins and the spins of the electrons induces a nonloca…",
-      "study_overview_zh": "这是一篇理论文章；研究对象为 Microscopic theory of an atomic spin diode。",
-      "abstract_summary_zh": "摘要要点：We present a microscopic theory of an atomic spin diode.。Our proposed system consists of two magnetic adatoms deposited on the surface of a two-dimensional electron gas with Rashba spin-orbit coupling.。A local s-d type coupling between the local spins and the spins of the electrons induces a nonloca…",
-      "main_content_zh": "本文属于磁性领域，核心关注 microscopic、theory、atomic、spin。We present a microscopic theory of an atomic spin diode.。Our proposed system consists of two magnetic adatoms deposited on the surface of a two-dimensional electron gas with Rashba spin-orbit coupling.。A local s-d type coupling between the local spins and the spins of the electrons induces a nonloca…",
-      "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 8a4947e1-75c3-427d-9f91-33b19a01428b)\",\"t...",
-      "keywords": [
-        "magnetism",
-        "microscopic",
-        "theory",
-        "atomic",
-        "spin",
-        "diode",
-        "coupling",
-        "local"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/pbc1-yzvd",
-      "abs_url": "http://link.aps.org/doi/10.1103/pbc1-yzvd",
-      "source": "prb",
-      "doi": "10.1103/pbc1-yzvd",
-      "journal_ref": "Phys. Rev. B 114, 144428 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/w6jy-7tk6",
-      "title": "Two-gap to single-gap transition and two-dome-like superconductivity in alkali-metal intercalated bilayer ${\\mathrm{PdTe}}_{2}$",
-      "authors": [
-        "Yu-Lin Han",
-        "Shu-Xiang Qiao",
-        "Kai-Yue Jiang",
-        "Jie Zhang",
-        "Bao-Tian Wang",
-        "Ping Zhang",
-        "C. S. Ting",
-        "Hong-Yan Lu"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Yu-Lin Han, Shu-Xiang Qiao, Kai-Yue Jiang, Jie Zhang, Bao-Tian Wang, Ping Zhang, C. S. Ting, and Hong-Yan Lu PdTe2 has been synthesized with controllable thickness down to the monolayer limit. Based on first-principles calculations within the fully anisotropic Migdal–Eliashberg framework, this work reveals that alkali-metal intercalation markedly enhances the weak superconductivity of bilayer PdTe2, boosti…",
-      "study_overview_zh": "这是一篇实验 + 计算 文章；研究对象为 PdTe2。",
-      "abstract_summary_zh": "摘要要点：Author(s): Yu-Lin Han, Shu-Xiang Qiao, Kai-Yue Jiang, Jie Zhang, Bao-Tian Wang, Ping Zhang, C.。S.。Ting, and Hong-Yan Lu PdTe2 has been synthesized with controllable thickness down to the monolayer limit.",
-      "main_content_zh": "本文属于超导领域，核心关注 superconductivity、alkali-metal、bilayer、zhang。Author(s): Yu-Lin Han, Shu-Xiang Qiao, Kai-Yue Jiang, Jie Zhang, Bao-Tian Wang, Ping Zhang, C.。S.。Ting, and Hong-Yan Lu PdTe2 has been synthesized with controllable thickness down to the monolayer limit.",
-      "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 299495a2-0954-415c-a188-dae8977a81d2)\",\"t...",
-      "keywords": [
-        "superfluidity and superconductivity",
-        "superconductivity",
-        "alkali-metal",
-        "bilayer",
-        "zhang",
-        "pdte2",
-        "two-gap",
-        "single-gap"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/w6jy-7tk6",
-      "abs_url": "http://link.aps.org/doi/10.1103/w6jy-7tk6",
-      "source": "prb",
-      "doi": "10.1103/w6jy-7tk6",
-      "journal_ref": "Phys. Rev. B 114, 144515 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/7tlr-cmqq",
-      "title": "Spin-orbit-entangled ${J}_{\\mathrm{eff}}=\\frac{1}{2}$ magnetism and unconventional spin freezing in the bond-disordered pyrochlore antiferromagnet ${\\mathrm{NaCdCo}}_{2}{\\mathrm{F}}_{7}$",
-      "authors": [
-        "A. Kancko",
-        "H. Sakai",
-        "J. Herrero-Martín",
-        "A. Berlie",
-        "M. Uhlarz",
-        "T. Haidamak",
-        "M. Klicpera",
-        "Y. Tokunaga",
-        "R. H. Colman"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): A. Kancko, H. Sakai, J. Herrero-Martín, A. Berlie, M. Uhlarz, T. Haidamak, M. Klicpera, Y. Tokunaga, and R. H. Colman Here, the authors establish NaCdCo2F7 as a spin-orbit-entangled Jeff=½ pyrochlore antiferromagnet, in which strong geometric frustration and bond disorder drive unconventional spin freezing. Despite the onset of a frozen state, persistent spin dynamics survive to the lowest temperatures, revealing an unusual coexistence of static and dynamic magnetism in a highly frustrated, disordered system.",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 NaCdCo2F7。",
-      "abstract_summary_zh": "摘要要点：Author(s): A.。Kancko, H.。Sakai, J.",
-      "main_content_zh": "本文属于磁性领域，核心关注 mathrm、spin、spin-orbit-entangled、magnetism。Author(s): A.。Kancko, H.。Sakai, J.",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3b1e5a0e-be55-4339-90f3-e0e176d13fdd)\",\"t...",
-      "keywords": [
-        "magnetism",
-        "mathrm",
-        "spin",
-        "spin-orbit-entangled",
-        "unconventional",
-        "freezing",
-        "pyrochlore"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/7tlr-cmqq",
-      "abs_url": "http://link.aps.org/doi/10.1103/7tlr-cmqq",
-      "source": "prb",
-      "doi": "10.1103/7tlr-cmqq",
-      "journal_ref": "Phys. Rev. B 114, 154431 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/fh3c-61jn",
-      "title": "Finite-temperature enhancement of magnetic interactions from first principles",
-      "authors": [
-        "Ravi Kaushik",
-        "Ryota Ono",
-        "Sergey Artyukhin"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Ravi Kaushik, Ryota Ono, and Sergey Artyukhin Density functional theory has demonstrated remarkable predictive power in calculating magnetic properties at zero temperature. At finite temperatures, thermally excited phonons affect magnetism. Efficient ab initio methods for calculating the temperature dependence of magnetic exchange interactions …",
-      "study_overview_zh": "这是一篇计算 + 理论 文章；研究对象为 Finite-temperature enhancement of magnetic interactions from first principles；主要计算方法：密度泛函理论 (DFT) 计算。",
-      "abstract_summary_zh": "摘要要点：Author(s): Ravi Kaushik, Ryota Ono, and Sergey Artyukhin Density functional theory has demonstrated remarkable predictive power in calculating magnetic properties at zero temperature.。At finite temperatures, thermally excited phonons affect magnetism.。Efficient ab initio methods for calculating the temperature dependence of magnetic exchange interactions …",
-      "main_content_zh": "本文属于磁性、热/声子领域，核心关注 magnetic、interactions、calculating、temperature。Author(s): Ravi Kaushik, Ryota Ono, and Sergey Artyukhin Density functional theory has demonstrated remarkable predictive power in calculating magnetic properties at zero temperature.。At finite temperatures, thermally excited phonons affect magnetism.。Efficient ab initio methods for calculating the temperature dependence of magnetic exchange interactions …",
-      "method_zh": "密度泛函理论 (DFT) 计算。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b3fae198-c8fe-457e-8fb4-bed1c7011226)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "magnetic",
-        "interactions",
-        "calculating",
-        "temperature",
-        "finite-temperature",
-        "enhancement",
-        "first"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/fh3c-61jn",
-      "abs_url": "http://link.aps.org/doi/10.1103/fh3c-61jn",
-      "source": "prb",
-      "doi": "10.1103/fh3c-61jn",
-      "journal_ref": "Phys. Rev. B 114, 165143 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/3hcv-nckk",
-      "title": "Spin dynamics from the Niu-Kleinman adiabatic approach and slave-boson mean-field theory",
-      "authors": [
-        "Xuan Yang",
-        "Tianyang Xie",
-        "Shaohang Shi",
-        "Kun Jiang",
-        "Jiangping Hu"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "In this work, we develop an adiabatic theory of spin dynamics by combining the Niu-Kleinman formalism with Kotliar-Ruckenstein slave-boson theory. For each frozen spin config…",
-      "study_overview_zh": "这是一篇理论文章；研究对象为 Spin dynamics from the Niu-Kleinman adiabatic approach and slave-boson mean-field theory。",
-      "abstract_summary_zh": "摘要要点：In this work, we develop an adiabatic theory of spin dynamics by combining the Niu-Kleinman formalism with Kotliar-Ruckenstein slave-boson theory.。For each frozen spin config…",
-      "main_content_zh": "本文属于磁性领域，核心关注 spin、theory、dynamics、niu-kleinman。In this work, we develop an adiabatic theory of spin dynamics by combining the Niu-Kleinman formalism with Kotliar-Ruckenstein slave-boson theory.。For each frozen spin config…",
-      "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ce035d64-e48a-45e7-b2b0-3166a0392782)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "spin",
-        "theory",
-        "dynamics",
-        "niu-kleinman",
-        "adiabatic",
-        "slave-boson",
-        "approach"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/3hcv-nckk",
-      "abs_url": "http://link.aps.org/doi/10.1103/3hcv-nckk",
-      "source": "prb",
-      "doi": "10.1103/3hcv-nckk",
-      "journal_ref": "Phys. Rev. B 114, 165144 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/vgd5-ycxb",
-      "title": "Tailoring bound states in the continuum in photonic crystal slabs via lattice engineering",
-      "authors": [
-        "Lei Zhang",
-        "Renfei Zheng",
-        "Shaojun You",
-        "Longxiao Wang",
-        "Wenxin Zhang",
-        "Yicheng Cai",
-        "Mengyang Qu",
-        "Jinzhong Zhang",
-        "Junhao Chu",
-        "Lujun Huang"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Lei Zhang, Renfei Zheng, Shaojun You, Longxiao Wang, Wenxin Zhang, Yicheng Cai, Mengyang Qu, Jinzhong Zhang, Junhao Chu, and Lujun Huang Bound states in the continuum (BICs) enable strong light confinement and enhanced light–matter interactions, yet how lattice deformation governs their momentum-space evolution remains unclear. Here, we develop a lattice-engineering framework for silicon photonic crystal slabs by investigating the co…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 BICs。",
-      "abstract_summary_zh": "摘要要点：Author(s): Lei Zhang, Renfei Zheng, Shaojun You, Longxiao Wang, Wenxin Zhang, Yicheng Cai, Mengyang Qu, Jinzhong Zhang, Junhao Chu, and Lujun Huang Bound states in the continuum (BICs) enable strong l...。Here, we develop a lattice-engineering framework for silicon photonic crystal slabs by investigating the co…",
-      "main_content_zh": "本文属于光学/激子领域，核心关注 zhang、bound、states、continuum。Author(s): Lei Zhang, Renfei Zheng, Shaojun You, Longxiao Wang, Wenxin Zhang, Yicheng Cai, Mengyang Qu, Jinzhong Zhang, Junhao Chu, and Lujun Huang Bound states in the continuum (BICs) enable strong l...。Here, we develop a lattice-engineering framework for silicon photonic crystal slabs by investigating the co…",
-      "method_zh": "lattice engineering。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ebdef195-cb31-475a-8d00-d8b78085abde)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "zhang",
-        "bound",
-        "states",
-        "continuum",
-        "photonic"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/vgd5-ycxb",
-      "abs_url": "http://link.aps.org/doi/10.1103/vgd5-ycxb",
-      "source": "prb",
-      "doi": "10.1103/vgd5-ycxb",
-      "journal_ref": "Phys. Rev. B 114, 165425 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/tdg3-1yg2",
-      "title": "Breit-Wigner-Fano Raman characteristics in semimetallic $1T\\text{−}{\\mathrm{Ti}}_{1.03}{\\mathrm{S}}_{2}$",
-      "authors": [
-        "Keana Rylie Pasoquen",
-        "Huynh Phuong Anh",
-        "Kalingarayanpalayam Matheswaran Arun Kumar",
-        "Nguyen Van Thanh",
-        "Xiang-Lin Huang",
-        "Guo-Jiun Shu",
-        "Riichiro Saito",
-        "Nguyen Tuan Hung",
-        "Hsiang-Lin Liu"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We present temperature-dependent Raman spectra of semimetallic 1T−Ti1.03S2 single crystals measured from 6 to 300 K using a 532 nm excitation laser and identify a change in the phonon line shape near the Raman crossover temperature TcR = 180 K. At 6 K, the Raman spectrum exhibits the first-order Eg …",
-      "study_overview_zh": "这是一篇实验文章；研究对象为 Breit-Wigner-Fano Raman characteristics in semimetallic。",
-      "abstract_summary_zh": "摘要要点：We present temperature-dependent Raman spectra of semimetallic 1T−Ti1.03S2 single crystals measured from 6 to 300 K using a 532 nm excitation laser and identify a change in the phonon line shape near...。At 6 K, the Raman spectrum exhibits the first-order Eg …",
-      "main_content_zh": "本文属于热/声子领域，核心关注 raman、semimetallic、mathrm、breit-wigner-fano。We present temperature-dependent Raman spectra of semimetallic 1T−Ti1.03S2 single crystals measured from 6 to 300 K using a 532 nm excitation laser and identify a change in the phonon line shape near...。At 6 K, the Raman spectrum exhibits the first-order Eg …",
-      "method_zh": "摘要未明确说明具体实验手段。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: ac755d78-3e07-41a1-9658-cee8653b0870)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "raman",
-        "semimetallic",
-        "mathrm",
-        "breit-wigner-fano",
-        "characteristics"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/tdg3-1yg2",
-      "abs_url": "http://link.aps.org/doi/10.1103/tdg3-1yg2",
-      "source": "prb",
-      "doi": "10.1103/tdg3-1yg2",
-      "journal_ref": "Phys. Rev. B 114, 165426 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/5fwf-wws8",
-      "title": "Emergence of spin-orbit coupling among spin, atomic orbital, and Bloch dynamics in Janus double-transition-metal MXenes",
-      "authors": [
-        "Tetsuro Habe"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We found a spin-orbit coupling to cause a simultaneous correlation among 3 degrees of freedom, the electronic spin, orbital, and Bloch dynamics in an investigation into the electronic structure of Janus double-transition-metal MXenes, Mo2HfC2OS and W2HfC2OS. In this paper, it is also revealed that t…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Janus double-transition-metal MXenes。",
-      "abstract_summary_zh": "摘要要点：We found a spin-orbit coupling to cause a simultaneous correlation among 3 degrees of freedom, the electronic spin, orbital, and Bloch dynamics in an investigation into the electronic structure of Jan...。In this paper, it is also revealed that t…",
-      "main_content_zh": "本文属于磁性领域，核心关注 spin-orbit、coupling、among、spin。We found a spin-orbit coupling to cause a simultaneous correlation among 3 degrees of freedom, the electronic spin, orbital, and Bloch dynamics in an investigation into the electronic structure of Jan...。In this paper, it is also revealed that t…",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 87e09d28-d8c0-41dc-a237-3e85b2435e48)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "spin-orbit",
-        "coupling",
-        "among",
-        "spin",
-        "orbital"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/5fwf-wws8",
-      "abs_url": "http://link.aps.org/doi/10.1103/5fwf-wws8",
-      "source": "prb",
-      "doi": "10.1103/5fwf-wws8",
-      "journal_ref": "Phys. Rev. B 114, 165427 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/6c3l-8n19",
-      "title": "General construction of quantum error-correcting codes from multiple classical codes",
-      "authors": [
-        "Yue Wu",
-        "Meng-Yuan Li",
-        "Chengshu Li",
-        "Hui Zhai"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The hypergraph product (HGP) construction of quantum error-correcting codes (QECCs) offers a general and explicit method for building a QECC from two classical codes, thereby paving the way for the discovery of good quantum low-density parity-check codes. In this paper, we propose a general and expl…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 QECCs。",
-      "abstract_summary_zh": "摘要要点：The hypergraph product (HGP) construction of quantum error-correcting codes (QECCs) offers a general and explicit method for building a QECC from two classical codes, thereby paving the way for the di...。In this paper, we propose a general and expl…",
-      "main_content_zh": "本文属于量子领域，核心关注 codes、general、quantum、construction。The hypergraph product (HGP) construction of quantum error-correcting codes (QECCs) offers a general and explicit method for building a QECC from two classical codes, thereby paving the way for the di...。In this paper, we propose a general and expl…",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 56ac0994-a560-454e-bd86-8d4b28ab3950)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "codes",
-        "general",
-        "quantum",
-        "construction",
-        "error-correcting",
-        "classical",
-        "multiple"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/6c3l-8n19",
-      "abs_url": "http://link.aps.org/doi/10.1103/6c3l-8n19",
-      "source": "prb",
-      "doi": "10.1103/6c3l-8n19",
-      "journal_ref": "Phys. Rev. B 114, 175138 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/47j8-8kll",
-      "title": "${G}^{0}{W}^{0}$ implementation based on the pseudopotential and numerical-atomic-orbital basis-set framework: Algorithms and benchmarks",
-      "authors": [
-        "Huanjing Gong",
-        "Min-Ye Zhang",
-        "Peize Lin",
-        "Bohan Jia",
-        "Ziqing Guan",
-        "Lixin He",
-        "Xinguo Ren"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The GW method delivers substantially improved accuracy in electronic band structure calculations over conventional Kohn–Sham density functional theory (KS-DFT) by explicitly incorporating the electron self-energy effect beyond mean-field approximations. In this work, we present an efficient NAO-PP-b…",
-      "study_overview_zh": "这是一篇计算 + 理论 文章；研究对象为 implementation based on the pseudopotential and numerical-atomic-orbital basis-set framework: Algori...；主要计算方法：密度泛函理论 (DFT) 计算。",
-      "abstract_summary_zh": "摘要要点：The GW method delivers substantially improved accuracy in electronic band structure calculations over conventional Kohn–Sham density functional theory (KS-DFT) by explicitly incorporating the electron...。In this work, we present an efficient NAO-PP-b…",
-      "main_content_zh": "本文属于凝聚态物理领域，核心关注 implementation、pseudopotential、numerical-atomic-orbital、basis-set。The GW method delivers substantially improved accuracy in electronic band structure calculations over conventional Kohn–Sham density functional theory (KS-DFT) by explicitly incorporating the electron...。In this work, we present an efficient NAO-PP-b…",
-      "method_zh": "密度泛函理论 (DFT) 计算。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 01d9e9e4-505e-4d47-b7e8-463f7c420a05)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "implementation",
-        "pseudopotential",
-        "numerical-atomic-orbital",
-        "basis-set",
-        "framework",
-        "algorithms",
-        "benchmarks"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/47j8-8kll",
-      "abs_url": "http://link.aps.org/doi/10.1103/47j8-8kll",
-      "source": "prb",
-      "doi": "10.1103/47j8-8kll",
-      "journal_ref": "Phys. Rev. B 114, 175139 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/335v-xff7",
-      "title": "Signatures of the quantum geometric dipole of interlayer excitons in counterflow conductivity",
-      "authors": [
-        "Fanuel I. Mendez",
-        "Luis Brey",
-        "H. A. Fertig"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Fanuel I. Mendez, Luis Brey, and H. A. Fertig Collective excitations of many-body electron systems can carry internal structure, supporting novel quantum geometric and topological properties. Among these are a quantum geometric dipole (QGD), which for excitons have direct significance as an internal polarization. For interlayer excitons of a bi…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Signatures of the quantum geometric dipole of interlayer excitons in counterflow conductivity。",
-      "abstract_summary_zh": "摘要要点：Author(s): Fanuel I.。Mendez, Luis Brey, and H.。A.",
-      "main_content_zh": "本文属于量子、光学/激子领域，核心关注 quantum、geometric、excitons、dipole。Author(s): Fanuel I.。Mendez, Luis Brey, and H.。A.",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: a45cc15a-06bf-45fc-93b8-8124e2b2f39b)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "quantum",
-        "geometric",
-        "excitons",
-        "dipole",
-        "interlayer"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/335v-xff7",
-      "abs_url": "http://link.aps.org/doi/10.1103/335v-xff7",
-      "source": "prb",
-      "doi": "10.1103/335v-xff7",
-      "journal_ref": "Phys. Rev. B 114, 175415 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/z696-28zn",
-      "title": "Magnetic-field-driven phase switching in the antiferromagnetic Mott insulator ${\\mathrm{Ca}}_{3}{({\\mathrm{Ru}}_{0.99}{\\mathrm{Ti}}_{0.01})}_{2}{\\mathrm{O}}_{7}$",
-      "authors": [
-        "Ksenia S. Rabinovich",
-        "Tim Priessnitz",
-        "Nils Gross",
-        "George Jackeli",
-        "Maximilian J. Krautloher",
-        "Pascal Reiss",
-        "Eberhard J. Goering",
-        "Jurgen H. Smet",
-        "Bernhard Keimer",
-        "Alexander V. Boris"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Author(s): Ksenia S. Rabinovich, Tim Priessnitz, Nils Gross, George Jackeli, Maximilian J. Krautloher, Pascal Reiss, Eberhard J. Goering, Jurgen H. Smet, Bernhard Keimer, and Alexander V. Boris Isovalent 1% Ti substitution tunes the polar metal Ca3Ru2O7 to the edge of its Mott transition. While electronic kinetic energy and strong electron-lattice coupling contribute to the system’s free-energy balance, its magnetic H-T phase diagram is remarkably simple, closely resembling that of a canonical anisotropic antiferromagnet, albeit with substantially renormalized critical fields. Along the easy axis, a first-order spin-flop transition near 6 Tesla reorients the Ru moments while the system remains insulating; a forced-ferromagnetic metal emerges above 10.5 Tesla field.",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Ca3Ru2O7。",
-      "abstract_summary_zh": "摘要要点：Author(s): Ksenia S.。Rabinovich, Tim Priessnitz, Nils Gross, George Jackeli, Maximilian J.。Krautloher, Pascal Reiss, Eberhard J.",
-      "main_content_zh": "本文属于凝聚态物理领域，核心关注 mathrm、phase、mott、metal。Author(s): Ksenia S.。Rabinovich, Tim Priessnitz, Nils Gross, George Jackeli, Maximilian J.。Krautloher, Pascal Reiss, Eberhard J.",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 8ee6780e-6afe-4b72-ad70-06b217cad885)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "mathrm",
-        "phase",
-        "mott",
-        "metal",
-        "transition",
-        "while",
-        "system"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/z696-28zn",
-      "abs_url": "http://link.aps.org/doi/10.1103/z696-28zn",
-      "source": "prb",
-      "doi": "10.1103/z696-28zn",
-      "journal_ref": "Phys. Rev. B 114, 185134 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/3pqw-ydt8",
-      "title": "Entanglement properties of the one-dimensional dimerized Fermi-Hubbard model",
-      "authors": [
-        "Min-Chul Cha",
-        "Hoon Beom Kwon",
-        "Ji-Woo Lee",
-        "Myung-Hoon Chung"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We study the entanglement properties of the one-dimensional dimerized Fermi-Hubbard model. Using a matrix product state approach, we compute the ground state and identify two insulating phases at 1/2- and 3/4-filling, along with a metallic phase. The underlying physical mechanisms of these phases ar…",
-      "study_overview_zh": "这是一篇计算 + 理论 文章；研究对象为 the one-dimensional dimerized Fermi-Hubbard model。",
-      "abstract_summary_zh": "摘要要点：We study the entanglement properties of the one-dimensional dimerized Fermi-Hubbard model.。Using a matrix product state approach, we compute the ground state and identify two insulating phases at 1/2- and 3/4-filling, along with a metallic phase.。The underlying physical mechanisms of these phases ar…",
-      "main_content_zh": "本文属于量子领域，核心关注 entanglement、properties、one-dimensional、dimerized。We study the entanglement properties of the one-dimensional dimerized Fermi-Hubbard model.。Using a matrix product state approach, we compute the ground state and identify two insulating phases at 1/2- and 3/4-filling, along with a metallic phase.。The underlying physical mechanisms of these phases ar…",
-      "method_zh": "摘要未明确说明具体计算方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 051658d8-e153-41b7-9ffa-7bb7c19e5396)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "entanglement",
-        "properties",
-        "one-dimensional",
-        "dimerized",
-        "fermi-hubbard",
-        "model",
-        "state"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/3pqw-ydt8",
-      "abs_url": "http://link.aps.org/doi/10.1103/3pqw-ydt8",
-      "source": "prb",
-      "doi": "10.1103/3pqw-ydt8",
-      "journal_ref": "Phys. Rev. B 114, 185135 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/9lf3-7p6p",
-      "title": "Graph neural networks in the Wilson loop representation of Abelian lattice gauge theories",
-      "authors": [
-        "Ali Rayat",
-        "Gia-Wei Chern"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We introduce a gauge-invariant graph neural network (GNN) architecture for Abelia…",
-      "study_overview_zh": "这是一篇计算文章；研究对象为 Graph neural networks in the Wilson loop representation of Abelian lattice gauge theories；主要计算方法：机器学习方法。",
-      "abstract_summary_zh": "摘要要点：We introduce a gauge-invariant graph neural network (GNN) architecture for Abelia…",
-      "main_content_zh": "本文属于机器学习领域，核心关注 graph、neural、networks、wilson。We introduce a gauge-invariant graph neural network (GNN) architecture for Abelia…",
-      "method_zh": "机器学习方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 3b13de22-4ce4-43ec-8947-a18706fb14d5)\",\"t...",
-      "keywords": [
-        "electronic structure and strongly correlated systems",
-        "graph",
-        "neural",
-        "networks",
-        "wilson",
-        "loop",
-        "representation",
-        "abelian"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/9lf3-7p6p",
-      "abs_url": "http://link.aps.org/doi/10.1103/9lf3-7p6p",
-      "source": "prb",
-      "doi": "10.1103/9lf3-7p6p",
-      "journal_ref": "Phys. Rev. B 114, 185136 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/skwd-9vcl",
-      "title": "High-efficiency spin filtering mediated by localized states in Mo-doped GaSe monolayers",
-      "authors": [
-        "Junyu Mou",
-        "Yongchao Liang",
-        "Qian Chen"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The realization of half-metallicity in two-dimensional materials is of considerable interest for the development of nanoscale spintronic devices. In this work, we systematically investigate the electronic structure and spin-dependent quantum transport properties of substitutionally Mo-doped GaSe mon…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 GaSe monolayers。",
-      "abstract_summary_zh": "摘要要点：The realization of half-metallicity in two-dimensional materials is of considerable interest for the development of nanoscale spintronic devices.。In this work, we systematically investigate the electronic structure and spin-dependent quantum transport properties of substitutionally Mo-doped GaSe mon…",
-      "main_content_zh": "本文属于磁性领域，核心关注 mo-doped、gase、high-efficiency、spin。The realization of half-metallicity in two-dimensional materials is of considerable interest for the development of nanoscale spintronic devices.。In this work, we systematically investigate the electronic structure and spin-dependent quantum transport properties of substitutionally Mo-doped GaSe mon…",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: a6c4cd68-bc08-4977-a13c-0402939fb11a)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "mo-doped",
-        "gase",
-        "high-efficiency",
-        "spin",
-        "filtering"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/skwd-9vcl",
-      "abs_url": "http://link.aps.org/doi/10.1103/skwd-9vcl",
-      "source": "prb",
-      "doi": "10.1103/skwd-9vcl",
-      "journal_ref": "Phys. Rev. B 114, 185431 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/3rrz-z4dm",
-      "title": "Nutational spin pumping and dissipation",
-      "authors": [
-        "Hans Gløckner Giil",
-        "Arne Brataas"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "We reveal a nutational damping torque comprising a bulk term and an interfacial contribution that describes spin emission into adjacent metals. The inter…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Nutational spin pumping and dissipation。",
-      "abstract_summary_zh": "摘要要点：We reveal a nutational damping torque comprising a bulk term and an interfacial contribution that describes spin emission into adjacent metals.。The inter…",
-      "main_content_zh": "本文属于磁性领域，核心关注 nutational、spin、pumping、dissipation。We reveal a nutational damping torque comprising a bulk term and an interfacial contribution that describes spin emission into adjacent metals.。The inter…",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: b4016e41-1368-4df4-8191-d3d516267ed8)\",\"t...",
-      "keywords": [
-        "magnetism",
-        "nutational",
-        "spin",
-        "pumping",
-        "dissipation",
-        "reveal",
-        "damping",
-        "torque"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/3rrz-z4dm",
-      "abs_url": "http://link.aps.org/doi/10.1103/3rrz-z4dm",
-      "source": "prb",
-      "doi": "10.1103/3rrz-z4dm",
-      "journal_ref": "Phys. Rev. B 114, L140413 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/g3pz-tnq7",
-      "title": "Spontaneous Chern-Euler duality transitions",
-      "authors": [
-        "Kang Yang",
-        "Zhi Li",
-        "Peng Xue",
-        "Emil J. Bergholtz",
-        "Piet W. Brouwer"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "Here we report a contrasting paradigm in spontaneous parity-time symmetry-breaking transitions induced by non-Hermiticity. The topological invariant remains conserved, but its nature transitions bet…",
-      "study_overview_zh": "这是一篇分类不明确；研究对象为 Spontaneous Chern-Euler duality transitions。",
-      "abstract_summary_zh": "摘要要点：Here we report a contrasting paradigm in spontaneous parity-time symmetry-breaking transitions induced by non-Hermiticity.。The topological invariant remains conserved, but its nature transitions bet…",
-      "main_content_zh": "本文属于拓扑领域，核心关注 transitions、spontaneous、chern-euler、duality。Here we report a contrasting paradigm in spontaneous parity-time symmetry-breaking transitions induced by non-Hermiticity.。The topological invariant remains conserved, but its nature transitions bet…",
-      "method_zh": "摘要未明确说明具体方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: 0745ae2b-6922-4ff7-ab29-1b73e6f89947)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "transitions",
-        "spontaneous",
-        "chern-euler",
-        "duality",
-        "here"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/g3pz-tnq7",
-      "abs_url": "http://link.aps.org/doi/10.1103/g3pz-tnq7",
-      "source": "prb",
-      "doi": "10.1103/g3pz-tnq7",
-      "journal_ref": "Phys. Rev. B 114, L171409 (2026)"
-    },
-    {
-      "arxiv_id": "PRB:10.1103/5z1f-x493",
-      "title": "Exact electrostatic theory of Fermi-energy response at metallic interfaces",
-      "authors": [
-        "Théophane Bernhard",
-        "Andrea Grisafi"
-      ],
-      "published": "2026-09-30T10:00:00+00:00",
-      "updated": "2026-09-30T10:00:00+00:00",
-      "primary_category": "prb",
-      "categories": [
-        "prb"
-      ],
-      "abstract": "The response of the Fermi energy to external perturbations governs key physical observables at metallic interfaces. Although this response admits a local formulation in terms of the Fukui function, its evaluation has traditionally been limited by inherent approximations, fundamentally rooted in the …",
-      "study_overview_zh": "这是一篇理论文章；研究对象为 Exact electrostatic theory of Fermi-energy response at metallic interfaces。",
-      "abstract_summary_zh": "摘要要点：The response of the Fermi energy to external perturbations governs key physical observables at metallic interfaces.。Although this response admits a local formulation in terms of the Fukui function, its evaluation has traditionally been limited by inherent approximations, fundamentally rooted in the …",
-      "main_content_zh": "本文属于凝聚态物理领域，核心关注 response、metallic、interfaces、exact。The response of the Fermi energy to external perturbations governs key physical observables at metallic interfaces.。Although this response admits a local formulation in terms of the Fukui function, its evaluation has traditionally been limited by inherent approximations, fundamentally rooted in the …",
-      "method_zh": "摘要未明确说明具体理论方法。",
-      "summary_mode": "rule-based; llm_error=LLM request failed: 402 {\"error\":{\"message\":\"Insufficient Balance (request_id: bb14ffb1-94dc-4306-b02a-beab2d565efc)\",\"t...",
-      "keywords": [
-        "surface physics",
-        "nanoscale physics",
-        "low-dimensional systems",
-        "response",
-        "metallic",
-        "interfaces",
-        "exact",
-        "electrostatic"
-      ],
-      "pdf_url": "http://link.aps.org/doi/10.1103/5z1f-x493",
-      "abs_url": "http://link.aps.org/doi/10.1103/5z1f-x493",
-      "source": "prb",
-      "doi": "10.1103/5z1f-x493",
-      "journal_ref": "Phys. Rev. B 114, L171410 (2026)"
     }
   ]
 }
