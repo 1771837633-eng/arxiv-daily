@@ -11,6 +11,7 @@ const els = {
   meta: document.getElementById("page-meta"),
   summary: document.getElementById("summary"),
   sourceFilters: document.getElementById("source-filters"),
+  status: document.getElementById("data-status"),
   filters: document.getElementById("filters"),
   list: document.getElementById("paper-list"),
   search: document.getElementById("search"),
@@ -75,6 +76,34 @@ function formatDate(value) {
   }).format(date);
 }
 
+function formatUpdateTime(value) {
+  if (!value || !Number.isFinite(new Date(value).getTime())) return "未知";
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(new Date(value));
+}
+
+function renderDataStatus() {
+  const messages = [];
+  const prb = state.data.source_status?.prb;
+  if (state.source !== "arxiv" && prb?.status === "stale") {
+    messages.push("PRB 暂未更新，保留 " + formatUpdateTime(prb.updated_at) + " 的结果。");
+  } else if (state.source !== "arxiv" && prb?.status === "unavailable") {
+    messages.push("PRB 暂时无法获取，arXiv 已更新。");
+  }
+  const papers = state.data.papers || [];
+  if (!papers.some(paper => sourceOf(paper) === "arxiv")) {
+    messages.push("当前数据缺少 arXiv 文章。");
+  }
+  const updated = new Date(state.data.generated_at).getTime();
+  if (Number.isFinite(updated) && Date.now() - updated > 48 * 60 * 60 * 1000) {
+    messages.push("最新数据停留在 " + formatUpdateTime(state.data.generated_at) + "。");
+  }
+  els.status.hidden = messages.length === 0;
+  els.status.textContent = messages.join(" ");
+}
+
 function escapeHtml(value) {
   return String(value || "")
     .replaceAll("&", "&amp;")
@@ -119,6 +148,8 @@ function filteredPapers() {
       paper.abstract_summary_zh,
       paper.main_content_zh,
       paper.method_zh,
+      paper.novelty_zh,
+      paper.limitations_zh,
       (paper.authors || []).join(" "),
       (paper.keywords || []).join(" "),
     ].join(" ").toLowerCase();
@@ -139,7 +170,7 @@ function renderMetrics(papers) {
     '<div class="metric"><div class="label">凝聚态论文</div><div class="value">' + papers.length + '</div></div>' +
     '<div class="metric"><div class="label">AI 总结</div><div class="value">' + llmCount + '</div></div>' +
     '<div class="metric"><div class="label">PRB 论文</div><div class="value">' + prbCount + '</div></div>' +
-    '<div class="metric"><div class="label">更新时间</div><div class="value">' + formatDate(state.data.generated_at) + '</div></div>';
+    '<div class="metric"><div class="label">更新于（北京时间）</div><div class="value metric-time">' + formatUpdateTime(state.data.generated_at) + '</div></div>';
 }
 
 function renderSourceFilters(papers) {
@@ -151,13 +182,15 @@ function renderSourceFilters(papers) {
   const options = [
     ["all", "全部", counts.all],
     ["arxiv", "arXiv", counts.arxiv],
-    ["prb", "PRB", counts.prb],
   ];
+  if ((state.data.sources || []).includes("prb") || counts.prb > 0) {
+    options.push(["prb", "PRB", counts.prb]);
+  }
   var html = "";
   for (var i = 0; i < options.length; i++) {
     var item = options[i];
     var active = state.source === item[0] ? " active" : "";
-    html += '<button class="source-chip' + active + '" data-source="' + item[0] + '">' +
+    html += '<button class="source-chip' + active + '" aria-pressed="' + (state.source === item[0]) + '" data-source="' + item[0] + '">' +
       '<span>' + item[1] + '</span>' +
       '<strong>' + item[2] + '</strong>' +
     '</button>';
@@ -184,7 +217,11 @@ function renderSummaryField(label, value, highlight) {
 
 function renderPapers(papers) {
   if (!papers.length) {
-    els.list.innerHTML = '<div class="paper"><div class="muted">没有匹配的论文。</div></div>';
+    var message = "没有匹配的论文。";
+    if (!sourceFilteredPapers().length) {
+      message = state.source === "prb" ? "当前没有可用的 PRB 文章。" : "当前没有可用的论文数据。";
+    }
+    els.list.innerHTML = '<div class="paper"><div class="muted">' + message + '</div></div>';
     return;
   }
 
@@ -195,7 +232,7 @@ function renderPapers(papers) {
     for (var si = 0; si < sections.length; si++) {
       var ids = sections[si].ids || [];
       for (var ii = 0; ii < ids.length; ii++) {
-        sectionMap[ids[ii]] = si;
+        sectionMap[String(ids[ii]).replace(/v\d+$/, "")] = si;
       }
     }
   }
@@ -205,7 +242,7 @@ function renderPapers(papers) {
 
   for (var i = 0; i < papers.length; i++) {
     var paper = papers[i];
-    var sectionIdx = sectionMap[paper.arxiv_id];
+    var sectionIdx = sectionMap[String(paper.arxiv_id).replace(/v\d+$/, "")];
     if (sectionIdx !== undefined && sectionIdx !== currentSection) {
       currentSection = sectionIdx;
       var sectionTitle = sections[currentSection].title || "";
@@ -222,7 +259,7 @@ function renderPapers(papers) {
     var pdfUrl = encodeURI(paper.pdf_url || "#");
     var mode = paper.summary_mode || "";
     var isLLM = mode.startsWith("llm-");
-    var modeLabel = isLLM ? "🤖 AI 总结" : "📋 规则总结";
+    var modeLabel = isLLM ? "AI 导读" : "规则摘录";
     var modeClass = isLLM ? "badge-llm" : "badge-rule";
 
     // Tags from category and keywords
@@ -245,21 +282,28 @@ function renderPapers(papers) {
             '<span>' + formatDate(paper.published) + '</span>' +
             '<span>·</span>' +
             (paper.journal_ref ? '<span>' + escapeHtml(paper.journal_ref) + '</span><span>·</span>' : '') +
+            (paper.source === "prb" ? '<span class="badge-excerpt">RSS 摘要片段</span><span>·</span>' : '') +
             '<span class="' + modeClass + '">' + modeLabel + '</span>' +
           '</div>' +
         '</div>' +
         '<div class="paper-id">' + paperId + '</div>' +
       '</div>' +
+      '<div class="muted author-note">通讯作者：' + escapeHtml(paper.corresponding_author || "corresponding author not confirmed") + '</div>' +
       '<div class="paper-summary">' +
-        renderSummaryField("📌 研究概览", paper.study_overview_zh, isLLM) +
-        renderSummaryField("📝 摘要概括", paper.abstract_summary_zh) +
-        renderSummaryField("📄 主要内容", paper.main_content_zh) +
-        renderSummaryField("🔬 方法", paper.method_zh) +
+        renderSummaryField("研究对象与类型", paper.study_overview_zh) +
+        renderSummaryField(isLLM ? "核心结论" : "结论原文", paper.abstract_summary_zh, isLLM) +
+        renderSummaryField(isLLM ? "研究问题与证据" : "研究背景", paper.main_content_zh) +
+        renderSummaryField("研究方法", paper.method_zh) +
       '</div>' +
+      '<details class="paper-details"><summary>创新性、边界与原始摘要</summary>' +
+        renderSummaryField("作者声称的新意", paper.novelty_zh) +
+        renderSummaryField("适用边界与未确认信息", paper.limitations_zh || "仅依据摘要，未读取全文。") +
+        renderSummaryField(paper.source === "prb" ? "原始 RSS 片段" : "原始摘要", paper.abstract) +
+      '</details>' +
       '<div class="tags">' + tagsHtml + '</div>' +
       '<div class="paper-actions">' +
         '<a href="' + absUrl + '" target="_blank" rel="noreferrer">' + (paper.source === "prb" ? "PRB Article" : "arXiv Abstract") + '</a>' +
-        (paper.source === "prb" ? '<a href="https://doi.org/' + encodeURIComponent(paper.doi || "") + '" target="_blank" rel="noreferrer">DOI</a>' : '<a href="' + pdfUrl + '" target="_blank" rel="noreferrer">PDF</a>') +
+        (paper.source === "prb" ? (paper.doi ? '<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noreferrer">DOI</a>' : '') : '<a href="' + pdfUrl + '" target="_blank" rel="noreferrer">PDF</a>') +
       '</div>' +
     '</article>';
   }
@@ -277,6 +321,7 @@ function rerender() {
   var papers = filteredPapers();
   var visibleSourcePapers = sourceFilteredPapers();
   renderSourceFilters(state.data.papers || []);
+  renderDataStatus();
   renderMetrics(papers);
   renderFilters(visibleSourcePapers);
   renderPapers(papers);
@@ -287,12 +332,25 @@ function rerender() {
 async function loadData() {
   var response = await fetch("./data/latest.json", { cache: "no-store" });
   if (!response.ok) throw new Error("加载失败: " + response.status);
-  state.data = await response.json();
+  var data = await response.json();
+  if (!data || !Array.isArray(data.papers)) throw new Error("论文数据格式异常");
+  state.data = data;
   els.title.textContent = state.data.site_title || "凝聚态论文日报";
   document.title = state.data.site_title || "凝聚态论文日报";
-  state.source = "all";
-  state.category = "all";
+  if (state.source === "prb" && !(data.sources || []).includes("prb") && !data.papers.some(p => sourceOf(p) === "prb")) {
+    state.source = "arxiv";
+    state.category = "all";
+  }
   rerender();
+}
+
+function showLoadError(error) {
+  els.status.hidden = false;
+  els.status.textContent = state.data ? "刷新失败，保留当前结果。" : "暂时无法加载论文数据，请稍后刷新。";
+  if (!state.data) {
+    els.meta.textContent = "加载失败：" + error.message;
+    els.list.innerHTML = '<div class="paper"><div class="muted">论文数据暂不可用。</div></div>';
+  }
 }
 
 els.search.addEventListener("input", function(event) {
@@ -303,6 +361,7 @@ els.search.addEventListener("input", function(event) {
 els.refresh.addEventListener("click", async function() {
   els.refresh.disabled = true;
   try { await loadData(); }
+  catch (error) { showLoadError(error); }
   finally { els.refresh.disabled = false; }
 });
 
@@ -321,7 +380,4 @@ els.filters.addEventListener("click", function(event) {
   rerender();
 });
 
-loadData().catch(function(error) {
-  els.meta.textContent = "加载失败：" + error.message;
-  els.list.innerHTML = '<div class="paper"><div class="muted">请先运行抓取脚本: python scripts/fetch_arxiv.py</div></div>';
-});
+loadData().catch(showLoadError);

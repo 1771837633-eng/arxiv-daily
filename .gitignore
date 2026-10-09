@@ -4,4 +4,7 @@ __pycache__/
 site/data/.paper_cache.json
 data/update_log.txt
 .env
+data/.email_delivery.json
+data/email-status.json
+data/email-preview/
 .cache/

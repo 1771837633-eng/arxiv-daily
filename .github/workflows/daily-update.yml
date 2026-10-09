@@ -7,15 +7,30 @@ on:
     # 每天 UTC 0:00 = 北京时间 8:00
     - cron: "0 0 * * *"
   workflow_dispatch:
+    inputs:
+      arxiv_only:
+        description: "Update arXiv only (disable PRB)"
+        type: boolean
+        default: false
+      send_email:
+        description: "Send the email digest after deployment (requires EMAIL_ENABLED)"
+        type: boolean
+        default: true
 
 # 确保不会同时运行多个实例
 concurrency:
   group: arxiv-update
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   fetch-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     # 给 workflow 写权限，才能提交和部署
     permissions:
       contents: write
@@ -24,18 +39,50 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+
+      - name: Restore summary cache
+        id: summary-cache
+        uses: actions/cache/restore@v6
+        with:
+          path: data/.paper_cache.json
+          key: ${{ runner.os }}-paper-summaries-v3-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-paper-summaries-v3-
+
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -v
 
       - name: Fetch arXiv and PRB papers
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ARXIV_ONLY: ${{ inputs.arxiv_only || false }}
         run: |
-          python scripts/fetch_arxiv.py --config config/arxiv.json
+          args=(--config config/arxiv.json)
+          if [ "$ARXIV_ONLY" = "true" ]; then
+            args+=(--arxiv-only)
+          fi
+          python -u scripts/fetch_arxiv.py "${args[@]}"
+
+      - name: Save completed summaries even if a later step fails
+        if: ${{ always() && hashFiles('data/.paper_cache.json') != '' }}
+        uses: actions/cache/save@v6
+        with:
+          path: data/.paper_cache.json
+          key: ${{ steps.summary-cache.outputs.cache-primary-key }}
+
+      - name: Store exact dataset for the notification job
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-dataset
+          path: site/data/latest.json
+          retention-days: 7
 
       - name: Commit updated data
         run: |
@@ -50,12 +97,63 @@ jobs:
           fi
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site/
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
+
+  email-digest:
+    needs: fetch-and-deploy
+    if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.send_email) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: email-digest
+      cancel-in-progress: false
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: daily-dataset
+          path: data/daily-dataset
+      - uses: actions/cache/restore@v6
+        id: email-cache
+        with:
+          path: data/.email_delivery.json
+          key: ${{ runner.os }}-email-delivery-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-email-delivery-v1-
+      - name: Send private per-recipient digest
+        env:
+          EMAIL_ENABLED: ${{ vars.EMAIL_ENABLED || 'false' }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_SECURITY: ${{ vars.SMTP_SECURITY }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          SITE_URL: ${{ needs.fetch-and-deploy.outputs.page_url }}
+        run: python -u scripts/send_digest.py --data data/daily-dataset/latest.json
+      - uses: actions/cache/save@v6
+        if: ${{ always() && hashFiles('data/.email_delivery.json') != '' }}
+        with:
+          path: data/.email_delivery.json
+          key: ${{ steps.email-cache.outputs.cache-primary-key }}
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: email-status
+          path: data/email-status.json
+          retention-days: 7

@@ -20,6 +20,7 @@
   },
   "openai_model": "gpt-4.1-mini",
   "site_data_path": "site/data/latest.json",
+  "cache_path": "data/.paper_cache.json",
   "site_title": "凝聚态论文日报",
   "llm": {
     "provider": "deepseek",
@@ -27,7 +28,22 @@
     "api_key_env": "DEEPSEEK_API_KEY",
     "base_url": "https://api.deepseek.com/v1",
     "max_concurrent": 3,
-    "timeout": 60
+    "timeout": 45,
+    "attempts": 2,
+    "time_budget_seconds": 900,
+    "max_requests_per_run": 500,
+    "circuit_breaker_failures": 5
   },
-  "use_openai_summary": true
+  "use_openai_summary": true,
+  "email": {
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "smtp_security": "ssl",
+    "site_url": "https://1771837633-eng.github.io/arxiv-daily/",
+    "max_papers": 20,
+    "max_recipients": 50,
+    "interval_seconds": 2,
+    "sources": ["arxiv", "prb"],
+    "keywords": []
+  }
 }

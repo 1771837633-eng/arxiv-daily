@@ -100,7 +100,7 @@ button:hover {
 
 .source-filters {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   margin-bottom: 12px;
 }
@@ -156,10 +156,12 @@ button:hover {
 
 .paper-list {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
 }
 
 .paper {
+  min-width: 0;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -171,6 +173,35 @@ button:hover {
   justify-content: space-between;
   gap: 12px;
   align-items: start;
+}
+
+.paper-head > div:first-child {
+  min-width: 0;
+}
+
+.paper-title, .summary-text, .tags, .paper-meta {
+  overflow-wrap: anywhere;
+}
+
+.data-status {
+  margin: 0 0 16px;
+  padding: 10px 0;
+  color: #854d0e;
+  border-block: 1px solid #e5cb83;
+  font-size: 14px;
+}
+
+.metric-time {
+  font-size: 20px;
+}
+
+.author-note {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.badge-excerpt {
+  color: #705200;
 }
 
 .paper-title {
@@ -201,7 +232,8 @@ button:hover {
   color: var(--muted);
   font-size: 12px;
   font-family: monospace;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  max-width: 180px;
 }
 
 .badge-llm {
@@ -235,12 +267,14 @@ button:hover {
 
 .paper-summary {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
   margin: 14px 0;
   line-height: 1.65;
 }
 
 .summary-block {
+  min-width: 0;
   border-left: 3px solid var(--accent);
   padding: 4px 0 4px 10px;
 }
@@ -254,6 +288,31 @@ button:hover {
 
 .summary-text {
   color: var(--text);
+  white-space: pre-line;
+}
+
+.paper-details {
+  margin: 12px 0;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.paper-details > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.paper-details .summary-block {
+  margin-top: 12px;
+}
+
+.summary-text mjx-container, .paper-title mjx-container {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .tags {
@@ -318,6 +377,14 @@ button:hover {
   }
 
   .source-filters {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .paper-head {
+    flex-direction: column;
+  }
+
+  .paper-id {
+    max-width: 100%;
   }
 }

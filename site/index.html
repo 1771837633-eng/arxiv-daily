@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>凝聚态论文日报</title>
-  <link rel="stylesheet" href="./styles.css?v=20260625-source" />
+  <link rel="stylesheet" href="./styles.css?v=20261008-digest-v2" />
   <script>
     window.MathJax = {
       tex: {
@@ -17,7 +17,7 @@
       }
     };
   </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
   <main class="app">
@@ -32,15 +32,17 @@
       </div>
     </header>
 
-    <section class="summary" id="summary"></section>
-
     <section class="source-filters" id="source-filters"></section>
+
+    <div id="data-status" class="data-status" role="status" hidden></div>
+
+    <section class="summary" id="summary"></section>
 
     <section class="filters" id="filters"></section>
 
     <section class="paper-list" id="paper-list"></section>
   </main>
 
-  <script defer src="./app.js?v=20260625-source"></script>
+  <script defer src="./app.js?v=20261008-digest-v2"></script>
 </body>
 </html>
