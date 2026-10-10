@@ -1,6 +1,6 @@
 {
   "site_title": "凝聚态论文日报",
-  "generated_at": "2026-10-09T16:00:38.740842+00:00",
+  "generated_at": "2026-10-10T04:36:40.369082+00:00",
   "query": "(cat:cond-mat.dis-nn OR cat:cond-mat.mes-hall OR cat:cond-mat.mtrl-sci OR cat:cond-mat.other OR cat:cond-mat.quant-gas OR cat:cond-mat.soft OR cat:cond-mat.stat-mech OR cat:cond-mat.str-el OR cat:cond-mat.supr-con)",
   "categories": [
     "cond-mat.dis-nn",
@@ -22,12 +22,12 @@
     "arxiv": {
       "status": "ok",
       "count": 345,
-      "updated_at": "2026-10-09T16:00:38.740842+00:00"
+      "updated_at": "2026-10-10T04:36:40.369082+00:00"
     },
     "prb": {
       "status": "ok",
       "count": 37,
-      "updated_at": "2026-10-09T16:00:38.740842+00:00"
+      "updated_at": "2026-10-10T04:36:40.369082+00:00"
     }
   },
   "summary_stats": {
