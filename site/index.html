@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>凝聚态论文日报</title>
-  <link rel="stylesheet" href="./styles.css?v=20261008-digest-v2" />
+  <link rel="stylesheet" href="./styles.css?v=20261013-brief" />
   <script>
     window.MathJax = {
       tex: {
@@ -34,15 +34,23 @@
 
     <section class="source-filters" id="source-filters"></section>
 
+    <div class="edition-controls">
+      <label for="edition">日报日期</label>
+      <select id="edition" aria-label="日报日期"></select>
+      <label class="ai-filter"><input id="ai-only" type="checkbox" /> 仅看 AI 导读</label>
+    </div>
+
     <div id="data-status" class="data-status" role="status" hidden></div>
 
     <section class="summary" id="summary"></section>
+
+    <section class="daily-brief" id="daily-brief" aria-label="本期导读"></section>
 
     <section class="filters" id="filters"></section>
 
     <section class="paper-list" id="paper-list"></section>
   </main>
 
-  <script defer src="./app.js?v=20261008-digest-v2"></script>
+  <script defer src="./app.js?v=20261013-brief"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>日报布局测试（模拟数据）</title>
+<link rel="stylesheet" href="../site/styles.css">
+<main class="app">
+  <header class="topbar"><div><h1 id="page-title"></h1><p id="page-meta"></p></div><div class="controls"><input id="search" type="search" aria-label="搜索"><button id="refresh">刷新</button></div></header>
+  <section id="source-filters" class="source-filters"></section>
+  <div class="edition-controls"><label for="edition">日报日期</label><select id="edition"></select><label><input type="checkbox" id="ai-only">仅看 AI 导读</label></div>
+  <div id="data-status" hidden></div><section id="summary" class="summary"></section>
+  <section id="daily-brief" class="daily-brief"></section><section id="filters" class="filters"></section><section id="paper-list" class="paper-list"></section>
+</main>
+<script>
+const fixture = {
+  site_title: '日报布局测试（模拟数据）', generated_at: '2026-10-13T00:00:00Z', sources: ['arxiv'],
+  papers: [{arxiv_id: 'test-1', title: '模拟论文：自旋关联的测量方法', published: '2026-10-12', source: 'arxiv', summary_mode: 'llm-test', abstract_summary_zh: '此处仅为排版测试文字，不代表真实论文结论。', authors: [], categories: ['cond-mat.str-el'], primary_category: 'cond-mat.str-el'}],
+  daily_briefs: {'2026-10-12': {status:'ready', covered:1, total:1, headline:'从研究问题到实验依据：本期阅读主线', overview:'这是一份模拟数据，用于检查日报总览、主题归纳和引用链接的排版。本期导读将先概括论文共同关注的问题，再说明不同研究路线提供了怎样的证据，最后指出仍需查阅全文核对的条件。真实内容将在接入 API 后生成。', themes:[{title:'研究主线与具体证据',summary:'主题段落将串联本期相关论文的研究对象、结论及其依据，而不是把每篇摘要再次复制一遍。下面的链接应直接定位到对应论文。',paper_ids:['test-1']}],caveat:'模拟内容仅供界面测试；正式导读基于摘要，并非全文评审。'}}
+};
+window.fetch = async () => ({ok: true, json: async () => fixture});
+</script>
+<script src="../site/app.js"></script>
+</html>

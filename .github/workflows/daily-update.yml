@@ -64,6 +64,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ARXIV_ONLY: ${{ inputs.arxiv_only || false }}
         run: |
+          python -u scripts/fetch_arxiv.py --config config/arxiv.json --check-llm
           args=(--config config/arxiv.json)
           if [ "$ARXIV_ONLY" = "true" ]; then
             args+=(--arxiv-only)

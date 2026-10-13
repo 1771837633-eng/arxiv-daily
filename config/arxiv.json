@@ -24,7 +24,8 @@
   "site_title": "凝聚态论文日报",
   "llm": {
     "provider": "deepseek",
-    "model": "deepseek-chat",
+    "model": "deepseek-flash",
+    "thinking": "disabled",
     "api_key_env": "DEEPSEEK_API_KEY",
     "base_url": "https://api.deepseek.com/v1",
     "max_concurrent": 3,
@@ -35,6 +36,8 @@
     "circuit_breaker_failures": 5
   },
   "use_openai_summary": true,
+  "require_ai_summary": true,
+  "daily_brief": { "enabled": true },
   "email": {
     "smtp_host": "smtp.qq.com",
     "smtp_port": 465,

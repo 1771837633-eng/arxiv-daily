@@ -83,7 +83,8 @@ python arxiv-daily/scripts/serve_site.py
 ```json
 "llm": {
   "provider": "deepseek",
-  "model": "deepseek-chat",
+  "model": "deepseek-flash",
+  "thinking": "disabled",
   "api_key_env": "DEEPSEEK_API_KEY",
   "base_url": "https://api.deepseek.com/v1",
   "max_concurrent": 3,
@@ -94,7 +95,8 @@ python arxiv-daily/scripts/serve_site.py
 | 字段 | 说明 |
 |------|------|
 | `provider` | `"openai"` / `"deepseek"` / 任意名称 |
-| `model` | 模型名，如 `deepseek-chat`、`gpt-4.1-mini` |
+| `model` | 模型名，当前默认 `deepseek-flash` |
+| `thinking` | DeepSeek 思考模式，短篇 JSON 导读默认 `disabled` |
 | `api_key_env` | API key 所在环境变量名 |
 | `base_url` | API 地址（需兼容 `/chat/completions`） |
 | `max_concurrent` | 并发 LLM 请求数 |
@@ -106,7 +108,19 @@ python arxiv-daily/scripts/serve_site.py
 $env:DEEPSEEK_API_KEY = "sk-your-key-here"
 ```
 
-或在系统环境变量中永久设置。没有 API key 时会自动使用规则引擎生成中文总结。
+或在系统环境变量中永久设置。不要把密钥提交到 Git。默认 `require_ai_summary: true`：没有有效 AI 导读时停止发布并保留旧数据，不把规则摘录当作中文 AI 总结。明确只需原文目录时，可设置 `use_openai_summary: false`。
+
+### 最后接入 API
+
+在 GitHub 仓库 **Settings > Secrets and variables > Actions > Repository secrets** 中新增或更新 `DEEPSEEK_API_KEY`。默认模型和地址已配置，无需把密钥写进配置文件。旧的 `deepseek-chat` 已停用，不要再沿用。
+
+提交并推送代码后，手动运行工作流；首次验证不要勾选发送邮件。工作流先用一篇摘要检查 API 连通性和 JSON 结构，通过后才开始批量处理。此检查会产生一次模型调用，但不改写论文数据。本地可运行：
+
+```powershell
+python scripts/fetch_arxiv.py --config config/arxiv.json --check-llm
+```
+
+失败日志会区分缺少密钥、HTTP 401（鉴权）、402（余额）、404（模型或地址）以及无效响应，不输出密钥或服务商响应正文。预检失败时，不更新线上日报。
 
 ## 自动更新
 
@@ -121,13 +135,22 @@ $env:DEEPSEEK_API_KEY = "sk-your-key-here"
 ```powershell
 python -m unittest discover -s tests -v
 node --check site/app.js
+node --test tests/test_site.cjs
 ```
 
 ## 摘要质量与容错
 
-模型必须返回完整 JSON，且“核心结论”不能重复作为“研究问题”或“证据”。四个展开字段分别是研究对象与类型、核心结论、研究问题与证据、研究方法；创新性、适用边界和原始摘要折叠展示。未提供的信息必须标为未明确说明，不能把摘要导读当作全文评审。
+### 本期综合导读
 
-规则降级改为不同句子的“结论原文”和“背景原文”，不再把同一段摘要重复两遍；没有明确结论时直接标注，规则判断不代替 AI 翻译或学术评审。
+每次更新为最近三个有论文的日期生成“本期导读”：总览、1 至 5 条研究主线及阅读边界。按 arXiv 发布列表日期分期，PRB 使用对应发布日；跨来源综合导读不随列表搜索或来源筛选改变，页面明确标为“全来源”，点击引用会清除列表筛选并定位论文。选择全部日期时不混合生成跨日总览。
+
+综合导读只依据已有有效 AI 单篇导读，不使用规则摘录冒充证据；每期按分类轮转选择最多 120 篇，页面显示实际覆盖数。主题必须引用本期输入中的论文 ID。它不是全文评审，也不能据此判断整个领域的趋势。
+
+内容和模型不变时复用缓存；综合阶段总计最多 180 秒、6 次请求，失败不影响论文列表发布，也不会把旧日期的导读贴到新一期。用 `daily_brief.enabled: false` 可关闭。API 接入前显示尚未生成，不会在浏览器端暴露密钥或请求模型。
+
+模型必须返回完整 JSON，且“核心结论”不能重复作为“研究问题”或“证据”。页面默认按最新一期展示，支持选择日报日期和仅看 AI 导读。列表直接展示核心结论，研究问题、证据、方法、创新性、适用边界和原始摘要折叠展示。未提供的信息必须标为未明确说明，不能把摘要导读当作全文评审。
+
+没有 AI 导读的论文只展示原始摘要预览，并标为“待生成导读”；不再把启发式规则生成的研究背景、结论等字段作为日报正文。规则判断不代替 AI 翻译或学术评审。
 
 - 摘要缓存检查结构版本、输入摘要和模型配置。旧版重复摘要不会被继续复用，首次升级可能需要重新生成。
 - 模型临时错误默认最多尝试 2 次（首次请求加 1 次重试），鉴权等永久错误立即打开熔断，连续 5 次失败也会停止后续调用。

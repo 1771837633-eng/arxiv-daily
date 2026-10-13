@@ -98,6 +98,53 @@ class FetchSafetyTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             runtime.reserve()
 
+    def test_deepseek_uses_current_model_with_explicit_non_thinking_mode(self):
+        config = {"llm": {"provider": "deepseek", "model": "deepseek-flash", "api_key_env": "DEEPSEEK_API_KEY", "base_url": "https://api.deepseek.com/v1"}}
+        with patch.dict(fetch.os.environ, {"DEEPSEEK_API_KEY": "test"}, clear=True):
+            with patch.object(fetch, "urlopen", return_value=self.mock_llm_response()) as request:
+                fetch.summarize_with_llm("Title", "Abstract", config)
+        body = json.loads(request.call_args.args[0].data)
+        self.assertEqual(body["model"], "deepseek-flash")
+        self.assertEqual(body["thinking"], {"type": "disabled"})
+
+    def test_provider_errors_are_classified_without_leaking_response_body(self):
+        error = HTTPError("https://example.invalid", 402, "private-provider-body", {}, None)
+        config = {"use_openai_summary": True}
+        with patch.dict(fetch.os.environ, {"OPENAI_API_KEY": "private-key"}, clear=True):
+            with patch.object(fetch, "urlopen", side_effect=error):
+                fetch.make_chinese_summary("Title", "Abstract", config)
+        stats = config["_summary_runtime"].stats()
+        self.assertEqual(stats["errors"], {"http_402": 1})
+        self.assertNotIn("private", json.dumps(stats))
+        self.assertIn("balance", fetch.summary_error_hint("http_402"))
+
+    def test_zero_ai_candidate_does_not_replace_previous_dataset(self):
+        original = b'{"papers": [{"summary_mode": "llm-deepseek"}]}'
+        self.output.write_bytes(original)
+        config_path = Path(self.directory.name) / "config.json"
+        config_path.write_text(json.dumps({**self.config, "use_openai_summary": True, "require_ai_summary": True}))
+        candidate = {"papers": [{"source": "arxiv", "summary_mode": "rule-based"}], "summary_stats": {"ai": 0, "errors": {"http_404": 1}}}
+        with patch.object(sys, "argv", ["fetch_arxiv.py", "--config", str(config_path), "--output", str(self.output)]):
+            with patch.object(fetch, "build_payload", return_value=candidate):
+                self.assertEqual(fetch.main(), 1)
+        self.assertEqual(self.output.read_bytes(), original)
+
+    def test_explicit_rules_mode_can_still_publish(self):
+        fetch.validate_summary_health({"papers": [{"summary_mode": "rule-based"}]}, {"use_openai_summary": False, "require_ai_summary": True})
+
+    def test_missing_key_preflight_does_not_contact_provider(self):
+        with patch.dict(fetch.os.environ, {}, clear=True):
+            with patch.object(fetch, "urlopen") as request:
+                self.assertEqual(fetch.check_llm({}, self.output), 1)
+        request.assert_not_called()
+        self.assertFalse(self.output.exists())
+
+    def test_preflight_does_not_write_paper_data(self):
+        with patch.dict(fetch.os.environ, {"OPENAI_API_KEY": "test"}, clear=True):
+            with patch.object(fetch, "urlopen", return_value=self.mock_llm_response()):
+                self.assertEqual(fetch.check_llm({}, self.output), 0)
+        self.assertFalse(self.output.exists())
+
     def test_cache_reuses_only_matching_schema_and_model(self):
         cache = fetch.PaperCache(Path(self.directory.name) / "summary-cache.json")
         config = {"use_openai_summary": False, "llm": {"model": "first-model"}}

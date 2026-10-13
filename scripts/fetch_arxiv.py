@@ -23,6 +23,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlencode, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
+from daily_brief import build_daily_briefs
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
@@ -649,6 +650,9 @@ class SummaryRuntime:
         self.requests = 0
         self.failures = 0
         self.circuit_open = False
+        self.errors: Counter = Counter()
+        self.enabled = bool(config.get("use_openai_summary", True))
+        self.key_present = bool(os.environ.get(settings.get("api_key_env", "OPENAI_API_KEY")))
 
     def reserve(self) -> float:
         with self.lock:
@@ -658,20 +662,56 @@ class SummaryRuntime:
             self.requests += 1
             return remaining
 
-    def record(self, success: bool, permanent: bool = False) -> None:
+    def record(self, success: bool, permanent: bool = False, reason: str = "") -> None:
         with self.lock:
             self.failures = 0 if success else self.failures + 1
+            if not success and reason:
+                self.errors[reason] += 1
+                if self.errors[reason] == 1:
+                    print(f"  [WARN] LLM failure: {reason}. {summary_error_hint(reason)}")
             if not self.circuit_open and (permanent or self.failures >= self.failure_limit):
                 self.circuit_open = True
                 print("  [WARN] LLM circuit open; remaining uncached papers use rule excerpts")
 
     def stats(self) -> dict:
         return {"requests": self.requests, "circuit_open": self.circuit_open,
+                "availability": "disabled" if not self.enabled else "ready" if self.key_present else "missing_api_key",
+                "errors": dict(self.errors),
                 "budget_exhausted": self.requests >= self.limit or time.monotonic() >= self.deadline}
+
+
+def summary_error_hint(reason: str) -> str:
+    return {
+        "http_400": "Check model name and request parameters.",
+        "http_401": "Check the configured provider's API key in GitHub Secrets.",
+        "http_402": "Check the model provider's account balance.",
+        "http_403": "Check provider access permissions.",
+        "http_404": "Check API endpoint and model availability.",
+        "http_422": "Check request parameters against the provider documentation.",
+        "http_429": "Provider rate limit reached.",
+        "invalid_response": "The response was empty, truncated or failed summary validation.",
+        "network_error": "The request timed out or the provider connection failed.",
+    }.get(reason, "Check the provider service status.")
 
 
 def summarize_with_llm(title: str, abstract: str, config: dict) -> dict[str, str]:
     """Summarize using an LLM (OpenAI, DeepSeek, or any OpenAI-compatible API)."""
+    parsed = request_llm_json(_build_summary_prompt(title, abstract), config, _parse_llm_response)
+    provider = config.get("llm", {}).get("provider", "openai")
+    return {
+        "study_overview_zh": f"研究类型：{parsed['study_type_zh']}；研究对象：{parsed['research_object_zh']}",
+        "abstract_summary_zh": parsed["core_finding_zh"],
+        "main_content_zh": f"研究问题：{parsed['research_question_zh']}\n证据与比较：{parsed['evidence_zh']}",
+        "method_zh": parsed["method_zh"],
+        "novelty_zh": parsed["novelty_zh"],
+        "limitations_zh": parsed["limitations_zh"],
+        "summary_mode": f"llm-{provider}",
+        "summary_schema_version": SUMMARY_SCHEMA_VERSION,
+    }
+
+
+def request_llm_json(prompt: str, config: dict, parser, max_tokens: int = 1400) -> dict:
+    """Shared bounded transport for paper summaries and edition-level briefs."""
     llm_cfg = config.get("llm", {})
     provider = llm_cfg.get("provider", "openai")
     api_key_env = llm_cfg.get("api_key_env", "OPENAI_API_KEY")
@@ -688,17 +728,21 @@ def summarize_with_llm(title: str, abstract: str, config: dict) -> dict[str, str
     if not api_url.endswith("/chat/completions"):
         api_url += "/chat/completions"
 
-    prompt = _build_summary_prompt(title, abstract)
-
     body = {
         "model": model,
         "messages": [
             {"role": "user", "content": prompt}
         ],
-        "max_tokens": 1400,
+        "max_tokens": max_tokens,
         "temperature": 0.1,
         "response_format": {"type": "json_object"},
     }
+    if provider == "deepseek":
+        # Current DeepSeek models default to thinking mode; short JSON digests do not need it.
+        thinking = llm_cfg.get("thinking", "disabled")
+        if thinking not in {"enabled", "disabled"}:
+            raise ValueError("llm.thinking must be enabled or disabled")
+        body["thinking"] = {"type": thinking}
 
     request = Request(
         api_url,
@@ -718,40 +762,24 @@ def summarize_with_llm(title: str, abstract: str, config: dict) -> dict[str, str
                 payload = json.loads(response.read().decode("utf-8"))
             if payload["choices"][0].get("finish_reason") == "length":
                 raise ValueError("LLM summary was truncated")
-            parsed = _parse_llm_response(payload["choices"][0]["message"]["content"])
+            parsed = parser(payload["choices"][0]["message"]["content"])
             runtime.record(True)
             break
         except HTTPError as exc:
             permanent = exc.code not in {408, 429, 500, 502, 503, 504}
-            runtime.record(False, permanent)
+            runtime.record(False, permanent, reason=f"http_{exc.code}")
             if permanent or attempt == attempts - 1:
                 raise RuntimeError(f"LLM HTTP {exc.code}") from exc
             delay = retry_delay(exc.headers, attempt)
         except (OSError, http.client.IncompleteRead, ValueError, KeyError, IndexError, TypeError) as exc:
-            runtime.record(False)
+            reason = "network_error" if isinstance(exc, (OSError, http.client.IncompleteRead)) else "invalid_response"
+            runtime.record(False, reason=reason)
             if attempt == attempts - 1:
                 raise RuntimeError(f"Invalid or unavailable LLM response ({type(exc).__name__})") from exc
             delay = retry_delay(None, attempt)
         time.sleep(min(delay, max(0, runtime.deadline - time.monotonic())))
 
-    # Map to the expected output fields
-    result = {
-        "study_overview_zh": (
-            f"研究类型：{parsed.get('study_type_zh', '未分类')}；"
-            f"研究对象：{parsed.get('research_object_zh', '未识别')}"
-        ),
-        "abstract_summary_zh": parsed["core_finding_zh"],
-        "main_content_zh": (
-            f"研究问题：{parsed['research_question_zh']}\n"
-            f"证据与比较：{parsed['evidence_zh']}"
-        ),
-        "method_zh": parsed.get("method_zh", "摘要未明确说明"),
-        "novelty_zh": parsed["novelty_zh"],
-        "limitations_zh": parsed["limitations_zh"],
-        "summary_mode": f"llm-{provider}",
-        "summary_schema_version": SUMMARY_SCHEMA_VERSION,
-    }
-    return result
+    return parsed
 
 
 # ── Main summarization dispatcher ──────────────────────────────
@@ -782,7 +810,8 @@ def make_chinese_summary(title: str, abstract: str, config: dict) -> tuple[dict[
 def summary_fingerprint(title: str, abstract: str, config: dict) -> str:
     llm = config.get("llm", {})
     material = [SUMMARY_SCHEMA_VERSION, title, abstract, llm.get("provider", "openai"),
-                llm.get("model", config.get("openai_model", "gpt-4.1-mini")), llm.get("base_url", "https://api.openai.com/v1")]
+                llm.get("model", config.get("openai_model", "gpt-4.1-mini")), llm.get("base_url", "https://api.openai.com/v1"),
+                llm.get("thinking", "disabled") if llm.get("provider") == "deepseek" else None]
     return hashlib.sha256(json.dumps(material, ensure_ascii=False).encode("utf-8")).hexdigest()
 
 
@@ -1235,7 +1264,14 @@ def build_payload(config: dict, output_path: Path) -> dict:
                 "status": "stale" if old_prb else "unavailable",
                 "count": len(old_prb), "updated_at": last_update if old_prb else "",
             }
+    brief_config = {**config, "llm": {**config.get("llm", {}),
+                    "time_budget_seconds": 180, "max_requests_per_run": 6}}
+    brief_config["_summary_runtime"] = SummaryRuntime(brief_config)
+    daily_briefs = build_daily_briefs(items, listing_sections, previous.get("daily_briefs", {}),
+                                     brief_config, request_llm_json)
     return {
+        "daily_briefs": daily_briefs,
+        "daily_brief_stats": brief_config["_summary_runtime"].stats(),
         "site_title": config.get("site_title", "arXiv Daily"),
         "generated_at": now,
         "query": build_query(config.get("categories", [])),
@@ -1265,6 +1301,36 @@ def write_payload(output_path: Path, payload: dict) -> None:
     temporary.replace(output_path)
 
 
+def validate_summary_health(payload: dict, config: dict) -> None:
+    if not config.get("use_openai_summary", True) or not config.get("require_ai_summary", False):
+        return
+    if any(str(paper.get("summary_mode", "")).startswith("llm-") for paper in payload.get("papers", [])):
+        return
+    diagnostics = json.dumps(payload.get("summary_stats", {}), ensure_ascii=False)
+    raise RuntimeError("No valid AI summaries; refusing to replace the published digest. " + diagnostics)
+
+
+def check_llm(config: dict, data_path: Path) -> int:
+    if not config.get("use_openai_summary", True):
+        print("LLM check skipped: AI summaries explicitly disabled")
+        return 0
+    config["_summary_runtime"] = runtime = SummaryRuntime(config)
+    try:
+        previous = load_config(data_path) if data_path.exists() else {}
+        candidates = [paper for paper in previous.get("papers", []) if paper.get("abstract")]
+        sample = candidates[0] if candidates else {
+            "title": "Synthetic connectivity test",
+            "abstract": "We compare two model samples using numerical simulations. We find a larger response in the first sample.",
+        }
+        summarize_with_llm(sample["title"], sample["abstract"], config)
+    except Exception:
+        # Report only classified errors, never provider response bodies or credentials.
+        print("[ERROR] LLM preflight failed: " + json.dumps(runtime.stats()))
+        return 1
+    print("LLM preflight passed: one structured summary validated")
+    return 0
+
+
 # ── Ensure directory exists ────────────────────────────────────
 
 def ensure_parent(path: Path) -> None:
@@ -1279,6 +1345,7 @@ def main() -> int:
     parser.add_argument("--output", default=None, help="Override output JSON path")
     parser.add_argument("--arxiv-only", action="store_true", help="Disable PRB for this run")
     parser.add_argument("--no-llm", action="store_true", help="Reuse cached summaries or use rules without API calls")
+    parser.add_argument("--check-llm", action="store_true", help="Validate one model response without fetching or writing site data")
     args = parser.parse_args()
 
     config_path = Path(args.config)
@@ -1292,8 +1359,11 @@ def main() -> int:
         output_path = PROJECT_ROOT / output_path
     cache_path = Path(config.get("cache_path", "data/.paper_cache.json"))
     config["cache_path"] = str(cache_path if cache_path.is_absolute() else PROJECT_ROOT / cache_path)
+    if args.check_llm:
+        return check_llm(config, output_path)
     try:
         payload = build_payload(config, output_path)
+        validate_summary_health(payload, config)
         write_payload(output_path, payload)
     except Exception as exc:
         print(f"[ERROR] Update aborted; previous site data unchanged: {exc}")

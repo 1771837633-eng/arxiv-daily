@@ -18,11 +18,12 @@ body {
   margin: 0;
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #fafbfc 0%, var(--bg) 100%);
+  background: #fff;
+  font-size: 15px;
 }
 
 .app {
-  width: min(1200px, calc(100% - 32px));
+  width: min(1080px, calc(100% - 32px));
   margin: 24px auto 40px;
 }
 
@@ -32,6 +33,8 @@ body {
   align-items: end;
   justify-content: space-between;
   margin-bottom: 16px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--text);
 }
 
 h1 {
@@ -55,7 +58,7 @@ input[type="search"] {
   width: min(420px, 52vw);
   padding: 11px 14px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 6px;
   background: var(--panel);
   color: var(--text);
 }
@@ -63,7 +66,7 @@ input[type="search"] {
 button {
   padding: 11px 14px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 6px;
   background: var(--panel);
   color: var(--text);
   cursor: pointer;
@@ -78,14 +81,16 @@ button:hover {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 16px;
+  padding: 12px 0;
+  border-block: 1px solid var(--line);
 }
 
 .summary .metric {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px 16px;
+  padding: 0 12px;
+  border-left: 1px solid var(--line);
 }
+
+.summary .metric:first-child { border-left: 0; padding-left: 0; }
 
 .metric .label {
   color: var(--muted);
@@ -94,7 +99,7 @@ button:hover {
 }
 
 .metric .value {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -157,15 +162,14 @@ button:hover {
 .paper-list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 12px;
+  gap: 0;
 }
 
 .paper {
   min-width: 0;
   background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
 }
 
 .paper-head {
@@ -206,7 +210,7 @@ button:hover {
 
 .paper-title {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.35;
 }
 
@@ -255,15 +259,22 @@ button:hover {
 }
 
 .section-header {
-  background: var(--accent-soft);
-  color: var(--accent);
-  padding: 10px 16px;
-  border-radius: 10px;
+  color: var(--text);
+  padding: 12px 0;
   font-weight: 700;
   font-size: 14px;
   margin-top: 8px;
-  border: 1px solid rgba(31, 94, 255, 0.12);
+  border-bottom: 2px solid var(--text);
 }
+
+.section-header span { color: var(--muted); font-weight: 400; margin-left: 12px; }
+
+.edition-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; font-size: 14px; }
+.edition-controls select { max-width: 100%; min-height: 38px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--text); font: inherit; }
+.ai-filter { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; min-height: 38px; }
+.ai-filter input { accent-color: #16734b; }
+.digest-finding { font-size: 16px; line-height: 1.75; margin: 12px 0; overflow-wrap: anywhere; }
+.abstract-preview { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 12px 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
 .paper-summary {
   display: grid;
@@ -292,9 +303,7 @@ button:hover {
 }
 
 .paper-details {
-  margin: 12px 0;
-  border-top: 1px solid var(--line);
-  padding-top: 10px;
+  margin: 10px 0;
 }
 
 .paper-details > summary {
@@ -306,6 +315,8 @@ button:hover {
 .paper-details .summary-block {
   margin-top: 12px;
 }
+
+.paper-details[open] { padding: 12px 0; border-block: 1px solid var(--line); }
 
 .summary-text mjx-container, .paper-title mjx-container {
   display: inline-block;
@@ -373,8 +384,11 @@ button:hover {
   }
 
   .summary {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .summary .metric:nth-child(3) { border-left: 0; padding-left: 0; }
+  .ai-filter { margin-left: 0; }
 
   .source-filters {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -387,4 +401,26 @@ button:hover {
   .paper-id {
     max-width: 100%;
   }
+}
+.daily-brief {
+  padding: 24px 0;
+  border-bottom: 1px solid #cdd4dc;
+  margin-bottom: 24px;
+  overflow-wrap: anywhere;
+}
+.daily-brief[hidden] { display: none; }
+.brief-kicker { color: #2355a0; font-size: 13px; font-weight: 600; }
+.daily-brief h2 { font-size: 23px; line-height: 1.45; margin: 12px 0; }
+.brief-coverage { font-size: 12px; color: #606970; }
+.brief-overview { font-size: 16px; line-height: 1.9; }
+.brief-themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; }
+.brief-theme h3 { font-size: 16px; margin: 12px 0 8px; }
+.brief-theme p, .brief-caveat { font-size: 14px; line-height: 1.8; }
+.brief-references { display: grid; gap: 6px; font-size: 12px; line-height: 1.6; }
+.brief-references a { color: #2355a0; }
+.brief-caveat { color: #62634b; border-top: 1px solid #e3e6e9; padding-top: 14px; margin-bottom: 0; }
+.paper:target { border-left: 3px solid #2355a0; padding-left: 12px; }
+@media (max-width: 640px) {
+  .brief-themes { grid-template-columns: minmax(0, 1fr); }
+  .daily-brief h2 { font-size: 20px; }
 }
