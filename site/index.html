@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>凝聚态论文日报</title>
-  <link rel="stylesheet" href="./styles.css?v=20261013-brief" />
+  <link rel="stylesheet" href="./styles.css?v=20261014-bilingual" />
   <script>
     window.MathJax = {
       tex: {
@@ -38,6 +38,11 @@
       <label for="edition">日报日期</label>
       <select id="edition" aria-label="日报日期"></select>
       <label class="ai-filter"><input id="ai-only" type="checkbox" /> 仅看 AI 导读</label>
+      <div id="guide-language" class="language-switch" role="group" aria-label="导读语言">
+        <button type="button" data-language="zh" aria-pressed="true">中文</button>
+        <button type="button" data-language="en" aria-pressed="false">English</button>
+        <button type="button" data-language="both" aria-pressed="false">中英对照</button>
+      </div>
     </div>
 
     <div id="data-status" class="data-status" role="status" hidden></div>
@@ -51,6 +56,6 @@
     <section class="paper-list" id="paper-list"></section>
   </main>
 
-  <script defer src="./app.js?v=20261013-brief"></script>
+  <script defer src="./app.js?v=20261014-bilingual"></script>
 </body>
 </html>

@@ -37,6 +37,13 @@
   },
   "use_openai_summary": true,
   "require_ai_summary": true,
+  "english_guide": { "enabled": true },
+  "author_metadata": {
+    "enabled": true,
+    "cache_path": "data/.author_metadata.json",
+    "max_requests_per_run": 60,
+    "time_budget_seconds": 300
+  },
   "daily_brief": { "enabled": true },
   "email": {
     "smtp_host": "smtp.qq.com",

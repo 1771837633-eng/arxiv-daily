@@ -6,6 +6,7 @@ const state = {
   edition: "",
   aiOnly: false,
   issueDates: {},
+  language: "zh",
 };
 
 const els = {
@@ -21,6 +22,7 @@ const els = {
   edition: document.getElementById("edition"),
   aiOnly: document.getElementById("ai-only"),
   brief: document.getElementById("daily-brief"),
+  language: document.getElementById("guide-language"),
 };
 
 const CATEGORY_LABELS_ZH = {
@@ -193,6 +195,9 @@ function filteredPapers() {
       paper.method_zh,
       paper.novelty_zh,
       paper.limitations_zh,
+      paper.first_affiliation,
+      paper.corresponding_author,
+      ...Object.values(paper.english_guide || {}),
       (paper.authors || []).join(" "),
       (paper.keywords || []).join(" "),
     ].join(" ").toLowerCase();
@@ -219,10 +224,15 @@ function renderMetrics(papers) {
 function renderDailyBrief() {
   els.brief.hidden = state.edition === "all";
   if (els.brief.hidden) return;
-  const brief = state.data.daily_briefs?.[state.edition];
+  const original = state.data.daily_briefs?.[state.edition];
+  const brief = state.language === "en" && original?.english ? {...original, ...original.english} : original;
   const heading = '<div class="brief-kicker">' + escapeHtml(state.edition) + ' · 本期导读</div>';
   if (!brief || brief.status !== "ready") {
     els.brief.innerHTML = heading + '<p class="muted">本期综合导读尚未生成。</p>';
+    return;
+  }
+  if (state.language === "en" && !original.english) {
+    els.brief.innerHTML = heading + '<p class="muted">English edition pending. 中文导读已保留，可切换查看。</p>';
     return;
   }
   const papers = new Map(editionPapers().map(p => [p.arxiv_id, p]));
@@ -237,7 +247,11 @@ function renderDailyBrief() {
     '<p class="brief-coverage">AI 综合 · 全来源 · 依据 ' + Number(brief.covered) + ' / ' + Number(brief.total) + ' 篇论文摘要导读，未经全文核验</p>' +
     '<p class="brief-overview">' + escapeHtml(brief.overview) + '</p>' +
     '<div class="brief-themes">' + themes + '</div>' +
-    '<p class="brief-caveat"><strong>阅读边界</strong> ' + escapeHtml(brief.caveat) + '</p>';
+    '<p class="brief-caveat"><strong>阅读边界 / Caveats</strong> ' + escapeHtml(brief.caveat) + '</p>' +
+    (state.language === "both" ? (original.english ? '<div class="english-edition" lang="en"><h2>' +
+      escapeHtml(original.english.headline) + '</h2><p>' + escapeHtml(original.english.overview) + '</p>' +
+      original.english.themes.map(t => '<h3>' + escapeHtml(t.title) + '</h3><p>' + escapeHtml(t.summary) + '</p>').join('') +
+      '<p class="brief-caveat">' + escapeHtml(original.english.caveat) + '</p></div>' : '<p class="muted">English edition pending.</p>') : '');
 }
 
 function renderSourceFilters(papers) {
@@ -304,8 +318,12 @@ function renderPapers(papers) {
       html += '<div class="section-header">' + escapeHtml(sectionIdx) + ' <span>论文目录</span></div>';
     }
 
-    var authors = escapeHtml((paper.authors || []).slice(0, 4).join(", "));
-    var moreAuthors = (paper.authors || []).length > 4 ? " 等" : "";
+    var authors = escapeHtml((paper.authors || [])[0] || "未确认");
+    var metadata = paper.author_metadata || {};
+    var corresponding = metadata.corresponding_authors || [];
+    var senior = corresponding.length ? corresponding[corresponding.length - 1] : paper.corresponding_author;
+    var confirmed = senior && senior !== "corresponding author not confirmed";
+    var english = paper.english_guide || {};
     var title = escapeHtml(paper.title);
     var paperId = escapeHtml(paper.source === "prb" ? (paper.doi || paper.arxiv_id) : paper.arxiv_id);
     var absUrl = escapeHtml(paper.abs_url || "#");
@@ -330,7 +348,8 @@ function renderPapers(papers) {
         '<div>' +
           '<h2 class="paper-title"><a href="' + absUrl + '" target="_blank" rel="noreferrer">' + title + '</a></h2>' +
           '<div class="paper-meta">' +
-            '<span>' + authors + moreAuthors + '</span>' +
+            '<span>第一作者：' + authors + '</span>' +
+            '<span>' + (confirmed ? '末位通讯：' + escapeHtml(senior) : '通讯作者：corresponding author not confirmed') + '</span>' +
             '<span>·</span>' +
             '<span>' + formatDate(paper.published) + '</span>' +
             '<span>·</span>' +
@@ -341,14 +360,23 @@ function renderPapers(papers) {
         '</div>' +
         '<div class="paper-id">' + paperId + '</div>' +
       '</div>' +
-      (isLLM ? '<p class="digest-finding">' + escapeHtml(paper.abstract_summary_zh) + '</p>' : '<p class="abstract-preview" lang="en">' + escapeHtml(paper.abstract || "原始摘要暂不可用。") + '</p>') +
+      '<div class="affiliation">第一作者单位：' + escapeHtml(paper.first_affiliation || "未确认") + '</div>' +
+      (isLLM ? (state.language !== "en" ? '<p class="digest-finding" lang="zh">' + escapeHtml(paper.abstract_summary_zh) + '</p>' : '') +
+      (state.language !== "zh" ? '<p class="digest-finding english-finding" lang="en">' + escapeHtml(english.finding || "English guide pending; the original abstract is available below.") + '</p>' : '') : '<p class="abstract-preview" lang="en">' + escapeHtml(paper.abstract || "原始摘要暂不可用。") + '</p>') +
       '<details class="paper-details"><summary>' + (isLLM ? "研究问题、证据与原文" : "查看原始摘要与作者信息") + '</summary>' +
         '<div class="muted author-note">通讯作者：' + escapeHtml(paper.corresponding_author || "corresponding author not confirmed") + '</div>' +
-        (isLLM ? renderSummaryField("研究对象与类型", paper.study_overview_zh) +
+        '<div class="muted author-note">全部作者：' + escapeHtml((paper.authors || []).join(', ')) + '</div>' +
+        (metadata.contact_authors?.length ? '<div class="muted author-note">邮箱标注的联系作者（不等同于已确认通讯）：' + escapeHtml(metadata.contact_authors.join(', ')) + '</div>' : '') +
+        (metadata.source_url && /^https:\/\/(arxiv\.org|journals\.aps\.org)\//.test(metadata.source_url) ? '<a href="' + escapeHtml(metadata.source_url) + '" target="_blank" rel="noreferrer">作者与单位来源</a>' : '') +
+        (isLLM && state.language !== "en" ? renderSummaryField("研究对象与类型", paper.study_overview_zh) +
         renderSummaryField("研究问题与证据", paper.main_content_zh) +
         renderSummaryField("研究方法", paper.method_zh) +
         renderSummaryField("作者声称的新意", paper.novelty_zh) +
         renderSummaryField("适用边界与未确认信息", paper.limitations_zh || "仅依据摘要，未读取全文。") : '') +
+        (isLLM && state.language !== "zh" && english.finding ? '<div lang="en">' +
+        renderSummaryField("Research question", english.question) + renderSummaryField("Evidence", english.evidence) +
+        renderSummaryField("Method", english.method) + renderSummaryField("Claimed novelty", english.novelty) +
+        renderSummaryField("Limitations", english.limitations) + '</div>' : '') +
         renderSummaryField(paper.source === "prb" ? "原始 RSS 片段" : "原始摘要", paper.abstract) +
       '</details>' +
       '<div class="tags">' + tagsHtml + '</div>' +
@@ -413,6 +441,14 @@ function showLoadError(error) {
 
 els.search.addEventListener("input", function(event) {
   state.query = event.target.value.trim();
+  rerender();
+});
+
+els.language?.addEventListener("click", function(event) {
+  const button = event.target.closest("[data-language]");
+  if (!button) return;
+  state.language = button.dataset.language;
+  for (const item of els.language.querySelectorAll('button')) item.setAttribute('aria-pressed', String(item === button));
   rerender();
 });
 

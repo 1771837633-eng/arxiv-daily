@@ -53,6 +53,24 @@ class BriefTests(unittest.TestCase):
         self.build(first)
         self.request.assert_called_once()
 
+    def test_operational_settings_do_not_invalidate_cached_brief(self):
+        first = self.build()
+        self.request.reset_mock()
+        self.config["llm"].update(timeout=90, max_concurrent=2, max_requests_per_run=10)
+        self.assertEqual(self.build(first), first)
+        self.request.assert_not_called()
+
+    def test_legacy_fingerprint_is_migrated_without_request(self):
+        import hashlib
+        first = self.build()
+        prompt = self.request.call_args.args[0]
+        records = json.loads(prompt.split('\n', 1)[1])["papers"]
+        first["2026-10-12"]["fingerprint"] = hashlib.sha256(json.dumps(
+            [1, "2026-10-12", records, 1, self.config["llm"]], ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+        self.request.reset_mock()
+        self.assertEqual(self.build(first)["2026-10-12"]["status"], "ready")
+        self.request.assert_not_called()
+
     def test_rules_not_used_as_evidence(self):
         self.papers[0]["summary_mode"] = "rule-based"
         self.assertEqual(self.build()["2026-10-12"]["covered"], 0)

@@ -8,6 +8,10 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
+      check_api:
+        description: "Run an extra paid API test (only needed after changing credentials or model)"
+        type: boolean
+        default: false
       arxiv_only:
         description: "Update arXiv only (disable PRB)"
         type: boolean
@@ -50,7 +54,9 @@ jobs:
         id: summary-cache
         uses: actions/cache/restore@v6
         with:
-          path: data/.paper_cache.json
+          path: |
+            data/.paper_cache.json
+            data/.author_metadata.json
           key: ${{ runner.os }}-paper-summaries-v3-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             ${{ runner.os }}-paper-summaries-v3-
@@ -63,8 +69,11 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ARXIV_ONLY: ${{ inputs.arxiv_only || false }}
+          CHECK_API: ${{ inputs.check_api || false }}
         run: |
-          python -u scripts/fetch_arxiv.py --config config/arxiv.json --check-llm
+          if [ "$CHECK_API" = "true" ]; then
+            python -u scripts/fetch_arxiv.py --config config/arxiv.json --check-llm
+          fi
           args=(--config config/arxiv.json)
           if [ "$ARXIV_ONLY" = "true" ]; then
             args+=(--arxiv-only)
@@ -75,7 +84,9 @@ jobs:
         if: ${{ always() && hashFiles('data/.paper_cache.json') != '' }}
         uses: actions/cache/save@v6
         with:
-          path: data/.paper_cache.json
+          path: |
+            data/.paper_cache.json
+            data/.author_metadata.json
           key: ${{ steps.summary-cache.outputs.cache-primary-key }}
 
       - name: Store exact dataset for the notification job

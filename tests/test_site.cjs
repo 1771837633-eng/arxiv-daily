@@ -36,3 +36,21 @@ test('brief displays coverage and escapes text and reference titles', () => {
   assert.doesNotMatch(html, /<script>|data-brief-paper="unknown"/);
   assert.match(html, /#paper-1v1/);
 });
+
+test('English mode never labels original abstract as an English AI guide', () => {
+  const {context, nodes} = page();
+  vm.runInContext("state.language='en'; state.data.papers[0].summary_mode='llm-test'; renderPapers(state.data.papers)", context);
+  assert.match(nodes.get('paper-list').innerHTML, /English guide pending/);
+  assert.match(nodes.get('paper-list').innerHTML, /corresponding author not confirmed/);
+});
+
+test('bilingual rendering includes first affiliation and last verified correspondent', () => {
+  const {context, nodes} = page();
+  vm.runInContext(`state.language='both'; Object.assign(state.data.papers[0], {authors:['First','Middle','Last'],first_affiliation:'Test Institute',summary_mode:'llm-test',abstract_summary_zh:'Chinese finding',english_guide:{finding:'English finding'},author_metadata:{corresponding_authors:['Middle','Last']}}); renderPapers(state.data.papers);`, context);
+  const html = nodes.get('paper-list').innerHTML;
+  assert.match(html, /第一作者：First/);
+  assert.match(html, /末位通讯：Last/);
+  assert.match(html, /Test Institute/);
+  assert.match(html, /Chinese finding/);
+  assert.match(html, /English finding/);
+});

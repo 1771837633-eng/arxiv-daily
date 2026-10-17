@@ -424,3 +424,10 @@ button:hover {
   .brief-themes { grid-template-columns: minmax(0, 1fr); }
   .daily-brief h2 { font-size: 20px; }
 }
+.language-switch { display: inline-flex; border: 1px solid #cad2dc; border-radius: 4px; overflow: hidden; }
+.language-switch button { border: 0; border-radius: 0; background: white; color: #334155; padding: 7px 10px; cursor: pointer; font-size: 13px; }
+.language-switch button[aria-pressed="true"] { background: #e8efff; color: #174aab; }
+.language-switch button:focus-visible { outline: 2px solid #174aab; outline-offset: -2px; }
+.affiliation { font-size: 13px; color: #52626b; line-height: 1.65; margin-top: 10px; overflow-wrap: anywhere; }
+.english-finding, .english-edition { border-left: 2px solid #98aca0; padding-left: 14px; }
+.english-edition { margin-top: 22px; line-height: 1.8; }

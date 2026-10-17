@@ -24,6 +24,8 @@ from urllib.parse import quote, urlencode, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 from daily_brief import build_daily_briefs
+from english_guide import supplement_english, parse_english, english_fingerprint
+from author_metadata import enrich_authors
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
@@ -140,6 +142,9 @@ class Paper:
     limitations_zh: str = ""
     summary_schema_version: int = SUMMARY_SCHEMA_VERSION
     summary_fingerprint: str = ""
+    english_guide: dict = field(default_factory=dict)
+    english_fingerprint: str = ""
+    first_affiliation: str = ""
 
 
 # ── arXiv API helpers ──────────────────────────────────────────
@@ -651,6 +656,10 @@ class SummaryRuntime:
         self.failures = 0
         self.circuit_open = False
         self.errors: Counter = Counter()
+        self.cache_hits = 0
+        self.cache_misses = 0
+        self.usage: Counter = Counter()
+        self.usage_reports: Counter = Counter()
         self.enabled = bool(config.get("use_openai_summary", True))
         self.key_present = bool(os.environ.get(settings.get("api_key_env", "OPENAI_API_KEY")))
 
@@ -673,8 +682,36 @@ class SummaryRuntime:
                 self.circuit_open = True
                 print("  [WARN] LLM circuit open; remaining uncached papers use rule excerpts")
 
+    def record_cache(self, hit: bool) -> None:
+        with self.lock:
+            if hit:
+                self.cache_hits += 1
+            else:
+                self.cache_misses += 1
+
+    def record_usage(self, usage: object) -> None:
+        if not isinstance(usage, dict):
+            return
+        with self.lock:
+            for key in ("prompt_tokens", "completion_tokens", "prompt_cache_hit_tokens", "prompt_cache_miss_tokens"):
+                value = usage.get(key)
+                if type(value) is int and value >= 0:
+                    self.usage[key] += value
+                    self.usage_reports[key] += 1
+
     def stats(self) -> dict:
+        lookups = self.cache_hits + self.cache_misses
+        cache_total = self.usage["prompt_cache_hit_tokens"] + self.usage["prompt_cache_miss_tokens"]
+        cache_reports_complete = (self.usage_reports["prompt_cache_hit_tokens"] == self.requests
+                                  and self.usage_reports["prompt_cache_miss_tokens"] == self.requests)
         return {"requests": self.requests, "circuit_open": self.circuit_open,
+                "result_cache_hits": self.cache_hits, "result_cache_misses": self.cache_misses,
+                "result_cache_hit_rate": round(self.cache_hits / lookups, 4) if lookups else None,
+                "tokens": {key: self.usage[key] if self.usage_reports[key] else None
+                           for key in ("prompt_tokens", "completion_tokens", "prompt_cache_hit_tokens", "prompt_cache_miss_tokens")},
+                "usage_reports": dict(self.usage_reports),
+                "provider_input_cache_hit_rate": round(self.usage["prompt_cache_hit_tokens"] / cache_total, 4)
+                    if cache_reports_complete and cache_total else None,
                 "availability": "disabled" if not self.enabled else "ready" if self.key_present else "missing_api_key",
                 "errors": dict(self.errors),
                 "budget_exhausted": self.requests >= self.limit or time.monotonic() >= self.deadline}
@@ -696,9 +733,23 @@ def summary_error_hint(reason: str) -> str:
 
 def summarize_with_llm(title: str, abstract: str, config: dict) -> dict[str, str]:
     """Summarize using an LLM (OpenAI, DeepSeek, or any OpenAI-compatible API)."""
-    parsed = request_llm_json(_build_summary_prompt(title, abstract), config, _parse_llm_response)
+    bilingual = config.get("english_guide", {}).get("enabled", False)
+    prompt = _build_summary_prompt(title, abstract)
+    if bilingual:
+        prompt = ("同时输出 english_guide 对象，字段 finding/question/evidence/method/novelty/limitations，"
+                  "值为英文字符串，总计不超过220词。保留原摘要的准确术语和表述。中文重要术语保留英文括注，"
+                  "不要猜测译名。以下原有非空字符串约束仅适用于中文字段。\n" + prompt)
+    def parse(text):
+        parsed = _parse_llm_response(text)
+        if bilingual:
+            try:
+                parsed["english_guide"] = parse_english(json.loads(text).get("english_guide"))
+            except ValueError:
+                pass
+        return parsed
+    parsed = request_llm_json(prompt, config, parse, max_tokens=2400 if bilingual else 1400)
     provider = config.get("llm", {}).get("provider", "openai")
-    return {
+    result = {
         "study_overview_zh": f"研究类型：{parsed['study_type_zh']}；研究对象：{parsed['research_object_zh']}",
         "abstract_summary_zh": parsed["core_finding_zh"],
         "main_content_zh": f"研究问题：{parsed['research_question_zh']}\n证据与比较：{parsed['evidence_zh']}",
@@ -708,6 +759,10 @@ def summarize_with_llm(title: str, abstract: str, config: dict) -> dict[str, str
         "summary_mode": f"llm-{provider}",
         "summary_schema_version": SUMMARY_SCHEMA_VERSION,
     }
+    if parsed.get("english_guide"):
+        result["english_guide"] = parsed["english_guide"]
+        result["english_fingerprint"] = english_fingerprint(summary_fingerprint(title, abstract, config))
+    return result
 
 
 def request_llm_json(prompt: str, config: dict, parser, max_tokens: int = 1400) -> dict:
@@ -760,6 +815,8 @@ def request_llm_json(prompt: str, config: dict, parser, max_tokens: int = 1400) 
         try:
             with urlopen(request, timeout=min(timeout, remaining), context=ssl.create_default_context()) as response:
                 payload = json.loads(response.read().decode("utf-8"))
+            # Even invalid/truncated generations can consume billed tokens.
+            runtime.record_usage(payload.get("usage"))
             if payload["choices"][0].get("finish_reason") == "length":
                 raise ValueError("LLM summary was truncated")
             parsed = parser(payload["choices"][0]["message"]["content"])
@@ -819,6 +876,8 @@ def summarize_cached(paper_id: str, title: str, abstract: str, config: dict,
                      cache: PaperCache | None) -> tuple[dict, list[str]]:
     fingerprint = summary_fingerprint(title, abstract, config)
     cached = cache.get(paper_id) if cache else None
+    if cache and (not cached or cached.get("fingerprint") != fingerprint):
+        cached = cache.get_by_fingerprint(fingerprint)
     summary = cached.get("summary") if cached else None
     if isinstance(summary, dict) and cached.get("fingerprint") == fingerprint:
         complete = all(isinstance(summary.get(key), str) and summary[key].strip()
@@ -827,7 +886,11 @@ def summarize_cached(paper_id: str, title: str, abstract: str, config: dict,
         if (complete and summary["summary_mode"].startswith("llm-")
                 and summary.get("summary_schema_version") == SUMMARY_SCHEMA_VERSION
                 and isinstance(keywords, list) and all(isinstance(word, str) for word in keywords)):
+            config.setdefault("_summary_runtime", SummaryRuntime(config)).record_cache(True)
+            summary = supplement_english(summary, title, abstract, config, fingerprint, request_llm_json)
+            cache.set(paper_id, summary, keywords, fingerprint)
             return summary, keywords
+    config.setdefault("_summary_runtime", SummaryRuntime(config)).record_cache(False)
     summary, keywords = make_chinese_summary(title, abstract, config)
     if cache:
         cache.set(paper_id, summary, keywords, fingerprint)
@@ -843,6 +906,7 @@ class PaperCache:
         self.path = path
         self.lock = threading.Lock()
         self.data: dict[str, dict] = {}
+        self.by_fingerprint: dict[str, dict] = {}
         if path.exists():
             try:
                 with path.open("r", encoding="utf-8") as f:
@@ -850,6 +914,14 @@ class PaperCache:
                     self.data = loaded if isinstance(loaded, dict) else {}
             except (json.JSONDecodeError, OSError):
                 self.data = {}
+        for record in self.data.values():
+            if isinstance(record, dict) and record.get("fingerprint") and isinstance(record.get("summary"), dict):
+                if str(record["summary"].get("summary_mode", "")).startswith("llm-"):
+                    self.by_fingerprint[record["fingerprint"]] = record
+
+    def get_by_fingerprint(self, fingerprint: str) -> dict | None:
+        with self.lock:
+            return self.by_fingerprint.get(fingerprint)
 
     def get(self, arxiv_id: str) -> dict | None:
         with self.lock:
@@ -863,6 +935,8 @@ class PaperCache:
                 "keywords": keywords,
                 "fingerprint": fingerprint,
             }
+            if fingerprint and str(summary.get("summary_mode", "")).startswith("llm-"):
+                self.by_fingerprint[fingerprint] = self.data[arxiv_id]
 
     def save(self) -> None:
         with self.lock:
@@ -875,15 +949,22 @@ class PaperCache:
 
     def seed_from_payload(self, payload: dict, config: dict | None = None) -> None:
         for paper in payload.get("papers", []):
-            if paper.get("source", "arxiv") != "arxiv":
-                continue
             if paper.get("summary_schema_version") != SUMMARY_SCHEMA_VERSION or not str(paper.get("summary_mode", "")).startswith("llm-"):
                 continue
-            fingerprint = summary_fingerprint(paper.get("title", ""), paper.get("abstract", ""), config or {})
+            abstract = paper.get("abstract", "")
+            if paper.get("source") == "prb":
+                abstract = f"[APS RSS 摘要片段，可能被截断；没有阅读全文]\n{abstract}"
+            fingerprint = summary_fingerprint(paper.get("title", ""), abstract, config or {})
             if paper.get("summary_fingerprint") != fingerprint:
                 continue
-            if all(paper.get(key) for key in SUMMARY_FIELDS) and not self.get(paper["arxiv_id"]):
-                self.set(paper["arxiv_id"], {key: paper[key] for key in SUMMARY_FIELDS}, paper.get("keywords", []),
+            if all(paper.get(key) for key in SUMMARY_FIELDS):
+                saved = {key: paper[key] for key in SUMMARY_FIELDS}
+                current = self.get(paper["arxiv_id"])
+                if current and current.get("fingerprint") == fingerprint and isinstance(current.get("summary"), dict):
+                    saved.update({k: current.get("summary", {}).get(k) for k in ("english_guide", "english_fingerprint")})
+                if paper.get("english_guide") and paper.get("english_fingerprint"):
+                    saved.update({k: paper[k] for k in ("english_guide", "english_fingerprint")})
+                self.set(paper["arxiv_id"], saved, paper.get("keywords", []),
                          fingerprint)
 
 
@@ -937,6 +1018,9 @@ def parse_entry(entry: ET.Element, config: dict, cache: PaperCache | None = None
         pdf_url=link_pdf,
         abs_url=link_abs,
         source="arxiv",
+        english_guide=summary.get("english_guide", {}),
+        english_fingerprint=summary.get("english_fingerprint", ""),
+        first_affiliation=text_of(entry.find(f"{ATOM_NS}author"), f"{ARXIV_NS}affiliation"),
         summary_fingerprint=summary_fingerprint(title, abstract, config),
     )
 
@@ -1006,6 +1090,8 @@ def parse_prb_item(item: ET.Element, config: dict, cache: PaperCache | None = No
         doi=doi,
         journal_ref=journal_ref,
         summary_basis="rss-excerpt",
+        english_guide=summary.get("english_guide", {}),
+        english_fingerprint=summary.get("english_fingerprint", ""),
         summary_fingerprint=summary_fingerprint(title, summary_input, config),
         novelty_zh=summary["novelty_zh"],
         limitations_zh=summary["limitations_zh"],
@@ -1048,6 +1134,9 @@ def serialize_papers(papers: Iterable[Paper]) -> list[dict]:
             "journal_ref": paper.journal_ref,
             "summary_basis": paper.summary_basis,
             "corresponding_author": paper.corresponding_author,
+            "first_affiliation": paper.first_affiliation,
+            "english_guide": paper.english_guide,
+            "english_fingerprint": paper.english_fingerprint,
             "novelty_zh": paper.novelty_zh,
             "limitations_zh": paper.limitations_zh,
             "summary_schema_version": paper.summary_schema_version,
@@ -1264,13 +1353,15 @@ def build_payload(config: dict, output_path: Path) -> dict:
                 "status": "stale" if old_prb else "unavailable",
                 "count": len(old_prb), "updated_at": last_update if old_prb else "",
             }
+    metadata_stats = enrich_authors(items, previous, config, http_get)
     brief_config = {**config, "llm": {**config.get("llm", {}),
-                    "time_budget_seconds": 180, "max_requests_per_run": 6}}
+                    "time_budget_seconds": 240, "max_requests_per_run": 12}}
     brief_config["_summary_runtime"] = SummaryRuntime(brief_config)
     daily_briefs = build_daily_briefs(items, listing_sections, previous.get("daily_briefs", {}),
                                      brief_config, request_llm_json)
     return {
         "daily_briefs": daily_briefs,
+        "author_metadata_stats": metadata_stats,
         "daily_brief_stats": brief_config["_summary_runtime"].stats(),
         "site_title": config.get("site_title", "arXiv Daily"),
         "generated_at": now,
@@ -1359,6 +1450,9 @@ def main() -> int:
         output_path = PROJECT_ROOT / output_path
     cache_path = Path(config.get("cache_path", "data/.paper_cache.json"))
     config["cache_path"] = str(cache_path if cache_path.is_absolute() else PROJECT_ROOT / cache_path)
+    metadata = config.setdefault("author_metadata", {})
+    metadata_path = Path(metadata.get("cache_path", "data/.author_metadata.json"))
+    metadata["cache_path"] = str(metadata_path if metadata_path.is_absolute() else PROJECT_ROOT / metadata_path)
     if args.check_llm:
         return check_llm(config, output_path)
     try:
@@ -1371,7 +1465,10 @@ def main() -> int:
     print(f"Wrote {payload['count']} papers to {output_path}")
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_path:
-        report = {"sources": payload["source_status"], "summary": payload["summary_stats"]}
+        report = {"sources": payload["source_status"], "summary": payload["summary_stats"],
+                  "daily_briefs": payload.get("daily_brief_stats", {}),
+                  "author_metadata": payload.get("author_metadata_stats", {}),
+                  "english_guides": sum(bool(p.get("english_guide")) for p in payload["papers"])}
         try:
             with Path(summary_path).open("a", encoding="utf-8") as summary:
                 summary.write("\n## Paper Update\n\n```json\n" + json.dumps(report, ensure_ascii=False, indent=2) + "\n```\n")

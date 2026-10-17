@@ -166,6 +166,59 @@ class FetchSafetyTests(unittest.TestCase):
             fetch.summarize_cached("id", "Title", "Abstract", {}, cache)
         model.assert_called_once()
 
+    def test_unchanged_abstract_reuses_summary_across_paper_versions(self):
+        path = Path(self.directory.name) / "version-cache.json"
+        config = {"use_openai_summary": True}
+        summary, keywords = fetch.fallback_chinese_summary("Title", "Abstract")
+        summary["summary_mode"] = "llm-test"
+        cache = fetch.PaperCache(path)
+        cache.set("paper-v1", summary, keywords, fetch.summary_fingerprint("Title", "Abstract", config))
+        cache.save()
+        cache = fetch.PaperCache(path)
+        with patch.object(fetch, "make_chinese_summary") as model:
+            result, _ = fetch.summarize_cached("paper-v2", "Title", "Abstract", config, cache)
+        model.assert_not_called()
+        self.assertEqual(result, summary)
+        self.assertEqual(config["_summary_runtime"].stats()["result_cache_hits"], 1)
+        self.assertIsNotNone(cache.get("paper-v2"))
+
+    def test_published_prb_recovers_over_obsolete_cache(self):
+        cache = fetch.PaperCache(Path(self.directory.name) / "prb-cache.json")
+        summary, keywords = fetch.fallback_chinese_summary("Title", "Abstract")
+        summary["summary_mode"] = "llm-test"
+        summary_input = "[APS RSS 摘要片段，可能被截断；没有阅读全文]\nAbstract"
+        fingerprint = fetch.summary_fingerprint("Title", summary_input, {})
+        entry = {**summary, "arxiv_id": "PRB:example", "source": "prb", "title": "Title",
+                 "abstract": "Abstract", "keywords": keywords, "summary_fingerprint": fingerprint}
+        cache.set("PRB:example", {}, [], "obsolete")
+        cache.seed_from_payload({"papers": [entry]}, {})
+        with patch.object(fetch, "make_chinese_summary") as model:
+            result, _ = fetch.summarize_cached("PRB:example", "Title", summary_input, {}, cache)
+        model.assert_not_called()
+        self.assertEqual(result, summary)
+
+    def test_token_usage_counts_invalid_generation_and_retry(self):
+        response = self.mock_llm_response()
+        good = {"choices": [{"message": {"content": json.dumps(self.structured_response())}}],
+                "usage": {"prompt_tokens": 100, "completion_tokens": 50,
+                          "prompt_cache_hit_tokens": 40, "prompt_cache_miss_tokens": 60}}
+        bad = {**good, "choices": [{"finish_reason": "length", "message": {"content": ""}}]}
+        response.__enter__.return_value.read.side_effect = [json.dumps(bad).encode(), json.dumps(good).encode()]
+        config = {}
+        with patch.dict(fetch.os.environ, {"OPENAI_API_KEY": "test"}, clear=True):
+            with patch.object(fetch, "urlopen", return_value=response), patch.object(fetch.time, "sleep"):
+                fetch.summarize_with_llm("Title", "Abstract", config)
+        stats = config["_summary_runtime"].stats()
+        self.assertEqual(stats["tokens"]["completion_tokens"], 100)
+        self.assertEqual(stats["provider_input_cache_hit_rate"], 0.4)
+
+    def test_missing_usage_is_unknown_not_zero(self):
+        runtime = fetch.SummaryRuntime({})
+        runtime.reserve()
+        runtime.record_usage(None)
+        self.assertIsNone(runtime.stats()["tokens"]["completion_tokens"])
+        self.assertIsNone(runtime.stats()["provider_input_cache_hit_rate"])
+
     def test_structurally_broken_cache_is_rebuilt(self):
         path = Path(self.directory.name) / "summary-cache.json"
         fingerprint = fetch.summary_fingerprint("Title", "Abstract", {})
